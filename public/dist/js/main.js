@@ -1,0 +1,1 @@
+for(var element=document.getElementById("apple"),text="",i=1;i<10;i++)text+="Apple"+i+"<br/>";element.innerHTML=text;
