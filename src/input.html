@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="grid.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+
+
+
+        <div class="input-box">
+
+            <h3>Loader</h3>
+            <h5>Progress</h5>
+            <div class="progress">
+                <div class="indeterminate"></div>
+            </div>
+            <h5>Spinner</h5>
+            <div class="progress">
+                <div class="spinner"></div>
+            </div>
+
+            <h5>Context</h5>
+            <div class="card">
+                <div class="row ">
+                    <div class="context context-bg col-12"></div>
+                    <div class="context context-title col-6"></div>
+                    <div class="context context-line col-12"></div>
+                    <div class="context context-line col-12"></div>
+                    <div class="context context-line col-12"></div>
+                    <div class="context context-line col-4"></div>
+                </div>
+            </div>
+
+
+            <h3>Input fields</h3>
+            <h5>With effect</h5>
+            <div class="input input-effect">
+                <input type="text" placeholder=" ">
+                <label>Label</label>
+                <span class="help-text">Important that label comes after the input and input has an empty placeholder</span>
+            </div>
+
+            <h5>Without effect</h5>
+            <div class="input">
+                <label>Label</label>
+                <input type="text" placeholder="Placeholder">
+
+            </div>
+
+            <div class="input">
+                <label>Label</label>
+                <input type="password" placeholder="Placeholder">
+                <span class="help-text">Help text</span>
+            </div>
+
+            <h3>Text Area</h3>
+            <div class="input">
+                <textarea placeholder="Placeholder"></textarea>
+            </div>
+
+            <h3>Select</h3>
+            <div class="input">
+                <select name="" id="">
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="">Test</option>
+                </select>
+            </div>
+
+            <h3>Checkbox</h3>
+            <div class="input">
+                <div class="input-group">
+                    <input type="checkbox" name="checkgroup1">
+                    <label>label</label>
+
+                    <input type="checkbox" name="checkgroup1">
+                    <label>label</label>
+                </div>
+            </div>
+
+            <h5>Checkbox chip</h5>
+            <div class="input">
+                <div class="input-group">
+                    <div class="chip">
+                        <input id="checkchoice1" type="checkbox" name="checkgroup2">
+                        <label for="checkchoice1">label</label>
+                    </div>
+
+                    <div class="chip">
+                        <input id="checkchoice2" type="checkbox" name="checkgroup2">
+                        <label for="checkchoice2">label</label>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Radio button</h3>
+            <div class="input">
+                <div class="input-group">
+                    <input type="radio" name="group1">
+                    <label>label</label>
+
+                    <input type="radio" name="group1">
+                    <label>label</label>
+                </div>
+            </div>
+            <h5>Radio button chip</h5>
+            <div class="input">
+                <div class="input-group">
+                    <div class="chip">
+                        <input id="choice1" type="radio" name="group2">
+                        <label for="choice1">label</label>
+                    </div>
+
+                    <div class="chip">
+                        <input id="choice2" type="radio" name="group2">
+                        <label for="choice2">label</label>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Buttons</h3>
+            <button class="btn input">Button</button>
+            <button class="btn btn-accent input">Accent Button</button>
+            <button class="btn btn-round-extra btn-accent input">Accent Button Round</button>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+:root {
+    --side-bar-width: 250px;
+}
+
+
+/* Sidebar*/
+
+.sidebar {
+    position: fixed;
+    width: var(--side-bar-width);
+    height: 100%;
+    background-color: var(--color-primary);
+}
+
+.sidebar-header {
+    /*Hiegth 1 third*/
+    height: calc(2*var(--side-bar-width)/3);
+    background-color: var(--color-secondary);
+}
+
+.sidebar>ul {
+    list-style: none;
+}
+
+.sidebar>ul>li {
+    padding-left: var(--dimentions-base);
+    padding-right: var(--dimentions-base);
+    padding-top: var(--dimentions-base-small);
+    padding-bottom: var(--dimentions-base-small);
+}
+
+.sidebar>ul>li>a {
+    color: var(--color-text-secoundary);
+}
+
+.sidebar>ul>li:hover {
+    filter: brightness(110%);
+}
+
+.prefix {
+    padding-right: var(--dimentions-base-small);
+}
+
+.sufix {
+    float: right;
+}
+
+.content-sidebar {
+    margin-left: var(--side-bar-width);
+}
+
+.profile {
+    display: flex;
+    padding: var(--dimentions-base);
+    align-items: center;
+}
+
+.profile-info {
+    padding-left: var(--dimentions-base);
+    font-size: smaller;
+}
+
+.profile-info>a {
+    display: block;
+    font-size: larger;
+}
+
+.icon-large {
+    height: calc(var(--dimentions-base)*3);
+    width: calc(var(--dimentions-base)*3);
+}
+
+.icon {
+    height: calc(var(--dimentions-base)*3/2);
+    width: calc(var(--dimentions-base)*3/2);
+}
+
+.icon-small {
+    height: var(--dimentions-base);
+}

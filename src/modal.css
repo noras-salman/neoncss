@@ -1,0 +1,53 @@
+.modal {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    padding: 5%;
+    display: none;
+    background-color: #0000005b;
+    z-index: 1;
+}
+
+.modal-visible {
+    display: flex !important;
+    animation-name: fadein;
+    animation-duration: 0.2s
+}
+
+
+/* Add Animation */
+
+@keyframes fadein {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.modal-title {
+    font-size: 2em;
+    padding: var(--dimentions-base) var(--dimentions-base-small);
+}
+
+.modal-box {
+    background-color: var(--color-window);
+    padding: var(--dimentions-base);
+    border-radius: var(--round-small);
+    margin: auto;
+}
+
+.modal-content {
+    padding: var(--dimentions-base-small);
+}
+
+.modal-footer {
+    float: right;
+}
+
+.modal-box-fixed {
+    width: 300px;
+}

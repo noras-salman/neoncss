@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/microcss.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="brand">
+            <a href="#">MicroCss</a>
+        </div>
+        <div class="nav-menu">
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="grid.html">Grid</a></li>
+                <li><a href="banner.html">Banner</a></li>
+                <li><a href="input.html">Input</a></li>
+                <li><a href="layout-sidebar.html">Sidebar</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+
+
+
+        </div>
+
+    </nav>
+
+    <div class="banner">
+        <video autoplay muted loop>
+            <source type="video/mp4" src="https://player.vimeo.com/external/385147580.sd.mp4?s=e6a0ffe2125b290636bd7a765e492e900b9e4013&profile_id=139&oauth2_token_id=57447761">
+        </video>
+        <div class="banner-overlay">
+            <div class="banner-content">
+                <div class="vertical-aligner">
+                    <div>
+                        <div class="banner-title">
+                            MicroCss
+                        </div>
+                        <p>Your next favorite minimal css framework. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- -------------------------------------------------- -->
+        <div class="section">
+            <div class="section-title">
+                Typography
+            </div>
+            <h1>Typography H1</h1>
+            <h2>Typography H2</h2>
+            <h3>Typography H3</h3>
+            <h4>Typography H4</h4>
+            <h5>Typography H5</h5>
+            <h6>Typography H6</h6>
+
+            <p>Paragraph</p>
+        </div>
+
+        <div class="divider"></div>
+        <!-- -------------------------------------------------- -->
+        <div class="section">
+            <div class="section-title">
+                Cards and Grids
+            </div>
+
+
+            <div class="row">
+                <div class="col">
+                    test
+                </div>
+
+                <div class="col">
+                    Test
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-2 card">
+                    test
+                </div>
+
+                <div class="col-4 card">
+                    Test
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col card">
+                    test
+                </div>
+
+                <div class="col card">
+                    Test
+                </div>
+                <div class="col card">
+                    Test
+                </div>
+                <div class="col card">
+                    Test
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col card">
+                    <div class="card-cover">
+                        <img src="https://images.pexels.com/photos/1896755/pexels-photo-1896755.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                    </div>
+
+                    <div class="card-body">
+                        <h3>Card with cover</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col card">
+                    <div class="card-cover">
+                        <img src="https://images.pexels.com/photos/1896755/pexels-photo-1896755.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+
+                        <div class="card-cover-title">
+                            <h3>Title</h3>
+                            <p>Sub title</p>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <h3>Card with cover</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                        </p>
+                    </div>
+                </div>
+
+
+
+                <div class="col card">
+                    <div class="card-cover">
+                        <video autoplay muted loop>
+                            <source type="video/mp4" src="https://player.vimeo.com/external/385147580.sd.mp4?s=e6a0ffe2125b290636bd7a765e492e900b9e4013&profile_id=139&oauth2_token_id=57447761">
+                            </video>
+
+                    </div>
+
+                    <div class="card-body">
+                        <h3>Card with cover</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col card">
+                    <div class="card-cover card-cover-full">
+                        <img src="https://images.pexels.com/photos/1896755/pexels-photo-1896755.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                        <div class="card-cover-title">
+                            <h3>Title</h3>
+                            <p>Sub title</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col card">
+                    <div class="card-cover card-cover-full">
+                        <video autoplay muted loop>
+                        <source type="video/mp4" src="https://player.vimeo.com/external/385147580.sd.mp4?s=e6a0ffe2125b290636bd7a765e492e900b9e4013&profile_id=139&oauth2_token_id=57447761">
+                        </video>
+
+                        <div class="card-cover-title">
+                            <h3>Title</h3>
+                            <p>Sub title</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="col card">
+                    <div class="card-cover card-cover-full">
+                        <video autoplay muted loop>
+                        <source type="video/mp4" src="https://player.vimeo.com/external/385574308.sd.mp4?s=b1eca8ecc45bf7f9530c53401f629c10d5170f6b&profile_id=139&oauth2_token_id=57447761">
+                        </video>
+
+                        <div class="card-cover-title">
+                            <h3>Title</h3>
+                            <p>Sub title</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col card">
+                    <div class="card-cover card-cover-full">
+                        <img src="https://images.pexels.com/photos/1896755/pexels-photo-1896755.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                        <div class="card-cover-title">
+                            <h3>Title</h3>
+                            <p>Sub title</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col card">
+                    <div class="card-cover card-cover-full">
+                        <img src="https://images.pexels.com/photos/1896755/pexels-photo-1896755.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                        <div class="card-cover-title">
+                            <h3>Title</h3>
+                            <p>Sub title</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="divider"></div>
+        <!-- -------------------------------------------------- -->
+
+        <div class="section">
+            <div class="section-title">
+                Input and forms
+            </div>
+            <div class="input-box">
+
+                <h3>Loader</h3>
+                <h5>Progress</h5>
+                <div class="progress">
+                    <div class="indeterminate"></div>
+                </div>
+                <h5>Spinner</h5>
+                <div class="progress">
+                    <div class="spinner"></div>
+                </div>
+
+                <h5>Context</h5>
+                <div class="card">
+                    <div class="row ">
+                        <div class="context context-bg col-12"></div>
+                        <div class="context context-title col-6"></div>
+                        <div class="context context-line col-12"></div>
+                        <div class="context context-line col-12"></div>
+                        <div class="context context-line col-12"></div>
+                        <div class="context context-line col-4"></div>
+                    </div>
+                </div>
+
+
+                <h3>Input fields</h3>
+                <h5>With effect</h5>
+                <div class="input input-effect">
+                    <input type="text" placeholder=" ">
+                    <label>Label</label>
+                    <span class="help-text">Important that label comes after the input and input has an empty placeholder</span>
+                </div>
+
+                <h5>Without effect</h5>
+                <div class="input">
+                    <label>Label</label>
+                    <input type="text" placeholder="Placeholder">
+
+                </div>
+
+                <div class="input">
+                    <label>Label</label>
+                    <input type="password" placeholder="Placeholder">
+                    <span class="help-text">Help text</span>
+                </div>
+
+                <h3>Text Area</h3>
+                <div class="input">
+                    <textarea placeholder="Placeholder"></textarea>
+                </div>
+
+                <h3>Select</h3>
+                <div class="input">
+                    <select name="" id="">
+                        <option value="" disabled selected>Select your option</option>
+                        <option value="">Test</option>
+                    </select>
+                </div>
+
+                <h3>Checkbox</h3>
+                <div class="input">
+                    <div class="input-group">
+                        <input type="checkbox" name="checkgroup1">
+                        <label>label</label>
+
+                        <input type="checkbox" name="checkgroup1">
+                        <label>label</label>
+                    </div>
+                </div>
+
+                <h5>Checkbox chip</h5>
+                <div class="input">
+                    <div class="input-group">
+                        <div class="chip">
+                            <input id="checkchoice1" type="checkbox" name="checkgroup2">
+                            <label for="checkchoice1">label</label>
+                        </div>
+
+                        <div class="chip">
+                            <input id="checkchoice2" type="checkbox" name="checkgroup2">
+                            <label for="checkchoice2">label</label>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Radio button</h3>
+                <div class="input">
+                    <div class="input-group">
+                        <input type="radio" name="group1">
+                        <label>label</label>
+
+                        <input type="radio" name="group1">
+                        <label>label</label>
+                    </div>
+                </div>
+                <h5>Radio button chip</h5>
+                <div class="input">
+                    <div class="input-group">
+                        <div class="chip">
+                            <input id="choice1" type="radio" name="group2">
+                            <label for="choice1">label</label>
+                        </div>
+
+                        <div class="chip">
+                            <input id="choice2" type="radio" name="group2">
+                            <label for="choice2">label</label>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Buttons</h3>
+                <button class="btn input">Button</button>
+                <button class="btn btn-accent input">Accent Button</button>
+                <button class="btn btn-round-extra btn-accent input">Accent Button Round</button>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+        <!-- -------------------------------------------------- -->
+
+        <div class="section">
+            <div class="section-title">
+                Navigation
+            </div>
+
+            <h3>Navbar</h3>
+            <nav class="navbar">
+                <div class="brand">
+                    <a href="#">Brand</a>
+                </div>
+                <div class="nav-menu">
+                    <ul>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+
+
+                    </ul>
+                </div>
+            </nav>
+
+            <h3>Navigation menu</h3>
+            <nav>
+
+                <div class="nav-menu">
+
+                    <ul>
+                        <li><a class="active" href="#">Active Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                        <li><a href="#">Link</a></li>
+                    </ul>
+
+                </div>
+
+            </nav>
+
+
+        </div>
+        <div class="divider"></div>
+        <!-- -------------------------------------------------- -->
+
+
+        <div class="section">
+            <div class="section-title">
+                Banners
+            </div>
+            <div class="banner">
+                <img src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+            </div>
+
+
+            <div class="banner">
+                <video autoplay muted loop>
+                    <source type="video/mp4" src="https://player.vimeo.com/external/385147580.sd.mp4?s=e6a0ffe2125b290636bd7a765e492e900b9e4013&profile_id=139&oauth2_token_id=57447761">
+                </video>
+                <div class="banner-overlay">
+                    <div class="banner-content">
+                        <div class="banner-title">
+                            Lorem ipsum
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="banner">
+                <img src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                <div class="banner-overlay">
+                    <div class="banner-content">
+                        <div class="banner-title">
+                            Lorem ipsum
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="banner">
+                <img src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                <div class="banner-overlay banner-overlay-gradient"></div>
+            </div>
+
+            <div class="banner banner-viewport">
+                <img src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
+                <div class="banner-overlay banner-overlay-gradient">
+                    <div class="vertical-aligner">
+                        <div class="container">
+                            <div class="banner-title">
+                                Lorem ipsum
+                            </div>
+
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <!-- -------------------------------------------------- -->
+
+
+        <!-- <div class="section">
+            <div class="section-title">
+                Input and forms
+            </div>
+
+        </div>
+        <div class="divider"></div> -->
+        <!-- -------------------------------------------------- -->
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+.list-horizontal,
+.list-vertical {
+    list-style: none;
+}
+
+.list-horizontal>li,
+.list-vertical>li {
+    padding: var(--dimentions-base-small);
+}
+
+.list-horizontal>li:hover,
+.list-vertical>li:hover {
+    filter: brightness(110%);
+}
+
+.list-horizontal>li {
+    display: inline-block;
+}
+
+.label {
+    font-size: var(--font-size-small);
+    background-color: var(--color-secondary);
+    color: var(--color-text-primary-light);
+    padding: calc(var(--dimentions-base-small)/2) var(--dimentions-base-small) calc(var(--dimentions-base-small)/2) var(--dimentions-base-small);
+    border-radius: calc(var(--round-small)/2);
+}
+
+.badge {
+    display: inline-block;
+    font-size: var(--font-size-xsmall);
+    line-height: calc(var(--dimentions-base)*1.2);
+    width: calc(var(--dimentions-base)*1.2);
+    height: calc(var(--dimentions-base)*1.2);
+    vertical-align: middle;
+    background-color: var(--color-accent);
+    text-align: center;
+    font-weight: 800;
+    color: var(--color-text-primary-light);
+    border-radius: 50%;
+}
