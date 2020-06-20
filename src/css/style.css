@@ -137,20 +137,16 @@ video {
 
 .arrow-right {
     transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
 }
 
 .arrow-left {
     transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
 }
 
 .arrow-up {
     transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
 }
 
 .arrow-down {
     transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
 }
