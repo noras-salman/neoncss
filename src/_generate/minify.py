@@ -1,4 +1,4 @@
-f=open('../../dist/microcss.css','w')
+f=open('../../dist/microcss.css','r')
 content=f.read()
 f.close()
 
