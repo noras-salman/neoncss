@@ -38,6 +38,12 @@
     --round-small: 4px;
     --round-normal: 8px;
     --round-hard: 16px;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    /*Screens*/
+    --screen-small: 480px;
+    --screen-medium: 768px;
+    --screen-large: 1024px;
+    --screen-xlarge: 1200px;
 }
 
 
@@ -76,6 +82,10 @@ p {
 
 a {
     text-decoration: none;
+    color: var( --color-text-primary);
+}
+
+p>a {
     color: var( --color-text-link);
 }
 
@@ -150,3 +160,9 @@ video {
 .arrow-down {
     transform: rotate(45deg);
 }
+
+@media (max-width: var(--screen-small)) {}
+
+@media (max-width: var(--screen-medium)) {}
+
+@media (max-width: var(--screen-large)) {}
