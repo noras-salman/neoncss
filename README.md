@@ -1,5 +1,7 @@
 # MicroCss
 
+[Check the demo here](https://noras-salman.github.io/microcss/)
+
 ## Usage
 CSS:
 ```
@@ -13,7 +15,7 @@ https://cdn.jsdelivr.net/gh/noras-salman/microcss/dist/microcss.js
 
 
 ## Template
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 
