@@ -11,6 +11,11 @@
     height: 100%;
     background-color: var(--color-window-secondary);
     overflow-y: scroll;
+    box-shadow: 2px 4px 8px 2px var(--shadow-color);
+}
+
+.sidebar+* {
+    margin-left: var(--side-bar-width);
 }
 
 .sidebar>.list>li,

@@ -1,6 +1,6 @@
 :root {
     /*100/12*/
-    --min-column-width: 8.33%;
+    --min-column-width: 8.3%;
 }
 
 .row {
@@ -60,12 +60,101 @@
     flex-basis: calc(var(--min-column-width)*12);
 }
 
-.col-12 {
-    flex-basis: 100%;
+@media (max-width: 1024px) {
+    /* On large screens*/
 }
 
-@media only screen and (max-width: 600px) {
-    .row {
-        display: block;
+@media (max-width: 768px) {
+    /* On medium screens*/
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-10,
+    .col-11,
+    .col-12,
+    .col {
+        flex-basis: 100%;
+    }
+    .col-1-m {
+        flex-basis: var(--min-column-width);
+    }
+    .col-2-m {
+        flex-basis: calc(var(--min-column-width)*2);
+    }
+    .col-3-m {
+        flex-basis: calc(var(--min-column-width)*3);
+    }
+    .col-4-m {
+        flex-basis: calc(var(--min-column-width)*4);
+    }
+    .col-5-m {
+        flex-basis: calc(var(--min-column-width)*5);
+    }
+    .col-6-m {
+        flex-basis: calc(var(--min-column-width)*6) !important;
+    }
+    .col-7-m {
+        flex-basis: calc(var(--min-column-width)*7);
+    }
+    .col-8-m {
+        flex-basis: calc(var(--min-column-width)*8);
+    }
+    .col-9-m {
+        flex-basis: calc(var(--min-column-width)*9);
+    }
+    .col-10-m {
+        flex-basis: calc(var(--min-column-width)*10);
+    }
+    .col-11-m {
+        flex-basis: calc(var(--min-column-width)*11);
+    }
+    .col-12-m {
+        flex-basis: calc(var(--min-column-width)*12);
+    }
+}
+
+@media (max-width: 480px) {
+    /* On small screens*/
+    .col-1-sm {
+        flex-basis: var(--min-column-width);
+    }
+    .col-2-sm {
+        flex-basis: calc(var(--min-column-width)*2);
+    }
+    .col-3-sm {
+        flex-basis: calc(var(--min-column-width)*3);
+    }
+    .col-4-sm {
+        flex-basis: calc(var(--min-column-width)*4);
+    }
+    .col-5-sm {
+        flex-basis: calc(var(--min-column-width)*5);
+    }
+    .col-6-sm {
+        flex-basis: calc(var(--min-column-width)*6) !important;
+    }
+    .col-7-sm {
+        flex-basis: calc(var(--min-column-width)*7);
+    }
+    .col-8-sm {
+        flex-basis: calc(var(--min-column-width)*8);
+    }
+    .col-9-sm {
+        flex-basis: calc(var(--min-column-width)*9);
+    }
+    .col-10-sm {
+        flex-basis: calc(var(--min-column-width)*10);
+    }
+    .col-11-sm {
+        flex-basis: calc(var(--min-column-width)*11);
+    }
+    .col-12-sm {
+        flex-basis: calc(var(--min-column-width)*12);
     }
 }

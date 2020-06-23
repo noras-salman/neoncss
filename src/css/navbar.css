@@ -1,10 +1,22 @@
 /* Navigation bar*/
 
 nav {
+    width: 100%;
     height: var(--dimentions-navbar-height);
     line-height: var(--dimentions-navbar-height);
     padding-left: var(--dimentions-base);
     padding-right: var(--dimentions-base);
+    box-shadow: 2px 4px 8px 2px var(--shadow-color);
+}
+
+nav.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+nav.fixed+* {
+    margin-top: var(--dimentions-navbar-height);
 }
 
 nav.navbar {

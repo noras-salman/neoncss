@@ -1,168 +1,143 @@
-/*Imports*/
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-/*Variables*/
-
-:root {
-    /*--colors--*/
-    /*Theme*/
-    --color-window: #FEFEFE;
-    --color-window-secondary: #e4e4e4;
-    --color-primary: #2d353c;
-    --color-secondary: #718897;
-    --color-accent: #348fe2;
-    --color-accent-2: #e2814d;
-    --color-accent-3: #da5e5a;
-    --color-error: #da5e5a;
-    /*text*/
-    --color-text-link: #6a6cff;
-    --color-text-primary: #222D34;
-    --color-text-primary-light: #FEFEFE;
-    --color-text-secoundary: #718897;
-    /*--fonts--*/
-    --font-general: 'Roboto', sans-serif;
-    --font-size-xsmall: .5rem;
-    --font-size-small: .75rem;
-    --font-size: .9rem;
-    --font-size-large: 2rem;
-    --font-size-xlarge: 4rem;
-    /*--dimentions--*/
-    --dimentions-base: 16px;
-    --dimentions-base-big: 32px;
-    --dimentions-base-small: 8px;
-    --dimentions-navbar-height: 64px;
-    --dimentions-button-height: 48px;
-    --dimentions-button-height-small: 32px;
-    /*Rounding*/
-    --round-small: 4px;
-    --round-normal: 8px;
-    --round-hard: 16px;
-    --shadow-color: rgba(0, 0, 0, 0.2);
-    /*Screens*/
-    --screen-small: 480px;
-    --screen-medium: 768px;
-    --screen-large: 1024px;
-    --screen-xlarge: 1200px;
-}
-
-
-/*General reset*/
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-/* Typography*/
-
-body {
-    font-family: var(--font-general);
-    background-color: var(--color-window);
-    font-size: var(--font-size);
-    font-weight: 400;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-top: var(--dimentions-base);
-    margin-bottom: var(--dimentions-base-small);
-}
-
-p {
-    margin-top: var(--dimentions-base-small);
-    margin-bottom: var(--dimentions-base-small);
-}
-
-a {
-    text-decoration: none;
-    color: var( --color-text-primary);
-}
-
-p>a {
-    color: var( --color-text-link);
-}
-
-.section {
-    padding: var(--dimentions-base);
-}
-
-.section-title {
-    font-size: 3em;
-}
-
-.vertical-aligner {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.aligner-top {
-    align-self: flex-start;
-}
-
-.aligner-bottom {
-    align-self: flex-end;
-}
-
-img,
-video {
-    width: 100%;
-    height: auto;
-}
-
-.divider {
-    width: 100%;
-    height: 1px;
-    background-color: var(--color-secondary);
-    margin-top: var(--dimentions-base-small);
-    margin-bottom: var(--dimentions-base-small);
-}
-
-.circle {
-    border-radius: 50%;
-}
-
-.container {
-    width: 90%;
-    margin: auto;
-}
-
-
-/*Arrow icons*/
-
-.arrow {
-    border: solid var(--color-secondary);
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-}
-
-.arrow-right {
-    transform: rotate(-45deg);
-}
-
-.arrow-left {
-    transform: rotate(135deg);
-}
-
-.arrow-up {
-    transform: rotate(-135deg);
-}
-
-.arrow-down {
-    transform: rotate(45deg);
-}
-
-@media (max-width: var(--screen-small)) {}
-
-@media (max-width: var(--screen-medium)) {}
-
-@media (max-width: var(--screen-large)) {}
+    /*Imports*/
+    
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    /*Variables*/
+    
+     :root {
+        /*--colors--*/
+        /*Theme*/
+        --color-window: #FEFEFE;
+        --color-window-secondary: #e4e4e4;
+        --color-primary: #2d353c;
+        --color-secondary: #718897;
+        --color-accent: #348fe2;
+        --color-accent-2: #e2814d;
+        --color-accent-3: #da5e5a;
+        --color-error: #da5e5a;
+        /*text*/
+        --color-text-link: #6a6cff;
+        --color-text-primary: #222D34;
+        --color-text-primary-light: #FEFEFE;
+        --color-text-secoundary: #718897;
+        /*--fonts--*/
+        --font-general: 'Roboto', sans-serif;
+        --font-size-xsmall: .5rem;
+        --font-size-small: .75rem;
+        --font-size: .9rem;
+        --font-size-large: 2rem;
+        --font-size-xlarge: 4rem;
+        /*--dimentions--*/
+        --dimentions-base: 16px;
+        --dimentions-base-big: 32px;
+        --dimentions-base-small: 8px;
+        --dimentions-navbar-height: 64px;
+        --dimentions-button-height: 48px;
+        --dimentions-button-height-small: 32px;
+        /*Rounding*/
+        --round-small: 4px;
+        --round-normal: 8px;
+        --round-hard: 16px;
+        --shadow-color: rgba(0, 0, 0, 0.2);
+        /*Screens*/
+        --screen-small: 480px;
+        --screen-medium: 768px;
+        --screen-large: 1024px;
+        --screen-xlarge: 1200px;
+    }
+    /*General reset*/
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    /* Typography*/
+    
+    body {
+        font-family: var(--font-general);
+        background-color: var(--color-window);
+        font-size: var(--font-size);
+        font-weight: 400;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: var(--dimentions-base);
+        margin-bottom: var(--dimentions-base-small);
+    }
+    
+    p {
+        margin-top: var(--dimentions-base-small);
+        margin-bottom: var(--dimentions-base-small);
+    }
+    
+    a {
+        text-decoration: none;
+        color: var( --color-text-primary);
+    }
+    
+    p>a {
+        color: var( --color-text-link);
+    }
+    
+    .section {
+        padding: var(--dimentions-base);
+    }
+    
+    .section-title {
+        font-size: 3em;
+    }
+    
+    .vertical-aligner {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .aligner-top {
+        align-self: flex-start;
+    }
+    
+    .aligner-bottom {
+        align-self: flex-end;
+    }
+    
+    img,
+    video {
+        width: 100%;
+        height: auto;
+    }
+    
+    .divider {
+        width: 100%;
+        height: 1px;
+        background-color: var(--color-secondary);
+        margin-top: var(--dimentions-base-small);
+        margin-bottom: var(--dimentions-base-small);
+    }
+    
+    .circle {
+        border-radius: 50%;
+    }
+    
+    .container {
+        width: 90%;
+        padding: var(--dimentions-base) 5%;
+    }
+    
+    @media (max-width: 1024px) {
+        /* On large screens*/
+    }
+    
+    @media (max-width: 768px) {
+        /* On medium screens*/
+    }
+    
+    @media (max-width: 480px) {
+        /* On small screens*/
+    }
