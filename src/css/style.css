@@ -8,14 +8,12 @@
         /*Theme*/
         --color-window: #FEFEFE;
         --color-window-secondary: #e4e4e4;
-        --color-primary: #2d353c;
+        --color-bg: #2d353c;
         --color-secondary: #718897;
         --color-accent: #348fe2;
-        --color-accent-2: #e2814d;
-        --color-accent-3: #da5e5a;
         --color-error: #da5e5a;
         /*text*/
-        --color-text-link: #6a6cff;
+        --color-text-link: #1d21ff;
         --color-text-primary: #222D34;
         --color-text-primary-light: #FEFEFE;
         --color-text-secoundary: #718897;
@@ -127,7 +125,8 @@
     
     .container {
         width: 90%;
-        padding: var(--dimentions-base) 5%;
+        margin: auto;
+        padding: var(--dimentions-base);
     }
     
     @media (max-width: 1024px) {

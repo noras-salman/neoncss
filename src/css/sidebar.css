@@ -9,8 +9,10 @@
     position: fixed;
     width: var(--side-bar-width);
     height: 100%;
-    background-color: var(--color-window-secondary);
+    background-color: var(--color-bg);
+    color: var(--color-text-secoundary);
     overflow-y: scroll;
+    z-index: 2;
     box-shadow: 2px 4px 8px 2px var(--shadow-color);
 }
 
@@ -20,5 +22,28 @@
 
 .sidebar>.list>li,
 .sidebar>.list>.sublist>li {
-    background-color: var(--color-window-secondary);
+    background-color: var(--color-bg);
+}
+
+.sidebar>.list>li>a,
+.sidebar>.list>.sublist>li>a {
+    color: var(--color-text-secoundary);
+}
+
+@media (max-width: 1024px) {
+    /* On large screens*/
+}
+
+@media (max-width: 768px) {
+    /* On medium screens*/
+    .sidebar {
+        display: none;
+    }
+    .sidebar+* {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* On small screens*/
 }

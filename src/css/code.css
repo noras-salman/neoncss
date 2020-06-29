@@ -1,6 +1,6 @@
 .code {
     padding: var(--dimentions-base);
-    border: 1px solid var(--color-secondary);
+    border: 1px solid var(--color-bg);
     border-radius: var(--round-normal);
     background-color: var(--color-window-secondary);
 }

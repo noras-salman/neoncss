@@ -20,7 +20,7 @@ nav.fixed+* {
 }
 
 nav.navbar {
-    background-color: var(--color-primary);
+    background-color: var(--color-bg);
 }
 
 .nav-menu {

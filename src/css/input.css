@@ -38,7 +38,7 @@ textarea {
     border-radius: var(--round-small);
     display: inline-block;
     padding: var(--dimentions-base-small);
-    border: solid 1px var(--color-secondary);
+    border: solid 1px var(--color-text-secoundary);
 }
 
 textarea {
@@ -86,7 +86,7 @@ select {
 
 .chip>input[type=radio]~label,
 .chip>input[type=checkbox]~label {
-    background-color: var(--color-secondary);
+    background-color: var(--color-text-secoundary);
     color: var(--color-text-primary-light);
     padding: calc(var(--dimentions-base-small)/2) var(--dimentions-base-small) calc(var(--dimentions-base-small)/2) var(--dimentions-base-small);
     border-radius: 24px;
@@ -195,7 +195,7 @@ label {
     left: 8px;
     position: absolute;
     font-size: 1em;
-    color: var(--color-secondary);
+    color: var(--color-text-secoundary);
     transition: 0.2s ease-in;
 }
 
