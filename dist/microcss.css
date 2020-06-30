@@ -441,9 +441,14 @@ video {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   border-radius: var(--round-small);
-  /* 5px rounded corners */
   padding: var(--dimentions-base);
-  margin: var(--dimentions-base-small);
+  /*width:100% - margin*2 */
+  width: calc(100% - var(--dimentions-base-small));
+  margin: calc(var(--dimentions-base-small)/2);
+}
+
+.card-fill {
+  height: calc(100% - var(--dimentions-base-small));
 }
 
 .card-cover {
@@ -490,13 +495,6 @@ video {
 .card-cover-full > .card-cover-title {
   margin-bottom: 0 !important;
   border-radius: var(--round-small);
-}
-
-.code {
-  padding: var(--dimentions-base);
-  border: 1px solid var(--color-bg);
-  border-radius: var(--round-normal);
-  background-color: var(--color-window-secondary);
 }
 
 /* Navigation bar*/
@@ -1019,9 +1017,10 @@ label {
 }
 
 .modal {
-  position: absolute;
+  position: fixed;
   width: 100%;
   top: 0;
+  left: 0;
   bottom: 0;
   -webkit-box-align: center;
       -ms-flex-align: center;

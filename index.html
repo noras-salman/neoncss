@@ -401,6 +401,66 @@
         </div>
         <div class="divider"></div>
         <!-- -------------------------------------------------- -->
+        <div class="section">
+            <div class="section-title">
+                Lists
+            </div>
+
+            <h3>list (vertical)</h3>
+            <ul class="list">
+                <li>List item <span class="label">label</span></li>
+                <li>List item <span class="badge">122</span></li>
+                <li>List item</li>
+                <ul class="list sublist">
+                    <li>List item</li>
+                    <li class="active">Active list item</li>
+                    <li>List item</li>
+                    <li>List item</li>
+                    <ul class="list sublist">
+                        <li>List item</li>
+                        <li>List item</li>
+
+                    </ul>
+                </ul>
+            </ul>
+
+            <h3>horizontal</h3>
+            <ul class="list horizontal">
+                <li>List item</li>
+                <li>List item</li>
+                <li>
+                    <a href="#">List item <span class="badge">22</span></a>
+                </li>
+                <li>List item</li>
+                <li>
+                    <div class="dropdown">
+                        <span>Dropdown</span>
+                        <ul class="list">
+                            <li>List item <span class="label">label</span></li>
+                            <li>List item <span class="badge">122</span></li>
+                            <li>List item <span class="badge sufix">122</span></li>
+                            <li>List item</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+            <h3>Dropdown</h3>
+            <div class="dropdown">
+                <span>Dropdown</span>
+                <ul class="list">
+                    <li>List item <span class="label">label</span></li>
+                    <li>List item <span class="badge">122</span></li>
+                    <li>List item <span class="badge sufix">122</span></li>
+                    <li>List item</li>
+                    <li>List item</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="divider"></div>
+
+        <!-- -------------------------------------------------- -->
 
 
         <div class="section">
@@ -465,6 +525,37 @@
         <!-- -------------------------------------------------- -->
 
 
+        <div class="section">
+            <div class="section-title">
+                Modals
+            </div>
+
+            <button class="btn btn-accent btn-round" action="modal" data="demo">Open Modal</button>
+
+            <div id="demo" class="modal">
+                <div class="modal-box modal-box-fixed">
+                    <span class="modal-title">Modal title</span>
+                    <div class="modal-content">
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-accent btn-small"> ACTION</button>
+                        <button class="btn btn-flat btn-small" action="dismiss-modal"> CLOSE</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="divider"></div>
+
+        <!-- -------------------------------------------------- -->
+
+
         <!-- <div class="section">
             <div class="section-title">
                 Input and forms
@@ -475,6 +566,8 @@
         <!-- -------------------------------------------------- -->
 
     </div>
+
+    <script src="dist/microcss.js"></script>
 
 </body>
 

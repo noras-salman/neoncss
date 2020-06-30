@@ -2,9 +2,14 @@
      box-shadow: 2px 4px 8px 2px var(--shadow-color);
      transition: 0.3s;
      border-radius: var(--round-small);
-     /* 5px rounded corners */
      padding: var(--dimentions-base);
-     margin: var(--dimentions-base-small);
+     /*width:100% - margin*2 */
+     width: calc(100% - var(--dimentions-base-small));
+     margin: calc(var(--dimentions-base-small)/2);
+ }
+ 
+ .card-fill {
+     height: calc(100% - var(--dimentions-base-small));
  }
  
  .card-cover {

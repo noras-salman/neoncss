@@ -107,9 +107,40 @@ this kind of column will switch to 100% when the screen is smaller than 768px
 
 ### Navigation
 #### Navbar
+```html
+  <nav>
+        <div class="nav-menu">
+            <ul>
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+        </div>
+    </nav>
 ```
-Todo
+Adding navbar class gives the bar a color
+```html
+  <nav class="navbar">
+        <div class="brand">
+            <a href="#">Brand</a>
+        </div>
+        <div class="nav-menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+        </div>
+    </nav>
 ```
+Fixed navbar
+```html
+<nav class="navbar fixed">
+       ...
+</nav>
+```
+
+
 #### Sidebar
 ```
 Todo
@@ -137,8 +168,34 @@ Todo
 
 ### Modals
 This requires javascript.
+```html
+<div class="container">
+        <button class="btn btn-accent btn-round" action="modal" data="demo">Open Modal</button>
+    </div>
+
+    <div id="demo" class="modal">
+        <div class="modal-box modal-box-fixed">
+            <span class="modal-title">Modal title</span>
+            <div class="modal-content">
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-accent btn-small"> ACTION</button>
+                <button class="btn btn-flat btn-small" action="dismiss-modal"> CLOSE</button>
+            </div>
+
+        </div>
+    </div>
 ```
-Todo
+
+Dissmiss modal when clicking outside
+```html
+<div id="demo" class="modal" dismissable="true">
+     ...
+</div>    
 ```
 
 ## Build: 
