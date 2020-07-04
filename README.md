@@ -1,16 +1,16 @@
-# MicroCss
+# NeonCss
 
-[Check the demo here](https://noras-salman.github.io/microcss/)
+[Check the demo here](https://noras-salman.github.io/neoncss/)
 
 ## Usage
 CSS:
 ```
-https://cdn.jsdelivr.net/gh/noras-salman/microcss/dist/microcss.min.css
+https://cdn.jsdelivr.net/gh/noras-salman/neoncss/dist/microcss.min.css
 
 ```
 JS:
 ```
-https://cdn.jsdelivr.net/gh/noras-salman/microcss/dist/microcss.js
+https://cdn.jsdelivr.net/gh/noras-salman/neoncss/dist/microcss.js
 ```
 
 
@@ -23,13 +23,13 @@ https://cdn.jsdelivr.net/gh/noras-salman/microcss/dist/microcss.js
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/noras-salman/microcss/dist/microcss.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/noras-salman/neoncss/dist/microcss.js">
 </head>
 
 <body>
 
 
-<script src="https://cdn.jsdelivr.net/gh/noras-salman/microcss/dist/microcss.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/noras-salman/neoncss/dist/microcss.js"></script>
 </body>
 </html>
 ```
