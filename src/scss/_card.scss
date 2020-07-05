@@ -1,0 +1,63 @@
+@import "./variables";
+// local vars
+$cardCoverHeight: 300px;
+
+.card {
+  box-shadow: 2px 4px 8px 2px $shadowColor;
+  transition: 0.3s;
+  border-radius: $roundSmall;
+  padding: $dimentionsBase;
+  /*width:100% - margin*2 */
+  width: 100%;
+  margin: $dimentionsBaseSmall/2;
+
+  .card-fill {
+    height: 100%;
+  }
+
+  .card-cover {
+    margin: -1 * $dimentionsBase;
+    position: relative;
+
+    .card-cover-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.95)
+      );
+      padding: $dimentionsBase;
+      color: $lightColor;
+    }
+
+    img,
+    video {
+      border-radius: $roundSmall $roundSmall 0 0;
+      object-fit: cover;
+      height: $cardCoverHeight;
+    }
+  }
+
+  .card-body {
+    padding-top: $dimentionsBase;
+  }
+}
+
+/*Full cover*/
+
+.card-cover-full {
+  margin: -1 * $dimentionsBase;
+  height: $cardCoverHeight;
+  img,
+  video {
+    height: 100%;
+    border-radius: $roundSmall;
+  }
+  .card-cover-title {
+    margin-bottom: 0;
+    border-radius: $roundSmall;
+  }
+}

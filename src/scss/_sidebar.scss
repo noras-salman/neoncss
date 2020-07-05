@@ -1,0 +1,38 @@
+@import "./variables";
+
+// local vars
+
+$sidebarWidth: 300px;
+
+/* Sidebar*/
+
+.sidebar {
+  position: fixed;
+  width: $sidebarWidth;
+  height: 100%;
+  background-color: $colorBg;
+  color: $colorTextSecondary;
+  overflow-y: scroll;
+  z-index: 2;
+  box-shadow: 2px 4px 8px 2px $shadowColor;
+
+  .list,
+  .sublist {
+    li {
+      background-color: $colorBg;
+      a {
+        color: $colorTextSecondary;
+      }
+    }
+  }
+  @media (max-width: $screenMedium) {
+    display: none;
+  }
+}
+
+.sidebar + * {
+  margin-left: $sidebarWidth;
+  @media (max-width: $screenMedium) {
+    margin-left: 0;
+  }
+}

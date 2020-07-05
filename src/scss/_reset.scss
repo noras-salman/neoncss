@@ -1,0 +1,88 @@
+@import "./variables";
+
+/*General reset*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Typography*/
+
+body {
+  font-family: $fontGeneral;
+  background-color: $colorWindow;
+  font-size: $fontSize;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: $dimentionsBase;
+  margin-bottom: $dimentionsBaseSmall;
+}
+
+p {
+  margin-top: $dimentionsBaseSmall;
+  margin-bottom: $dimentionsBaseSmall;
+}
+
+a {
+  text-decoration: none;
+  color: $colorTextPrimary;
+}
+
+p > a {
+  color: $colorTextLink;
+}
+
+.section {
+  padding: $dimentionsBase;
+}
+
+.section-title {
+  font-size: 3em;
+}
+
+.vertical-aligner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aligner-top {
+  align-self: flex-start;
+}
+
+.aligner-bottom {
+  align-self: flex-end;
+}
+
+img,
+video {
+  width: 100%;
+  height: auto;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: $colorSecondary;
+  margin-top: $dimentionsBaseSmall;
+  margin-bottom: $dimentionsBaseSmall;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  padding: $dimentionsBase;
+}
