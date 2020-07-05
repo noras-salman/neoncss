@@ -1,12 +1,15 @@
-This is an example of how to setup gulp file in a project, it's linked to some articles.
+- Install dependencies
+  `npm install`
 
-To run this project 
+- To run index localy for developement and watch file changes
+  `npm run start`
+  `npm run watch`
 
-- first install dependencies 
-`npm install`
+- To export minified version of the library
+  `npm run export`
 
-- run node server
-`node server.js`
+- To export minified version of the css
+  `npm run export:css`
 
-- run gulp 
-`gulp`
+- To export minified version of the js
+  `npm run export:js`

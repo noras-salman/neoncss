@@ -9,7 +9,7 @@ sass.compiler = require("node-sass");
 const cleanCSS = require("gulp-clean-css");
 const liveReload = require("gulp-livereload");
 
-function minifyCSS() {
+function exportCSS() {
   return src("src/scss/neoncss.scss")
     .pipe(plumber())
     .pipe(sass().on("error", sass.logError))
@@ -19,7 +19,7 @@ function minifyCSS() {
     .pipe(liveReload());
 }
 
-function minifyJS() {
+function exportJS() {
   return src("src/js/*.js")
     .pipe(plumber())
     .pipe(
@@ -40,12 +40,13 @@ function minifyJS() {
     .pipe(liveReload());
 }
 
-exports.minifyCSS = minifyCSS;
-exports.default = series(minifyCSS, minifyJS);
+exports.exportCSS = exportCSS;
+exports.exportJS = exportJS;
+exports.default = series(exportCSS, exportJS);
 exports.watch = function () {
   liveReload.listen({
     port: 8010,
   });
-  watch("src/scss/*.scss", minifyCSS);
-  watch("src/js/*.js", series(minifyJS));
+  watch("src/scss/*.scss", exportCSS);
+  watch("src/js/*.js", series(exportJS));
 };
