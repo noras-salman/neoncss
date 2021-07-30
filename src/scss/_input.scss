@@ -109,6 +109,8 @@ select {
   text-align: center;
   cursor: pointer;
   min-width: 96px;
+  padding-left: 16px;
+  padding-right: 16px;
   height: $dimentionsButtonHeight;
   line-height: $dimentionsButtonHeight;
   border: 1px solid $colorAccent;
@@ -117,6 +119,17 @@ select {
   vertical-align: middle;
   align-items: center;
   text-decoration: none;
+
+  &.btn-action {
+    padding: 2px;
+    min-width: 32px;
+    width: 32px;
+    min-height: 32px;
+    height: 32px;
+    line-height: 24px;
+    border-radius: 4px;
+    font-size: 0.75rem !important;
+  }
 
   &.btn-small {
     height: $dimentionsButtonHeightSmall;
@@ -155,6 +168,16 @@ select {
   }
   &:active {
     filter: brightness(75%);
+  }
+
+  .prefix {
+    vertical-align: middle;
+    padding-right: 8px;
+  }
+
+  .postfix {
+    vertical-align: middle;
+    padding-left: 8px;
   }
 }
 
