@@ -12,7 +12,10 @@ $sidebarWidth: 300px;
   height: 100%;
   background-color: $colorBg;
   color: $colorTextSecondary;
-  overflow-y: scroll;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  overflow-y: scroll; /* Hide vertical scrollbar */
+
   z-index: 2;
   box-shadow: 2px 4px 8px 2px $shadowColor;
 
@@ -32,7 +35,13 @@ $sidebarWidth: 300px;
 
 .sidebar + * {
   margin-left: $sidebarWidth;
+  width: calc(100% - #{$sidebarWidth});
   @media (max-width: $screenMedium) {
+    width: 100%;
     margin-left: 0;
   }
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }

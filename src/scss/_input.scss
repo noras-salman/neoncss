@@ -134,9 +134,16 @@ select {
   &.btn-round-extra {
     border-radius: 48px;
   }
+
   &.btn-accent {
     background-color: $colorAccent;
     color: $lightColor;
+  }
+
+  &.btn-accent-gradient {
+    background: $colorAccentGradient;
+    color: $lightColor;
+    border-color: transparent;
   }
 
   &:hover {

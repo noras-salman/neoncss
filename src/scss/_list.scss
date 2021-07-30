@@ -7,13 +7,18 @@
     padding: $dimentionsBase;
     background-color: $colorWindow;
 
+    .prefix {
+      vertical-align: middle;
+      padding-right: 8px;
+    }
+
+    .postfix {
+      float: right;
+    }
+
     &.active {
       border-left: 2px solid $colorAccent;
       filter: brightness(95%);
-    }
-
-    .sufix {
-      float: right;
     }
 
     &:hover {
@@ -52,7 +57,7 @@
 
 .badge {
   display: inline-block;
-  font-size: $fontSizeSmall;
+  font-size: $fontSizeXSmall;
   line-height: $dimentionsBase * 1.2;
   width: $dimentionsBase * 1.2;
   height: $dimentionsBase * 1.2;
