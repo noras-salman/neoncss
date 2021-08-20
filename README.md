@@ -27,14 +27,15 @@
 CSS:
 
 ```
-https://cdn.jsdelivr.net/gh/noras-salman/neoncss/dist/microcss.min.css
+https://cdn.jsdelivr.net/gh/noras-salman/neoncss/dist/css/neoncss.min.css
+
 
 ```
 
 JS:
 
 ```
-https://cdn.jsdelivr.net/gh/noras-salman/neoncss/dist/microcss.js
+https://cdn.jsdelivr.net/gh/noras-salman/neoncss/dist/js/neoncss.min.js
 ```
 
 ## Template
