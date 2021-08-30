@@ -40,8 +40,20 @@ p > a {
   color: $colorTextLink;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .section {
   padding: $dimentionsBase;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.padding-16 {
+  padding: 16px;
 }
 
 .section-title {
@@ -75,6 +87,33 @@ video {
   background-color: $colorSecondary;
   margin-top: $dimentionsBaseSmall;
   margin-bottom: $dimentionsBaseSmall;
+}
+
+.inline-divider {
+  margin: 16px auto;
+  position: relative;
+  max-width: 600px;
+  text-align: center;
+}
+.inline-divider:before {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 1px;
+  background: $colorSecondary;
+  left: 85px;
+  top: 50%;
+  position: absolute;
+}
+.inline-divider:after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 1px;
+  background: $colorSecondary;
+  right: 85px;
+  top: 50%;
+  position: absolute;
 }
 
 .circle {
