@@ -1,0 +1,45 @@
+/*Theme*/
+$colorWindow: #fefefe;
+$colorWindowSecondary: #e4e4e4;
+$colorBg: #2d353c;
+$colorSecondary: #718897;
+$colorAccent: #348fe2;
+$colorAccentSecondary: #00d4ff;
+$colorAccentGradient: linear-gradient(
+  90deg,
+  $colorAccent 0%,
+  $colorAccentSecondary 100%
+);
+
+$colorError: #da5e5a;
+/*text*/
+$colorTextLink: #1d21ff;
+$colorTextPrimary: #222d34;
+$colorTextPrimaryLight: #fefefe;
+$colorTextSecondary: #718897;
+$shadowColor: rgba(0, 0, 0, 0.2);
+$lightColor: #fff;
+$overlayColor: rgba(0, 0, 0, 0.8);
+/*$fonts$*/
+$fontGeneral: "Roboto", sans-serif;
+$fontSizeXSmall: 0.5rem;
+$fontSizeSmall: 0.75rem;
+$fontSize: 0.9rem;
+$fontsizeLarge: 2rem;
+$fontSizeXLarge: 4rem;
+/*$dimentions$*/
+$dimentionsBase: 16px;
+$dimentionsBaseBig: 32px;
+$dimentionsBaseSmall: 8px;
+$dimentionsNavbarHeight: 64px;
+$dimentionsButtonHeight: 48px;
+$dimentionsButtonHeightSmall: 32px;
+/*Rounding*/
+$roundSmall: 4px;
+$roundNormal: 8px;
+$roundHard: 16px;
+/*Screens*/
+$screenSmall: 480px;
+$screenMedium: 768px;
+$screenLarge: 1024px;
+$screenXLarge: 1200px;

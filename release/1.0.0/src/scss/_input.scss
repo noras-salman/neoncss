@@ -1,0 +1,314 @@
+@import "./variables";
+@import "./animation";
+// local vars
+
+/*Wrappers*/
+
+.input-group {
+  display: flex;
+
+  label {
+    margin-right: $dimentionsBaseSmall;
+    margin-left: $dimentionsBaseSmall;
+  }
+}
+
+.input {
+  width: 100%;
+  margin: $dimentionsBaseSmall;
+}
+
+.input-box {
+  max-width: 300px;
+  margin: auto;
+}
+
+.input-box,
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box > input .input > input {
+  width: 100%;
+}
+
+/*Generic*/
+
+input,
+select,
+textarea {
+  border-radius: $roundSmall;
+  display: inline-block;
+  padding: $dimentionsBaseSmall;
+  border: solid 1px $colorTextSecondary;
+}
+
+textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+  outline: none;
+}
+
+/*Select*/
+
+select {
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+  appearance: none;
+  /* Remove default arrow */
+  /*background-image: url(...);   /* Add custom arrow */
+  background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+
+  &:hover,
+  &:focus {
+    filter: brightness(110%);
+  }
+}
+
+/*Chips*/
+
+.chip {
+  &:hover {
+    filter: brightness(110%);
+  }
+  input[type="radio"],
+  input[type="checkbox"] {
+    display: none;
+
+    & ~ label {
+      background-color: $colorTextSecondary;
+      color: $colorTextPrimaryLight;
+      padding: $dimentionsBaseSmall / 2 $dimentionsBaseSmall
+        $dimentionsBaseSmall / 2 $dimentionsBaseSmall;
+      border-radius: 24px;
+      margin-right: $dimentionsBaseSmall;
+      cursor: pointer;
+    }
+
+    &:checked ~ label {
+      background-color: $colorAccent;
+    }
+  }
+}
+
+/*Buttons*/
+
+.btn {
+  text-align: center;
+  cursor: pointer;
+  min-width: 96px;
+  padding-left: 16px;
+  padding-right: 16px;
+  height: $dimentionsButtonHeight;
+  line-height: $dimentionsButtonHeight;
+  border: 1px solid $colorAccent;
+  color: $colorAccent;
+  background-color: $colorWindow;
+  vertical-align: middle;
+  align-items: center;
+  text-decoration: none;
+
+  &.btn-action {
+    padding: 2px;
+    min-width: 32px;
+    width: 32px;
+    min-height: 32px;
+    height: 32px;
+    line-height: 24px;
+    border-radius: 4px;
+    font-size: 0.75rem !important;
+  }
+
+  &.btn-small {
+    height: $dimentionsButtonHeightSmall;
+    line-height: $dimentionsButtonHeightSmall;
+  }
+
+  &.btn-flat {
+    border: 0px;
+  }
+
+  &.btn-round {
+    border-radius: $roundNormal;
+  }
+
+  &.btn-round-extra {
+    border-radius: 48px;
+  }
+
+  &.btn-accent {
+    background-color: $colorAccent;
+    color: $lightColor;
+  }
+
+  &.btn-accent-gradient {
+    background: $colorAccentGradient;
+    color: $lightColor;
+    border-color: transparent;
+  }
+
+  &:hover {
+    filter: brightness(90%);
+    transition: background-color 0.8s linear;
+  }
+  &:focus {
+    outline: 0;
+  }
+  &:active {
+    filter: brightness(75%);
+  }
+
+  .prefix {
+    vertical-align: middle;
+    padding-right: 8px;
+  }
+
+  .postfix {
+    vertical-align: middle;
+    padding-left: 8px;
+  }
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background-color: #8842d5;
+  border: none;
+  color: white;
+  padding: 18px 36px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input:focus,
+textarea:focus {
+  margin-bottom: -1px;
+  margin-top: -1px;
+  margin-right: -1px;
+  margin-left: -1px;
+  border-bottom: solid 2px $colorAccent;
+  border-top: solid 2px $colorAccent;
+  border-right: solid 2px $colorAccent;
+  border-left: solid 2px $colorAccent;
+  transition: border-bottom 0.1s ease-in, margin-bottom 0.1s ease-in,
+    border-right 0.2s ease-in, margin-right 0.2s ease-in,
+    border-top 0.3s ease-in, margin-top 0.3s ease-in, border-left 0.4s ease-in,
+    margin-left 0.4s ease-in;
+}
+
+label {
+  font-size: 0.8em;
+}
+
+.help-text {
+  padding: 4px;
+  color: #a1a1a1;
+  font-size: 0.8em;
+}
+
+.input-effect {
+  position: relative;
+  padding-top: 8px;
+
+  & > input + label {
+    top: 16px;
+    left: 8px;
+    position: absolute;
+    font-size: 1em;
+    color: $colorTextSecondary;
+    transition: 0.2s ease-in;
+  }
+  & > input:not(:placeholder-shown) + label,
+  & > input:focus + label {
+    top: -8px;
+    left: 0;
+    font-size: 0.8em;
+    transition: 0.2s ease-in;
+  }
+  & input:focus + label {
+    color: $colorAccent;
+  }
+}
+
+/*When to move it up*/
+
+/* Color on focus */
+
+/* .input>input[value!=""]:invalid {
+  border: solid 2px var(--color-error);
+  margin: -1px;
+  color: var(--color-error);
+}
+.input>input[value!=""]:invalid~label,
+.input>input[value!=""]:invalid:focus~label {
+  color: var(--color-error);
+} */
+
+/*Loaders and spinners*/
+
+.progress {
+  width: 100%;
+  text-align: center;
+}
+
+.indeterminate {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, $colorAccent, $colorAccent);
+  background-color: #ccc;
+  margin: auto;
+  border-radius: 4px;
+  background-size: 20%;
+  background-repeat: repeat-y;
+  background-position: -25% 0;
+  animation: progress-scroll 1.2s ease-in-out infinite;
+}
+
+.spinner {
+  display: inline-block;
+  margin: 4px;
+  border: 4px solid #ccc;
+  border-radius: 50%;
+  border-top: 4px solid $colorAccent;
+  width: 48px;
+  height: 48px;
+  /* Safari */
+  animation: spin 1s ease-in-out infinite;
+}
+
+.context {
+  width: 100%;
+  background: linear-gradient(to right, #ccc, #e1e1e1, #ccc);
+  background-color: #ccc;
+  margin: 4px;
+  background-size: 10%;
+  background-repeat: repeat-y;
+  background-position: -50% 0;
+  animation: progress-scroll 1s ease-in-out infinite;
+}
+
+.context-line {
+  height: 8px;
+}
+
+.context-title {
+  height: 12px;
+  background: linear-gradient(to right, #b1b1b1, #e1e1e1, #b1b1b1);
+  background-color: #b1b1b1;
+}
+
+.context-bg {
+  height: 100px;
+}

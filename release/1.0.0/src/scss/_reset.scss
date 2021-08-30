@@ -1,0 +1,152 @@
+@import "./variables";
+
+/*General reset*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Typography*/
+
+body {
+  font-family: $fontGeneral;
+  background-color: $colorWindow;
+  font-size: $fontSize;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: $dimentionsBase;
+  margin-bottom: $dimentionsBaseSmall;
+}
+
+p {
+  margin-top: $dimentionsBaseSmall;
+  margin-bottom: $dimentionsBaseSmall;
+}
+
+a {
+  text-decoration: none;
+  color: $colorTextPrimary;
+}
+
+p > a {
+  color: $colorTextLink;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.section {
+  padding: $dimentionsBase;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.padding-16 {
+  padding: 16px;
+}
+
+.section-title {
+  font-size: 3em;
+}
+
+.vertical-aligner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aligner-top {
+  align-self: flex-start;
+}
+
+.aligner-bottom {
+  align-self: flex-end;
+}
+
+img,
+video {
+  width: 100%;
+  height: auto;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: $colorSecondary;
+  margin-top: $dimentionsBaseSmall;
+  margin-bottom: $dimentionsBaseSmall;
+}
+
+.inline-divider {
+  margin: 16px auto;
+  position: relative;
+  max-width: 600px;
+  text-align: center;
+}
+.inline-divider:before {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 1px;
+  background: $colorSecondary;
+  left: 85px;
+  top: 50%;
+  position: absolute;
+}
+.inline-divider:after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 1px;
+  background: $colorSecondary;
+  right: 85px;
+  top: 50%;
+  position: absolute;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  padding: $dimentionsBase;
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}

@@ -1,0 +1,59 @@
+@import "./variables";
+
+// local vars
+$bannerHeight: 300px;
+
+.banner {
+  height: $bannerHeight;
+  position: relative;
+
+  // image and video cover
+
+  & > img,
+  & > video {
+    object-fit: cover;
+    height: $bannerHeight;
+  }
+
+  .banner-overlay {
+    color: $lightColor;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    background-color: $overlayColor;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .banner-overlay-gradient {
+    background-color: rgba(0, 0, 0, 0) !important;
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.95)
+    );
+  }
+
+  &.banner-viewport {
+    height: 100vh;
+
+    & > img,
+    & > video {
+      height: 100vh;
+    }
+  }
+
+  .banner-content {
+    width: 80%;
+    margin: auto;
+    padding-top: 2 * $dimentionsBase;
+  }
+
+  .banner-title {
+    margin-top: $dimentionsBase;
+    margin-bottom: $dimentionsBaseSmall;
+    font-size: 4em;
+  }
+}
