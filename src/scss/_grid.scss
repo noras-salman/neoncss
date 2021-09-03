@@ -16,7 +16,7 @@ $minColumnWidth: 8.3%;
 // small screen mobile first grid
 @for $i from 1 through 12 {
   .col-s-#{$i} {
-    flex-basis: $minColumnWidth * #{$i};
+    flex-basis: calc($minColumnWidth * #{$i});
   }
 }
 
@@ -27,7 +27,7 @@ $minColumnWidth: 8.3%;
       flex-basis: 100%;
     }
     @include screenSize(m) {
-      flex-basis: $minColumnWidth * #{$i};
+      flex-basis: calc($minColumnWidth * #{$i});
     }
   }
 }
