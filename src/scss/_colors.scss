@@ -11,6 +11,14 @@ $cryola: #ee1d52;
   background-color: $colorAccent !important;
 }
 
+.error {
+  color: $colorError !important;
+}
+
+.error-bg {
+  background-color: $colorError !important;
+}
+
 .black {
   color: $black !important;
 }
