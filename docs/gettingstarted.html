@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeonCss</title>
+    <link rel="stylesheet" href="../dist/css/neoncss.min.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/base16/dracula.min.css"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        if (hljs) {
+          document.querySelectorAll("pre code").forEach((element) => {
+            element.innerHTML = element.innerHTML
+              .replace(/&/g, "&amp;")
+              .replace(/</g, "&lt;")
+              .replace(/>/g, "&gt;")
+              .replace(/"/g, "&quot;")
+              .replace(/'/g, "&#039;");
+            hljs.highlightElement(element);
+          });
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <nav class="navbar fixed black-bg">
+      <div class="brand">
+        <a href="#">NeonCss</a>
+      </div>
+      <div class="nav-menu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Grid</a></li>
+          <li><a href="#">Banner</a></li>
+          <li><a href="#">Input</a></li>
+          <li><a href="#">Sidebar</a></li>
+          <li><a href="#">Profile</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="sidebar"></div>
+    <div class="container">
+      <br /><br />
+      <div class="section">
+        <div class="section-title">Getting started</div>
+
+        <pre>
+            <code>
+<link rel="stylesheet" href="dist/css/neoncss.min.css" />
+<!-- Optional -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+              </code>
+        </pre>
+      </div>
+    </div>
+  </body>
+</html>
