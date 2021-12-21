@@ -1,0 +1,147 @@
+@import "./variables";
+
+.list {
+  list-style: none;
+
+  li {
+    padding: $dimentionsBase;
+    background-color: var(--window-color-secondary);
+
+    &.border {
+      border: 1px solid #ddd;
+    }
+
+    &.bubble {
+      border-radius: 16px;
+      margin: 4px;
+      &.sent {
+        background-color: var(--accent-color);
+        color: white;
+        margin-left: 48px;
+      }
+      &.received {
+        background-color: #ddd;
+        color: black;
+        margin-right: 48px;
+      }
+    }
+
+    .prefix {
+      vertical-align: middle;
+      padding-right: 8px;
+    }
+
+    .postfix {
+      float: right;
+    }
+
+    &.active {
+      border-left: 2px solid var(--accent-color);
+      filter: brightness(95%);
+    }
+
+    &:hover {
+      filter: brightness(95%);
+    }
+  }
+  &.horizontal > li {
+    display: inline-block;
+  }
+
+  @for $i from 1 through 8 {
+    .sublist:nth-child(#{$i}) {
+      position: relative;
+      > li {
+        padding-left: $i * $dimentionsBase/2 !important;
+      }
+    }
+  }
+}
+.sublist.indicator::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: var(--accent-color);
+  filter: brightness(85%);
+  left: 8px;
+  top: 0;
+  z-index: 11;
+  border-radius: 50%;
+}
+.sublist.indicator:before {
+  z-index: 10;
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: var(--accent-color);
+  filter: brightness(90%);
+  left: 12px;
+}
+
+.label {
+  font-size: $fontSizeSmall;
+  background-color: $colorTextSecondary;
+  color: $colorTextPrimaryLight;
+  padding: $dimentionsBaseSmall / 2 $dimentionsBaseSmall $dimentionsBaseSmall /
+    2 $dimentionsBaseSmall;
+  border-radius: $roundSmall / 2;
+}
+
+.badge {
+  display: inline-block;
+  line-height: 24px;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-weight: bold;
+  font-size: 0.7em;
+  height: 24px;
+  min-width: 24px;
+  vertical-align: middle;
+  background-color: $colorError;
+  text-align: center;
+  color: $colorTextPrimaryLight;
+  border-radius: 12px;
+}
+
+.icon-badge {
+  .material-icons {
+    vertical-align: middle;
+  }
+  .badge {
+    margin-left: -8px;
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  .list {
+    display: none;
+    position: absolute;
+    background-color: var(--window-color-secondary);
+    min-width: 160px;
+    box-shadow: 2px 4px 8px 8px $shadowColor;
+    z-index: 1;
+    color: #010101;
+
+    li {
+      a {
+        color: #010101;
+      }
+    }
+
+    &.left {
+      left: 0;
+    }
+
+    &.right {
+      right: 0;
+    }
+  }
+
+  &:hover.dropdown > .list {
+    display: block;
+  }
+}

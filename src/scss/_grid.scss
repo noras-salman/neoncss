@@ -1,0 +1,45 @@
+@import "./variables";
+@import "./mixins";
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1;
+}
+
+// small screen mobile first grid
+@for $i from 1 through 12 {
+  .col-s-#{$i} {
+    flex-basis: calc(8.3% * #{$i});
+  }
+}
+
+// small screen mobile first grid
+@for $i from 1 through 12 {
+  .col-m-#{$i} {
+    @include screenSize(s) {
+      flex-basis: 100%;
+    }
+    @include screenSize(m) {
+      flex-basis: calc(8.3% * #{$i});
+    }
+  }
+}
+
+// large screen mobile first grid
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    @include screenSize(s) {
+      flex-basis: 100%;
+    }
+    @include screenSize(m) {
+      flex-basis: 100%;
+    }
+    @include screenSize(l) {
+      flex-basis: calc(8.3% * #{$i});
+    }
+  }
+}

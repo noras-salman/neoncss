@@ -1,0 +1,51 @@
+@import "./variables";
+
+// local vars
+
+$sidebarWidth: 300px;
+
+/* Sidebar*/
+
+.sidebar {
+  position: fixed;
+  width: $sidebarWidth;
+  height: 100%;
+  background-color: var(--accent-color);
+  color: $lightColor;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  overflow-y: scroll; /* Hide vertical scrollbar */
+
+  z-index: 2;
+  box-shadow: 2px 4px 8px 2px $shadowColor;
+
+  .list,
+  .sublist {
+    li {
+      padding: 0;
+      background-color: var(--accent-color);
+      a {
+        padding: 16px;
+        display: inline-block;
+        width: 100%;
+        color: $lightColor;
+      }
+    }
+  }
+  @media (max-width: $screenMedium) {
+    display: none;
+  }
+}
+
+.sidebar + * {
+  margin-left: $sidebarWidth;
+  width: calc(100% - #{$sidebarWidth});
+  @media (max-width: $screenMedium) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}

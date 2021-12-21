@@ -1,0 +1,104 @@
+/*Theme*/
+
+$defaultColorAccent: #348fe2;
+$defaultColorAccentDark: #1d1d1d;
+$defaultColorAccentSecondary: #00d4ff;
+
+$colorWindow: #fff;
+$colorWindowDark: #121212;
+$colorWindowSecondary: #fefefe;
+$colorWindowSecondaryDark: #292929;
+$colorBg: #2d353c;
+$colorSecondary: #979797;
+
+$colorTextLink: #1d21ff;
+$colorTextPrimary: #000000d9;
+$colorTextPrimaryLight: #fefefe;
+$colorTextSecondary: #00000099;
+
+$colorError: #da5e5a;
+:root {
+  --window-color: #{$colorWindow};
+  --window-color-secondary: #{$colorWindowSecondary};
+  --accent-color: #{$defaultColorAccent};
+  --accent-color-dark: #{$defaultColorAccentDark};
+  --accent-secondary-color: #{$defaultColorAccentSecondary};
+  --text-primary-color: #{$colorTextPrimary};
+  --color-error: #{$colorError};
+}
+
+[data-theme="dark"] {
+  --text-primary-color: #{$colorTextPrimaryLight};
+  --window-color: #{$colorWindowDark};
+  --accent-color: var(--accent-color-dark);
+  --window-color-secondary: #{$colorWindowSecondaryDark};
+}
+
+/*Constatnt colots*/
+
+$shadowColor: rgba(0, 0, 0, 0.2);
+$lightColor: #fff;
+$overlayColor: rgba(0, 0, 0, 0.8);
+
+$black: #010101;
+$sea: #69c9d0;
+$white: #ffffff;
+$cryola: #ee1d52;
+
+$colorAccentGradient: linear-gradient(
+  90deg,
+  var(--accent-color) 0%,
+  var(--accent-secondary-color) 100%
+);
+
+.accent {
+  color: var(--accent-color) !important;
+}
+
+.accent-bg {
+  background-color: var(--accent-color) !important;
+}
+
+.error {
+  color: $colorError !important;
+}
+
+.error-bg {
+  background-color: $colorError !important;
+}
+
+.black {
+  color: $black !important;
+}
+
+.black-bg {
+  background-color: $black !important;
+}
+
+.sea {
+  color: $sea !important;
+}
+
+.sea-bg {
+  background-color: $sea !important;
+}
+
+.cryola {
+  color: $cryola !important;
+}
+
+.cryola-bg {
+  background-color: $cryola !important;
+}
+
+.white {
+  color: $white !important;
+}
+
+.white-bg {
+  background-color: $white !important;
+}
+
+.secondary {
+  color: $colorTextSecondary;
+}

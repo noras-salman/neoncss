@@ -1,0 +1,33 @@
+// Google Fonts
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Open+Sans:400italic,700italic,400,700);
+
+/*$fonts$*/
+$fontGeneral: "Roboto", sans-serif;
+$fontSizeXSmall: 0.5rem;
+$fontSizeSmall: 0.75rem;
+$fontSize: 0.9rem;
+$fontsizeLarge: 2rem;
+$fontSizeXLarge: 4rem;
+/*$dimentions$*/
+$dimentionsBase: 16px;
+$dimentionsBaseBig: 32px;
+$dimentionsBaseSmall: 8px;
+$dimentionsNavbarHeight: 64px;
+$dimentionsButtonHeight: 32px;
+$dimentionsButtonHeightSmall: 24px;
+/*Rounding*/
+$roundSmall: 4px;
+$roundNormal: 8px;
+$roundHard: 16px;
+/*Screens*/
+$screenSmall: 480px;
+$screenMedium: 768px;
+$screenLarge: 1024px;
+$screenXLarge: 1200px;
+
+$fontWeightThin: 100;
+$fontWeightLight: 300;
+$fontWeightRegular: 400;
+$fontWeightMedium: 500;
+$fontWeightBold: 700;
+$fontWeightBalck: 700;

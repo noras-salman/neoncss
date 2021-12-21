@@ -1,0 +1,320 @@
+@import "./variables";
+
+/*General reset*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Typography*/
+
+body {
+  font-family: $fontGeneral;
+  background-color: var(--window-color);
+  font-size: 16px;
+  font-weight: $fontWeightRegular;
+  color: var(--text-primary-color);
+  letter-spacing: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: $dimentionsBase;
+  margin-bottom: $dimentionsBaseSmall;
+}
+
+.heading-1 {
+  letter-spacing: -1.5px;
+  font-size: 96px;
+  font-weight: $fontWeightThin;
+}
+
+h1 {
+  @extend .heading-1;
+}
+
+.heading-2 {
+  letter-spacing: -0.5px;
+  font-size: 60px;
+  font-weight: $fontWeightThin;
+}
+
+h2 {
+  @extend .heading-2;
+}
+
+.heading-3 {
+  letter-spacing: 0px;
+  font-size: 48px;
+  font-weight: $fontWeightRegular;
+}
+h3 {
+  @extend .heading-3;
+}
+
+.heading-4 {
+  letter-spacing: 0.25px;
+  font-size: 34px;
+  font-weight: $fontWeightRegular;
+}
+
+h4 {
+  @extend .heading-4;
+}
+
+.heading-5 {
+  letter-spacing: 0px;
+  font-size: 24px;
+  font-weight: $fontWeightRegular;
+}
+
+h5 {
+  @extend .heading-5;
+}
+
+.heading-6 {
+  letter-spacing: 0.15px;
+  font-size: 20px;
+  font-weight: $fontWeightMedium;
+}
+
+h6 {
+  @extend .heading-6;
+}
+
+p {
+  margin-top: $dimentionsBaseSmall;
+  margin-bottom: $dimentionsBaseSmall;
+}
+
+.body-2 {
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  font-weight: $fontWeightRegular;
+}
+
+.button-text {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: $fontWeightMedium;
+  letter-spacing: 1.25px;
+}
+
+.subtitle {
+  font-size: 16px;
+  letter-spacing: 0.15px;
+  font-weight: $fontWeightRegular;
+}
+
+.subtitle-2 {
+  font-size: 14px;
+  letter-spacing: 0.1px;
+  font-weight: $fontWeightMedium;
+}
+
+.caption {
+  font-size: 12px;
+  letter-spacing: 0.4px;
+}
+
+.overline {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.text-thin {
+  font-weight: $fontWeightThin;
+}
+
+.text-light {
+  font-weight: $fontWeightLight;
+}
+
+.text-regular {
+  font-weight: $fontWeightRegular;
+}
+
+.text-medium {
+  font-weight: $fontWeightMedium;
+}
+
+.text-bold {
+  font-weight: $fontWeightBold;
+}
+
+.text-black {
+  font-weight: $fontWeightBalck;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-primary-color);
+}
+
+p > a {
+  color: $colorTextLink;
+}
+
+.section {
+  padding: $dimentionsBase;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.left-text {
+  text-align: left;
+}
+
+.right-text {
+  text-align: right;
+}
+
+@for $i from 0 through 12 {
+  .padding-#{4*$i } {
+    padding: #{4 * $i}px;
+  }
+
+  .margin-#{4*$i } {
+    margin: #{4 * $i}px;
+  }
+}
+
+.section-title {
+  padding-bottom: 16px;
+}
+
+.vertical-aligner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aligner-top {
+  align-self: flex-start;
+}
+
+.aligner-bottom {
+  align-self: flex-end;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+img,
+video {
+  width: 100%;
+  height: auto;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: $colorSecondary;
+  margin-top: $dimentionsBaseSmall;
+  margin-bottom: $dimentionsBaseSmall;
+}
+
+.divider-inline {
+  @extend .overline;
+  margin: 16px auto;
+  position: relative;
+  max-width: 600px;
+  text-align: center;
+}
+.divider-inline:before {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 1px;
+  background: $colorSecondary;
+  left: 85px;
+  top: 50%;
+  position: absolute;
+}
+.divider-inline:after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 1px;
+  background: $colorSecondary;
+  right: 85px;
+  top: 50%;
+  position: absolute;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  padding: $dimentionsBase;
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+.neonText {
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+}
+
+p {
+  code {
+    padding: 4px;
+    background: #ffd8db;
+    font-family: monospace;
+    font-size: 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #d73a49;
+    margin: 2px;
+  }
+}
+
+pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f3f3f3;
+  border-radius: 6px;
+  color: #000;
+}

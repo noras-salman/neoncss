@@ -1,0 +1,347 @@
+@import "./variables";
+@import "./animation";
+// local vars
+
+/*Wrappers*/
+
+.input-group {
+  display: flex;
+
+  label {
+    margin-right: $dimentionsBaseSmall;
+    margin-left: $dimentionsBaseSmall;
+  }
+}
+
+.input {
+  width: 100%;
+  margin: $dimentionsBaseSmall;
+}
+
+.input-box {
+  max-width: 300px;
+  margin: auto;
+}
+
+.input-box,
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box > input .input > input {
+  width: 100%;
+}
+
+/*Generic*/
+
+input,
+select,
+textarea {
+  border-radius: $roundSmall;
+  display: inline-block;
+  padding: $dimentionsBaseSmall;
+  border: solid 1px $colorTextSecondary;
+}
+
+textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+  outline: none;
+}
+
+/*Select*/
+
+select {
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+  appearance: none;
+  /* Remove default arrow */
+  /*background-image: url(...);   /* Add custom arrow */
+  background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+
+  &:hover,
+  &:focus {
+    filter: brightness(110%);
+  }
+}
+
+/*Chips*/
+
+.chip {
+  &:hover {
+    filter: brightness(110%);
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    display: none;
+
+    & ~ label {
+      background-color: $colorTextSecondary;
+      color: $colorTextPrimaryLight;
+      padding: $dimentionsBaseSmall / 2 $dimentionsBaseSmall
+        $dimentionsBaseSmall / 2 $dimentionsBaseSmall;
+      border-radius: 24px;
+      margin-right: $dimentionsBaseSmall;
+      cursor: pointer;
+    }
+
+    &:checked ~ label {
+      background-color: var(--accent-color);
+    }
+  }
+}
+
+.chip-big {
+  @extend .chip;
+  input[type="radio"],
+  input[type="checkbox"] {
+    display: none;
+
+    & ~ label {
+      text-align: center;
+      cursor: pointer;
+      min-width: 96px;
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      border: none;
+      display: inline-block;
+      line-height: 32px;
+      color: var(--text-primary-color);
+      background-color: var(--window-color-secondary);
+      vertical-align: middle;
+      align-items: center;
+      text-decoration: none;
+      border: 1px solid var(--accent-color);
+      border-radius: 4px;
+    }
+
+    &:checked ~ label {
+      box-shadow: inset 0px 0px 0px 2px var(--accent-color);
+      background-color: var(--window-color-secondary);
+    }
+  }
+}
+
+/*Buttons*/
+
+.btn {
+  @extend .button-text;
+  text-align: center;
+  cursor: pointer;
+  min-width: 96px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: none;
+  display: inline-block;
+  line-height: $dimentionsButtonHeight;
+  color: var(--accent-color);
+  background-color: var(--window-color-secondary);
+  vertical-align: middle;
+  align-items: center;
+  text-decoration: none;
+
+  img {
+    height: $dimentionsButtonHeight;
+    width: auto;
+  }
+  &.with-border {
+    border: 1px solid var(--accent-color);
+  }
+
+  &.btn-action {
+    padding: 2px;
+    min-width: 32px;
+    width: 32px;
+    min-height: 32px;
+    height: 32px;
+    line-height: 24px;
+    border-radius: 4px;
+    font-size: 0.75rem !important;
+    color: var(--text-primary-color) !important;
+  }
+
+  &.btn-floating {
+    min-width: 56px;
+    width: 56px;
+    min-height: 56px;
+    height: 56px;
+    border-radius: 50%;
+    font-size: 0.75rem !important;
+    background-color: var(--accent-color);
+    color: $lightColor;
+    padding: 0;
+    > .material-icons {
+      width: 56px;
+      height: 56px;
+      line-height: 56px;
+    }
+  }
+
+  &.btn-small {
+    line-height: $dimentionsButtonHeightSmall;
+    img {
+      height: $dimentionsButtonHeightSmall;
+    }
+  }
+
+  &.btn-flat {
+    border: 0px;
+  }
+
+  &.btn-round {
+    border-radius: $roundNormal;
+  }
+
+  &.btn-round-extra {
+    border-radius: 48px;
+  }
+
+  &.btn-accent {
+    background-color: var(--accent-color);
+    color: $lightColor;
+  }
+
+  &.btn-accent-gradient {
+    background: $colorAccentGradient;
+    color: $lightColor;
+    border-color: transparent;
+  }
+
+  &:hover {
+    filter: brightness(90%);
+    transition: background-color 0.8s linear;
+  }
+  &:focus {
+    outline: 0;
+  }
+  &:active {
+    filter: brightness(75%);
+  }
+
+  .prefix {
+    vertical-align: middle;
+    padding-right: 8px;
+  }
+
+  .postfix {
+    vertical-align: middle;
+    padding-left: 8px;
+  }
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background-color: #8842d5;
+  border: none;
+  color: white;
+  padding: 18px 36px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input:focus,
+textarea:focus {
+  margin-bottom: -1px;
+  margin-top: -1px;
+  margin-right: -1px;
+  margin-left: -1px;
+  // box-shadow: inset 0px 0px 0px 2px var(--accent-color);
+  border-bottom: solid 2px var(--accent-color);
+  border-top: solid 2px var(--accent-color);
+  border-right: solid 2px var(--accent-color);
+  border-left: solid 2px var(--accent-color);
+  transition: border-bottom 0.1s ease-in, margin-bottom 0.1s ease-in,
+    border-right 0.2s ease-in, margin-right 0.2s ease-in,
+    border-top 0.3s ease-in, margin-top 0.3s ease-in, border-left 0.4s ease-in,
+    margin-left 0.4s ease-in;
+}
+
+label {
+  font-size: 0.8em;
+}
+
+.help-text {
+  padding: 4px;
+  color: #a1a1a1;
+  font-size: 0.8em;
+}
+
+.input-effect {
+  position: relative;
+  padding-top: 8px;
+
+  & > input + label {
+    top: 16px;
+    left: 8px;
+    position: absolute;
+    font-size: 1em;
+    color: $colorTextSecondary;
+    transition: 0.2s ease-in;
+  }
+  & > input:not(:placeholder-shown) + label,
+  & > input:focus + label {
+    top: -8px;
+    left: 0;
+    font-size: 0.8em;
+    transition: 0.2s ease-in;
+  }
+  & input:focus + label {
+    color: var(--accent-color);
+  }
+}
+
+/*Invalid either with a pattern or with a class .invalid*/
+textarea:invalid:not([value]):not(:focus),
+input:invalid:not([value]):not(:focus),
+input.invalid:not([value]):not(:focus),
+textarea.invalid:not([value]):not(:focus) {
+  border: solid 2px var(--color-error);
+  margin: -1px;
+  color: var(--color-error);
+
+  + span,
+  ~ label {
+    color: var(--color-error) !important;
+  }
+}
+
+.autocomplete-results {
+  position: relative;
+
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: none;
+  &.visible {
+    position: relative;
+    display: inline-block !important;
+  }
+  .list {
+    width: 100%;
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-top: none;
+    z-index: 99;
+  }
+  a {
+    width: 100%;
+  }
+}

@@ -1,0 +1,42 @@
+$img-small: 32px;
+$img-mid: 64px;
+$img-large: 128px;
+a img,
+.img-line img {
+  margin: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.img-small {
+  height: $img-small;
+  width: $img-small;
+}
+
+.img-mid {
+  height: $img-mid;
+  width: $img-mid;
+}
+
+.img-large {
+  height: $img-large;
+  width: $img-large;
+}
+
+.img-cover {
+  object-fit: cover;
+}
+
+.img-contain {
+  object-fit: contain;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+.img-backdrop {
+  display: inline-block;
+  padding: 2px;
+  background-color: #f1f1f1;
+}
