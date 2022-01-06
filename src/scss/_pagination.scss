@@ -1,0 +1,13 @@
+.pagination {
+  text-align: center;
+  margin: 8px;
+
+  button,
+  a {
+    @extend .btn;
+    @extend .btn.with-border;
+    &.active {
+      @extend .btn.btn-accent;
+    }
+  }
+}
