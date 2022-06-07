@@ -266,6 +266,23 @@ video {
   padding: $dimentionsBase;
 }
 
+.container-fixed {
+  max-width:1200px;
+  margin: auto !important;
+  padding: $dimentionsBase;
+}
+
+.container-fixed-m {
+  max-width:1024px;
+  margin: auto !important;
+  padding: $dimentionsBase;
+}
+.container-fixed-s {
+  max-width:700px;
+  margin: auto !important;
+  padding: $dimentionsBase;
+}
+
 .material-icons {
   font-family: "Material Icons";
   font-weight: normal;

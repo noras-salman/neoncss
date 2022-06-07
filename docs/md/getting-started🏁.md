@@ -1,21 +1,21 @@
 ## Getting started
 
-##### From CDN:
+#### From CDN:
 
-CSS:
+##### CSS
 
 ```
 https://cdn.jsdelivr.net/gh/noras-salman/neoncss/release/latest/css/neoncss.min.css
 
 ```
 
-JS:
+##### JS
 
 ```
 https://cdn.jsdelivr.net/gh/noras-salman/neoncss/release/latest/js/neoncss.min.js
 ```
 
-##### Template
+#### Template
 
 ```html
 <!DOCTYPE html>

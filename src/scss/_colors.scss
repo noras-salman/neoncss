@@ -102,3 +102,8 @@ $colorAccentGradient: linear-gradient(
 .secondary {
   color: $colorTextSecondary;
 }
+
+
+.gradient-bg {
+  background: $colorAccentGradient
+}

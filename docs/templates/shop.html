@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop page</title>
+    <link rel="stylesheet" href="../../dist/css/neoncss.min.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --window-color: #fff;
+        --window-color-secondary: #fefefe;
+        --accent-color: #880081;
+        --accent-color-dark: #001c36;
+        --accent-secondary-color: #4600eb99;
+        --text-primary-color: #000000d9;
+        --color-error: #da5e5a;
+      }
+      .search-box {
+        padding: 16px;
+      }
+
+      .input-icon {
+        position: relative;
+      }
+
+      .postfix {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 40px;
+        text-align: center;
+        line-height: 49px;
+      }
+
+      .card {
+        border-radius: 12px;
+      }
+      .card .card-cover img {
+        border-radius: 12px 12px 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar gradient-bg">
+      <div class="brand">
+        <a href="#">My Shop</a>
+      </div>
+      <div class="nav-menu">
+        <ul>
+          <li>
+            <a href="#"> My Orders </a>
+            <a href="#">
+              <span class="icon-badge">
+                <span class="material-icons">favorite_outline</span>
+              </span>
+            </a>
+            <a href="#">
+              <span class="icon-badge">
+                <span class="material-icons">shopping_cart</span>
+                <span id="dark_mode_toggle_badge" class="badge">0</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fixed-s">
+      <div class="input input-icon">
+        <input
+          class="search-box"
+          type="text"
+          placeholder="Search for products, brands and more.."
+        />
+        <i class="material-icons postfix">search</i>
+      </div>
+    </div>
+
+    <div class="container-fixed">
+      <div class="section">
+        <div class="banner">
+          <img
+            src="https://images.pexels.com/photos/2721977/pexels-photo-2721977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
+
+          <div class="banner-overlay banner-overlay-gradient">
+            <div class="vertical-aligner">
+              <div class="container">
+                <div class="banner-title">Special offers</div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col card">
+          <div class="card-cover">
+            <img
+              src="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <div class="card-cover-title">
+              <h5><span style="text-decoration: line-through">60.00$</span></h5>
+              <div class="subtitle">50% OFF</div>
+              <div class="caption">Limited offer until 2023</div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- <button class="btn btn-action btn-flat">
+                <span class="material-icons">favorite_outline</span>
+              </button> -->
+
+            <div class="center-text">
+              <h6>Card with cover</h6>
+              <p>Lorem ipsum dolor sit amet...</p>
+
+              <div class="row">
+                <div class="col">
+                  <div class="vertical-aligner">1 x 30ml</div>
+                </div>
+                <div class="col">
+                  <h5>
+                    <b> 30$</b>
+                  </h5>
+                </div>
+              </div>
+              <button
+                class="btn btn-round-extra accent-bg white btn-small input"
+              >
+                Add to cart
+              </button>
+              <div>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">remove</span>
+                </button>
+                <span class="padding-8">1</span>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col card">
+          <div class="card-cover">
+            <img
+              src="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <div class="card-cover-title">
+              <h5><span style="text-decoration: line-through">60.00$</span></h5>
+              <div class="subtitle">50% OFF</div>
+              <div class="caption">Limited offer until 2023</div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- <button class="btn btn-action btn-flat">
+                  <span class="material-icons">favorite_outline</span>
+                </button> -->
+
+            <div class="center-text">
+              <h6>Card with cover</h6>
+              <p>Lorem ipsum dolor sit amet...</p>
+
+              <div class="row">
+                <div class="col">
+                  <div class="vertical-aligner">1 x 30ml</div>
+                </div>
+                <div class="col">
+                  <h5>
+                    <b> 30$</b>
+                  </h5>
+                </div>
+              </div>
+              <button
+                class="btn btn-round-extra accent-bg white btn-small input"
+              >
+                Add to cart
+              </button>
+              <div>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">remove</span>
+                </button>
+                <span class="padding-8">1</span>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col card">
+          <div class="card-cover">
+            <img
+              src="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <div class="card-cover-title">
+              <h5><span style="text-decoration: line-through">60.00$</span></h5>
+              <div class="subtitle">50% OFF</div>
+              <div class="caption">Limited offer until 2023</div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- <button class="btn btn-action btn-flat">
+                  <span class="material-icons">favorite_outline</span>
+                </button> -->
+
+            <div class="center-text">
+              <h6>Card with cover</h6>
+              <p>Lorem ipsum dolor sit amet...</p>
+
+              <div class="row">
+                <div class="col">
+                  <div class="vertical-aligner">1 x 30ml</div>
+                </div>
+                <div class="col">
+                  <h5>
+                    <b> 30$</b>
+                  </h5>
+                </div>
+              </div>
+              <button
+                class="btn btn-round-extra accent-bg white btn-small input"
+              >
+                Add to cart
+              </button>
+              <div>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">remove</span>
+                </button>
+                <span class="padding-8">1</span>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col card">
+          <div class="card-cover">
+            <img
+              src="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <div class="card-cover-title">
+              <h5><span style="text-decoration: line-through">60.00$</span></h5>
+              <div class="subtitle">50% OFF</div>
+              <div class="caption">Limited offer until 2023</div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- <button class="btn btn-action btn-flat">
+                  <span class="material-icons">favorite_outline</span>
+                </button> -->
+
+            <div class="center-text">
+              <h6>Card with cover</h6>
+              <p>Lorem ipsum dolor sit amet...</p>
+
+              <div class="row">
+                <div class="col">
+                  <div class="vertical-aligner">1 x 30ml</div>
+                </div>
+                <div class="col">
+                  <h5>
+                    <b> 30$</b>
+                  </h5>
+                </div>
+              </div>
+              <button
+                class="btn btn-round-extra accent-bg white btn-small input"
+              >
+                Add to cart
+              </button>
+              <div>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">remove</span>
+                </button>
+                <span class="padding-8">1</span>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col card">
+          <div class="card-cover">
+            <img
+              src="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <div class="card-cover-title">
+              <h5><span style="text-decoration: line-through">60.00$</span></h5>
+              <div class="subtitle">50% OFF</div>
+              <div class="caption">Limited offer until 2023</div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- <button class="btn btn-action btn-flat">
+                  <span class="material-icons">favorite_outline</span>
+                </button> -->
+
+            <div class="center-text">
+              <h6>Card with cover</h6>
+              <p>Lorem ipsum dolor sit amet...</p>
+
+              <div class="row">
+                <div class="col">
+                  <div class="vertical-aligner">1 x 30ml</div>
+                </div>
+                <div class="col">
+                  <h5>
+                    <b> 30$</b>
+                  </h5>
+                </div>
+              </div>
+              <button
+                class="btn btn-round-extra accent-bg white btn-small input"
+              >
+                Add to cart
+              </button>
+              <div>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">remove</span>
+                </button>
+                <span class="padding-8">1</span>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col card">
+          <div class="card-cover">
+            <img
+              src="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <div class="card-cover-title">
+              <h5><span style="text-decoration: line-through">60.00$</span></h5>
+              <div class="subtitle">50% OFF</div>
+              <div class="caption">Limited offer until 2023</div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- <button class="btn btn-action btn-flat">
+                <span class="material-icons">favorite_outline</span>
+              </button> -->
+
+            <div class="center-text">
+              <h6>Card with cover</h6>
+              <p>Lorem ipsum dolor sit amet...</p>
+
+              <div class="row">
+                <div class="col">
+                  <div class="vertical-aligner">1 x 30ml</div>
+                </div>
+                <div class="col">
+                  <h5>
+                    <b> 30$</b>
+                  </h5>
+                </div>
+              </div>
+              <button
+                class="btn btn-round-extra accent-bg white btn-small input"
+              >
+                Add to cart
+              </button>
+              <div>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">remove</span>
+                </button>
+                <span class="padding-8">1</span>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col card">
+          <div class="card-cover">
+            <img
+              src="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <div class="card-cover-title">
+              <h5><span style="text-decoration: line-through">60.00$</span></h5>
+              <div class="subtitle">50% OFF</div>
+              <div class="caption">Limited offer until 2023</div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- <button class="btn btn-action btn-flat">
+                  <span class="material-icons">favorite_outline</span>
+                </button> -->
+
+            <div class="center-text">
+              <h6>Card with cover</h6>
+              <p>Lorem ipsum dolor sit amet...</p>
+
+              <div class="row">
+                <div class="col">
+                  <div class="vertical-aligner">1 x 30ml</div>
+                </div>
+                <div class="col">
+                  <h5>
+                    <b> 30$</b>
+                  </h5>
+                </div>
+              </div>
+              <button
+                class="btn btn-round-extra accent-bg white btn-small input"
+              >
+                Add to cart
+              </button>
+              <div>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">remove</span>
+                </button>
+                <span class="padding-8">1</span>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col card">
+          <div class="card-cover">
+            <img
+              src="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <div class="card-cover-title">
+              <h5><span style="text-decoration: line-through">60.00$</span></h5>
+              <div class="subtitle">50% OFF</div>
+              <div class="caption">Limited offer until 2023</div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- <button class="btn btn-action btn-flat">
+                  <span class="material-icons">favorite_outline</span>
+                </button> -->
+
+            <div class="center-text">
+              <h6>Card with cover</h6>
+              <p>Lorem ipsum dolor sit amet...</p>
+
+              <div class="row">
+                <div class="col">
+                  <div class="vertical-aligner">1 x 30ml</div>
+                </div>
+                <div class="col">
+                  <h5>
+                    <b> 30$</b>
+                  </h5>
+                </div>
+              </div>
+              <button
+                class="btn btn-round-extra accent-bg white btn-small input"
+              >
+                Add to cart
+              </button>
+              <div>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">remove</span>
+                </button>
+                <span class="padding-8">1</span>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col card">
+          <div class="card-cover">
+            <img
+              src="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <div class="card-cover-title">
+              <h5><span style="text-decoration: line-through">60.00$</span></h5>
+              <div class="subtitle">50% OFF</div>
+              <div class="caption">Limited offer until 2023</div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- <button class="btn btn-action btn-flat">
+                  <span class="material-icons">favorite_outline</span>
+                </button> -->
+
+            <div class="center-text">
+              <h6>Card with cover</h6>
+              <p>Lorem ipsum dolor sit amet...</p>
+
+              <div class="row">
+                <div class="col">
+                  <div class="vertical-aligner">1 x 30ml</div>
+                </div>
+                <div class="col">
+                  <h5>
+                    <b> 30$</b>
+                  </h5>
+                </div>
+              </div>
+              <button
+                class="btn btn-round-extra accent-bg white btn-small input"
+              >
+                Add to cart
+              </button>
+              <div>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">remove</span>
+                </button>
+                <span class="padding-8">1</span>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col card">
+          <div class="card-cover">
+            <img
+              src="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <div class="card-cover-title">
+              <h5><span style="text-decoration: line-through">60.00$</span></h5>
+              <div class="subtitle">50% OFF</div>
+              <div class="caption">Limited offer until 2023</div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- <button class="btn btn-action btn-flat">
+                  <span class="material-icons">favorite_outline</span>
+                </button> -->
+
+            <div class="center-text">
+              <h6>Card with cover</h6>
+              <p>Lorem ipsum dolor sit amet...</p>
+
+              <div class="row">
+                <div class="col">
+                  <div class="vertical-aligner">1 x 30ml</div>
+                </div>
+                <div class="col">
+                  <h5>
+                    <b> 30$</b>
+                  </h5>
+                </div>
+              </div>
+              <button
+                class="btn btn-round-extra accent-bg white btn-small input"
+              >
+                Add to cart
+              </button>
+              <div>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">remove</span>
+                </button>
+                <span class="padding-8">1</span>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col card">
+          <div class="card-cover">
+            <img
+              src="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <div class="card-cover-title">
+              <h5><span style="text-decoration: line-through">60.00$</span></h5>
+              <div class="subtitle">50% OFF</div>
+              <div class="caption">Limited offer until 2023</div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- <button class="btn btn-action btn-flat">
+                <span class="material-icons">favorite_outline</span>
+              </button> -->
+
+            <div class="center-text">
+              <h6>Card with cover</h6>
+              <p>Lorem ipsum dolor sit amet...</p>
+
+              <div class="row">
+                <div class="col">
+                  <div class="vertical-aligner">1 x 30ml</div>
+                </div>
+                <div class="col">
+                  <h5>
+                    <b> 30$</b>
+                  </h5>
+                </div>
+              </div>
+              <button
+                class="btn btn-round-extra accent-bg white btn-small input"
+              >
+                Add to cart
+              </button>
+              <div>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">remove</span>
+                </button>
+                <span class="padding-8">1</span>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col card">
+          <div class="card-cover">
+            <img
+              src="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <div class="card-cover-title">
+              <h5><span style="text-decoration: line-through">60.00$</span></h5>
+              <div class="subtitle">50% OFF</div>
+              <div class="caption">Limited offer until 2023</div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- <button class="btn btn-action btn-flat">
+                  <span class="material-icons">favorite_outline</span>
+                </button> -->
+
+            <div class="center-text">
+              <h6>Card with cover</h6>
+              <p>Lorem ipsum dolor sit amet...</p>
+
+              <div class="row">
+                <div class="col">
+                  <div class="vertical-aligner">1 x 30ml</div>
+                </div>
+                <div class="col">
+                  <h5>
+                    <b> 30$</b>
+                  </h5>
+                </div>
+              </div>
+              <button
+                class="btn btn-round-extra accent-bg white btn-small input"
+              >
+                Add to cart
+              </button>
+              <div>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">remove</span>
+                </button>
+                <span class="padding-8">1</span>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col card">
+          <div class="card-cover">
+            <img
+              src="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <div class="card-cover-title">
+              <h5><span style="text-decoration: line-through">60.00$</span></h5>
+              <div class="subtitle">50% OFF</div>
+              <div class="caption">Limited offer until 2023</div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- <button class="btn btn-action btn-flat">
+                  <span class="material-icons">favorite_outline</span>
+                </button> -->
+
+            <div class="center-text">
+              <h6>Card with cover</h6>
+              <p>Lorem ipsum dolor sit amet...</p>
+
+              <div class="row">
+                <div class="col">
+                  <div class="vertical-aligner">1 x 30ml</div>
+                </div>
+                <div class="col">
+                  <h5>
+                    <b> 30$</b>
+                  </h5>
+                </div>
+              </div>
+              <button
+                class="btn btn-round-extra accent-bg white btn-small input"
+              >
+                Add to cart
+              </button>
+              <div>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">remove</span>
+                </button>
+                <span class="padding-8">1</span>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col card">
+          <div class="card-cover">
+            <img
+              src="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <div class="card-cover-title">
+              <h5><span style="text-decoration: line-through">60.00$</span></h5>
+              <div class="subtitle">50% OFF</div>
+              <div class="caption">Limited offer until 2023</div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- <button class="btn btn-action btn-flat">
+                  <span class="material-icons">favorite_outline</span>
+                </button> -->
+
+            <div class="center-text">
+              <h6>Card with cover</h6>
+              <p>Lorem ipsum dolor sit amet...</p>
+
+              <div class="row">
+                <div class="col">
+                  <div class="vertical-aligner">1 x 30ml</div>
+                </div>
+                <div class="col">
+                  <h5>
+                    <b> 30$</b>
+                  </h5>
+                </div>
+              </div>
+              <button
+                class="btn btn-round-extra accent-bg white btn-small input"
+              >
+                Add to cart
+              </button>
+              <div>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">remove</span>
+                </button>
+                <span class="padding-8">1</span>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col card">
+          <div class="card-cover">
+            <img
+              src="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <div class="card-cover-title">
+              <h5><span style="text-decoration: line-through">60.00$</span></h5>
+              <div class="subtitle">50% OFF</div>
+              <div class="caption">Limited offer until 2023</div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- <button class="btn btn-action btn-flat">
+                  <span class="material-icons">favorite_outline</span>
+                </button> -->
+
+            <div class="center-text">
+              <h6>Card with cover</h6>
+              <p>Lorem ipsum dolor sit amet...</p>
+
+              <div class="row">
+                <div class="col">
+                  <div class="vertical-aligner">1 x 30ml</div>
+                </div>
+                <div class="col">
+                  <h5>
+                    <b> 30$</b>
+                  </h5>
+                </div>
+              </div>
+              <button
+                class="btn btn-round-extra accent-bg white btn-small input"
+              >
+                Add to cart
+              </button>
+              <div>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">remove</span>
+                </button>
+                <span class="padding-8">1</span>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col card">
+          <div class="card-cover">
+            <img
+              src="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <div class="card-cover-title">
+              <h5><span style="text-decoration: line-through">60.00$</span></h5>
+              <div class="subtitle">50% OFF</div>
+              <div class="caption">Limited offer until 2023</div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- <button class="btn btn-action btn-flat">
+                <span class="material-icons">favorite_outline</span>
+              </button> -->
+
+            <div class="center-text">
+              <h6>Card with cover</h6>
+              <p>Lorem ipsum dolor sit amet...</p>
+
+              <div class="row">
+                <div class="col">
+                  <div class="vertical-aligner">1 x 30ml</div>
+                </div>
+                <div class="col">
+                  <h5>
+                    <b> 30$</b>
+                  </h5>
+                </div>
+              </div>
+              <button
+                class="btn btn-round-extra accent-bg white btn-small input"
+              >
+                Add to cart
+              </button>
+              <div>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">remove</span>
+                </button>
+                <span class="padding-8">1</span>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col card">
+          <div class="card-cover">
+            <img
+              src="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <div class="card-cover-title">
+              <h5><span style="text-decoration: line-through">60.00$</span></h5>
+              <div class="subtitle">50% OFF</div>
+              <div class="caption">Limited offer until 2023</div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- <button class="btn btn-action btn-flat">
+                  <span class="material-icons">favorite_outline</span>
+                </button> -->
+
+            <div class="center-text">
+              <h6>Card with cover</h6>
+              <p>Lorem ipsum dolor sit amet...</p>
+
+              <div class="row">
+                <div class="col">
+                  <div class="vertical-aligner">1 x 30ml</div>
+                </div>
+                <div class="col">
+                  <h5>
+                    <b> 30$</b>
+                  </h5>
+                </div>
+              </div>
+              <button
+                class="btn btn-round-extra accent-bg white btn-small input"
+              >
+                Add to cart
+              </button>
+              <div>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">remove</span>
+                </button>
+                <span class="padding-8">1</span>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col card">
+          <div class="card-cover">
+            <img
+              src="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <div class="card-cover-title">
+              <h5><span style="text-decoration: line-through">60.00$</span></h5>
+              <div class="subtitle">50% OFF</div>
+              <div class="caption">Limited offer until 2023</div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- <button class="btn btn-action btn-flat">
+                  <span class="material-icons">favorite_outline</span>
+                </button> -->
+
+            <div class="center-text">
+              <h6>Card with cover</h6>
+              <p>Lorem ipsum dolor sit amet...</p>
+
+              <div class="row">
+                <div class="col">
+                  <div class="vertical-aligner">1 x 30ml</div>
+                </div>
+                <div class="col">
+                  <h5>
+                    <b> 30$</b>
+                  </h5>
+                </div>
+              </div>
+              <button
+                class="btn btn-round-extra accent-bg white btn-small input"
+              >
+                Add to cart
+              </button>
+              <div>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">remove</span>
+                </button>
+                <span class="padding-8">1</span>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col card">
+          <div class="card-cover">
+            <img
+              src="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <div class="card-cover-title">
+              <h5><span style="text-decoration: line-through">60.00$</span></h5>
+              <div class="subtitle">50% OFF</div>
+              <div class="caption">Limited offer until 2023</div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- <button class="btn btn-action btn-flat">
+                  <span class="material-icons">favorite_outline</span>
+                </button> -->
+
+            <div class="center-text">
+              <h6>Card with cover</h6>
+              <p>Lorem ipsum dolor sit amet...</p>
+
+              <div class="row">
+                <div class="col">
+                  <div class="vertical-aligner">1 x 30ml</div>
+                </div>
+                <div class="col">
+                  <h5>
+                    <b> 30$</b>
+                  </h5>
+                </div>
+              </div>
+              <button
+                class="btn btn-round-extra accent-bg white btn-small input"
+              >
+                Add to cart
+              </button>
+              <div>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">remove</span>
+                </button>
+                <span class="padding-8">1</span>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col card">
+          <div class="card-cover">
+            <img
+              src="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+            <div class="card-cover-title">
+              <h5><span style="text-decoration: line-through">60.00$</span></h5>
+              <div class="subtitle">50% OFF</div>
+              <div class="caption">Limited offer until 2023</div>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- <button class="btn btn-action btn-flat">
+                  <span class="material-icons">favorite_outline</span>
+                </button> -->
+
+            <div class="center-text">
+              <h6>Card with cover</h6>
+              <p>Lorem ipsum dolor sit amet...</p>
+
+              <div class="row">
+                <div class="col">
+                  <div class="vertical-aligner">1 x 30ml</div>
+                </div>
+                <div class="col">
+                  <h5>
+                    <b> 30$</b>
+                  </h5>
+                </div>
+              </div>
+              <button
+                class="btn btn-round-extra accent-bg white btn-small input"
+              >
+                Add to cart
+              </button>
+              <div>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">remove</span>
+                </button>
+                <span class="padding-8">1</span>
+                <button class="btn btn-action btn-flat">
+                  <span class="material-icons">add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="row">
+        <div class="col">
+          <p>Copyright © 2021 <sup>®</sup></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../../dist/css/neoncss.min.css"></script>
+  </body>
+</html>

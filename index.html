@@ -16,7 +16,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <script src="https://cdn.rawgit.com/showdownjs/showdown/1.9.0/dist/showdown.min.js"></script>
-    <script src="docs/demo.js"></script>
+    <script src="docs/js/demo.js"></script>
   </head>
 
   <body>
@@ -42,29 +42,40 @@
 
     <nav class="navbar fixed">
       <div class="brand">
-        <a href="/neoncss" >NeonCss</a>
+        <a href="/neoncss">NeonCss</a>
       </div>
 
       <div class="nav-menu">
         <ul>
-         
-          <li><a href="/neoncss">Docs</a></li>
-          <li><a href="demo.html">Demo</a></li>
-          <li><a href="docs/templates/login.html">Login <span class="label">Example</span></a></li>
-          <li><a href="docs/templates/signup.html">Signup <span class="label">Example</span></a></li>
- 
-       
-           
           <li>
-            <a  id="dark_mode_toggle">
+            <a href="docs/templates/blog.html"
+              >blog <span class="label">Example</span></a
+            >
+          </li>
+          <li>
+            <a href="docs/templates/shop.html"
+              >shop <span class="label">Example</span></a
+            >
+          </li>
+          <li>
+            <a href="docs/templates/login.html"
+              >Login <span class="label">Example</span></a
+            >
+          </li>
+          <li>
+            <a href="docs/templates/signup.html"
+              >Signup <span class="label">Example</span></a
+            >
+          </li>
+
+          <li>
+            <a id="dark_mode_toggle">
               <span class="icon-badge">
                 <span class="material-icons">dark_mode</span>
                 <span id="dark_mode_toggle_badge" class="badge">OFF</span>
               </span>
             </a>
           </li>
-
-          
         </ul>
       </div>
     </nav>
@@ -74,9 +85,7 @@
         <div class="input-box padding-16">
           <input placeholder="Search" type="text" id="search" />
         </div>
-        <ul class="list" id="sidebarlist">
-       
-        </ul>
+        <ul class="list" id="sidebarlist"></ul>
       </div>
       <div>
         <div class="banner">
@@ -97,697 +106,27 @@
                   <p class="overline">By Noras Salman</p>
                   <p class="caption">
                     Creds to: Mahran Omairy
-                    <br>Image creds: Pexels.com
+                    <br />Image creds: Pexels.com
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
         <div class="container">
           <!-- -------------------------------------------------- -->
           <div id="documentation"></div>
-     
-
- 
-        <!-- -------------------------------------------------- -->
-
-        <div class="section">
-          <div class="input-box">
-            
-            <h5>Autocomplete</h5>
-            <div class="divider-inline">Simple</div>
-            <div class="input">
-              <label>Label</label>
-              <input
-                id="autocomplete1"
-                class="autocomplete"
-                type="text"
-                placeholder="Country"
-              />
-            </div>
-            <div class="divider-inline">Custom</div>
-            <div class="input">
-              <label>Label</label>
-              <input
-                id="autocomplete2"
-                class="autocomplete"
-                type="text"
-                placeholder="Country"
-              />
-            </div>
-           
-          </div>
         </div>
-
-       
-
-        <div class="divider"></div>
-       
-        <!-- -------------------------------------------------- -->
-
-        <div class="section">
-          <div class="section-title">
-            <h2>Navigation</h2>
-          </div>
-
-          <h4>Navbar</h4>
-          <nav class="navbar">
-            <div class="brand">
-              <a href="#">Brand</a>
-            </div>
-            <div class="nav-menu">
-              <ul>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-              </ul>
-            </div>
-          </nav>
-
-          <h4>Navigation menu</h4>
-          <nav class="white-bg black">
-            <div class="brand">
-              <a href="#">
-                <img
-                  src="https://4m4you.com/wp-content/uploads/2020/06/logo-placeholder-300x120.png"
-                  alt=""
-                />
-              </a>
-            </div>
-            <div class="nav-menu">
-              <ul>
-                <li><a class="black active" href="#">Active Link</a></li>
-                <li><a href="#" class="black">Link</a></li>
-                <li><a href="#" class="black">Link</a></li>
-                <li><a href="#" class="black">Link</a></li>
-                <li><a href="#" class="black">Link</a></li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-        <div class="divider"></div>
-        <!-- -------------------------------------------------- -->
-        <div class="section">
-          <div class="section-title">
-            <h2>Lists</h2>
-          </div>
-
-          <h4>Vertical</h4>
-          <ul class="list">
-            <li>List item <span class="label">label</span></li>
-            <li>List item <span class="badge">122</span></li>
-            <li>List item</li>
-            <ul class="list sublist">
-              <li>List item</li>
-              <li class="active">Active list item</li>
-              <li>List item</li>
-              <li>List item</li>
-              <ul class="list sublist">
-                <li>List item</li>
-                <li>List item</li>
-              </ul>
-            </ul>
-          </ul>
-
-          <h4>Horizontal</h4>
-          <ul class="list horizontal">
-            <li>List item</li>
-            <li>List item</li>
-            <li>
-              <a href="#">List item <span class="badge">22</span></a>
-            </li>
-            <li>List item</li>
-            <li>
-              <div class="dropdown">
-                <span>Dropdown</span>
-                <ul class="list">
-                  <li>List item <span class="label">label</span></li>
-                  <li>List item <span class="badge">122</span></li>
-                  <li>List item <span class="badge sufix">122</span></li>
-                  <li>List item</li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-
-          <h4>Border</h4>
-          <ul class="list">
-            <li class="border">
-              <div class="row">
-                <div class="col-2">
-                  <img
-                    class="img-mid img-cover img-circle"
-                    src="https://images.pexels.com/photos/1896755/pexels-photo-1896755.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-                    alt=""
-                  />
-                </div>
-                <div class="col-7">
-                  <b>Veronica</b>
-                  <p>Hey! What's up?</p>
-                </div>
-                <div class="col-3">
-                  <label>Today 15:24</label>
-                  <div class="badge">3</div>
-                </div>
-              </div>
-            </li>
-            <li class="border">
-              <div class="row">
-                <div class="col-2">
-                  <img
-                    class="img-mid img-cover img-circle"
-                    src="  https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                    alt=""
-                  />
-                </div>
-                <div class="col-7">
-                  <b>Vivik</b>
-                  <p>Dude, did you finish the report?</p>
-                </div>
-                <div class="col-3">
-                  <label>Yesterday 15:11</label>
-                  <div class="badge">1</div>
-                </div>
-              </div>
-            </li>
-          </ul>
-
-          <h4>Bubble</h4>
-          <ul class="list">
-            <li class="bubble sent">
-              neoncss is such an awesome thing
-              <br />
-              <br />
-              <label>13:37</label>
-            </li>
-            <li class="bubble received">
-              😲 right?
-
-              <br />
-              <br />
-              <label>13:37</label>
-            </li>
-          </ul>
-
-          <h4>Dropdown</h4>
-          <div class="dropdown">
-            <span>Dropdown</span>
-            <ul class="list">
-              <li>List item <span class="label">label</span></li>
-              <li>List item <span class="badge">122</span></li>
-              <li>List item <span class="badge sufix">122</span></li>
-              <li>List item</li>
-              <li>List item</li>
-            </ul>
-          </div>
-        </div>
-        <div class="divider"></div>
-
-        <!-- -------------------------------------------------- -->
-
-        <div class="section">
-          <div class="section-title">
-            <h2>Banners</h2>
-          </div>
-          <div class="banner">
-            <img
-              src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-              alt=""
-            />
-          </div>
-
-          <div class="banner">
-            <video autoplay muted loop>
-              <source
-                type="video/mp4"
-                src="https://player.vimeo.com/external/385147580.sd.mp4?s=e6a0ffe2125b290636bd7a765e492e900b9e4013&profile_id=139&oauth2_token_id=57447761"
-              />
-            </video>
-            <div class="banner-overlay">
-              <div class="banner-content">
-                <div class="banner-title">Lorem ipsum</div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
+        <footer>
+          <div class="row">
+            <div class="col">
+              <p>Copyright © 2021 <sup>®</sup></p>
             </div>
           </div>
-
-          <div class="banner">
-            <img
-              src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-              alt=""
-            />
-            <div class="banner-overlay">
-              <div class="banner-content">
-                <div class="banner-title">Lorem ipsum</div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="banner">
-            <img
-              src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-              alt=""
-            />
-            <div class="banner-overlay banner-overlay-gradient"></div>
-          </div>
-
-          <div class="banner banner-viewport">
-            <img
-              src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-              alt=""
-            />
-            <div class="banner-overlay banner-overlay-gradient">
-              <div class="vertical-aligner">
-                <div class="container">
-                  <div class="banner-title">Lorem ipsum</div>
-
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="divider"></div>
-        <!-- -------------------------------------------------- -->
-
-        <div class="section">
-          <div class="section-title">
-            <h2>Modals</h2>
-          </div>
-
-          <button class="btn btn-accent btn-round" action="modal" data="demo">
-            Open Modal
-          </button>
-
-          <div id="demo" class="modal">
-            <div class="modal-box modal-box-fixed">
-              <span class="modal-title">Modal title</span>
-              <div class="modal-content">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum
-                </p>
-              </div>
-
-              <div class="modal-footer">
-                <button class="btn btn-accent btn-small">ACTION</button>
-                <button class="btn btn-flat btn-small" action="dismiss-modal">
-                  CLOSE
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="divider"></div>
-
-      <div class="section">
-        <div class="section-title">carousel</div>
-
-        <div class="carousel">
-          <div class="item">
-            <img
-              src="https://images.pexels.com/photos/1896755/pexels-photo-1896755.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-              alt=""
-            />
-          </div>
-          <div class="item">
-            <img
-              src=" https://images.pexels.com/photos/1903871/pexels-photo-1903871.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-              alt=""
-            />
-          </div>
-          <div class="item">
-            <img
-              src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-              alt=""
-            />
-          </div>
-
-          <div class="carousel-indicator"></div>
-
-          <div class="carasoule-contorl next">
-            <div class="carasoule-contorl-btn"></div>
-          </div>
-          <div class="carasoule-contorl prev">
-            <div class="carasoule-contorl-btn"></div>
-          </div>
-        </div>
-
-        <div class="divider"></div>
-      </div> -->
-        <!-- -------------------------------------------------- -->
-
-        <!-- <div class="section">
-            <div class="section-title">
-                Input and forms
-            </div>
-        </div>
-        <div class="divider"></div> -->
-        <!-- -------------------------------------------------- -->
+        </footer>
       </div>
     </div>
 
     <script src="dist/js/neoncss.min.js"></script>
-
-    <script>
-      const countries = [
-        { name: "Afghanistan", code: "AF" },
-        { name: "Åland Islands", code: "AX" },
-        { name: "Albania", code: "AL" },
-        { name: "Algeria", code: "DZ" },
-        { name: "American Samoa", code: "AS" },
-        { name: "AndorrA", code: "AD" },
-        { name: "Angola", code: "AO" },
-        { name: "Anguilla", code: "AI" },
-        { name: "Antarctica", code: "AQ" },
-        { name: "Antigua and Barbuda", code: "AG" },
-        { name: "Argentina", code: "AR" },
-        { name: "Armenia", code: "AM" },
-        { name: "Aruba", code: "AW" },
-        { name: "Australia", code: "AU" },
-        { name: "Austria", code: "AT" },
-        { name: "Azerbaijan", code: "AZ" },
-        { name: "Bahamas", code: "BS" },
-        { name: "Bahrain", code: "BH" },
-        { name: "Bangladesh", code: "BD" },
-        { name: "Barbados", code: "BB" },
-        { name: "Belarus", code: "BY" },
-        { name: "Belgium", code: "BE" },
-        { name: "Belize", code: "BZ" },
-        { name: "Benin", code: "BJ" },
-        { name: "Bermuda", code: "BM" },
-        { name: "Bhutan", code: "BT" },
-        { name: "Bolivia", code: "BO" },
-        { name: "Bosnia and Herzegovina", code: "BA" },
-        { name: "Botswana", code: "BW" },
-        { name: "Bouvet Island", code: "BV" },
-        { name: "Brazil", code: "BR" },
-        { name: "British Indian Ocean Territory", code: "IO" },
-        { name: "Brunei Darussalam", code: "BN" },
-        { name: "Bulgaria", code: "BG" },
-        { name: "Burkina Faso", code: "BF" },
-        { name: "Burundi", code: "BI" },
-        { name: "Cambodia", code: "KH" },
-        { name: "Cameroon", code: "CM" },
-        { name: "Canada", code: "CA" },
-        { name: "Cape Verde", code: "CV" },
-        { name: "Cayman Islands", code: "KY" },
-        { name: "Central African Republic", code: "CF" },
-        { name: "Chad", code: "TD" },
-        { name: "Chile", code: "CL" },
-        { name: "China", code: "CN" },
-        { name: "Christmas Island", code: "CX" },
-        { name: "Cocos (Keeling) Islands", code: "CC" },
-        { name: "Colombia", code: "CO" },
-        { name: "Comoros", code: "KM" },
-        { name: "Congo", code: "CG" },
-        { name: "Congo, The Democratic Republic of the", code: "CD" },
-        { name: "Cook Islands", code: "CK" },
-        { name: "Costa Rica", code: "CR" },
-        { name: "Cote D'Ivoire", code: "CI" },
-        { name: "Croatia", code: "HR" },
-        { name: "Cuba", code: "CU" },
-        { name: "Cyprus", code: "CY" },
-        { name: "Czech Republic", code: "CZ" },
-        { name: "Denmark", code: "DK" },
-        { name: "Djibouti", code: "DJ" },
-        { name: "Dominica", code: "DM" },
-        { name: "Dominican Republic", code: "DO" },
-        { name: "Ecuador", code: "EC" },
-        { name: "Egypt", code: "EG" },
-        { name: "El Salvador", code: "SV" },
-        { name: "Equatorial Guinea", code: "GQ" },
-        { name: "Eritrea", code: "ER" },
-        { name: "Estonia", code: "EE" },
-        { name: "Ethiopia", code: "ET" },
-        { name: "Falkland Islands (Malvinas)", code: "FK" },
-        { name: "Faroe Islands", code: "FO" },
-        { name: "Fiji", code: "FJ" },
-        { name: "Finland", code: "FI" },
-        { name: "France", code: "FR" },
-        { name: "French Guiana", code: "GF" },
-        { name: "French Polynesia", code: "PF" },
-        { name: "French Southern Territories", code: "TF" },
-        { name: "Gabon", code: "GA" },
-        { name: "Gambia", code: "GM" },
-        { name: "Georgia", code: "GE" },
-        { name: "Germany", code: "DE" },
-        { name: "Ghana", code: "GH" },
-        { name: "Gibraltar", code: "GI" },
-        { name: "Greece", code: "GR" },
-        { name: "Greenland", code: "GL" },
-        { name: "Grenada", code: "GD" },
-        { name: "Guadeloupe", code: "GP" },
-        { name: "Guam", code: "GU" },
-        { name: "Guatemala", code: "GT" },
-        { name: "Guernsey", code: "GG" },
-        { name: "Guinea", code: "GN" },
-        { name: "Guinea-Bissau", code: "GW" },
-        { name: "Guyana", code: "GY" },
-        { name: "Haiti", code: "HT" },
-        { name: "Heard Island and Mcdonald Islands", code: "HM" },
-        { name: "Holy See (Vatican City State)", code: "VA" },
-        { name: "Honduras", code: "HN" },
-        { name: "Hong Kong", code: "HK" },
-        { name: "Hungary", code: "HU" },
-        { name: "Iceland", code: "IS" },
-        { name: "India", code: "IN" },
-        { name: "Indonesia", code: "ID" },
-        { name: "Iran, Islamic Republic Of", code: "IR" },
-        { name: "Iraq", code: "IQ" },
-        { name: "Ireland", code: "IE" },
-        { name: "Isle of Man", code: "IM" },
-        { name: "Israel", code: "IL" },
-        { name: "Italy", code: "IT" },
-        { name: "Jamaica", code: "JM" },
-        { name: "Japan", code: "JP" },
-        { name: "Jersey", code: "JE" },
-        { name: "Jordan", code: "JO" },
-        { name: "Kazakhstan", code: "KZ" },
-        { name: "Kenya", code: "KE" },
-        { name: "Kiribati", code: "KI" },
-        { name: "Korea, Democratic People'S Republic of", code: "KP" },
-        { name: "Korea, Republic of", code: "KR" },
-        { name: "Kuwait", code: "KW" },
-        { name: "Kyrgyzstan", code: "KG" },
-        { name: "Lao People'S Democratic Republic", code: "LA" },
-        { name: "Latvia", code: "LV" },
-        { name: "Lebanon", code: "LB" },
-        { name: "Lesotho", code: "LS" },
-        { name: "Liberia", code: "LR" },
-        { name: "Libyan Arab Jamahiriya", code: "LY" },
-        { name: "Liechtenstein", code: "LI" },
-        { name: "Lithuania", code: "LT" },
-        { name: "Luxembourg", code: "LU" },
-        { name: "Macao", code: "MO" },
-        { name: "Macedonia, The Former Yugoslav Republic of", code: "MK" },
-        { name: "Madagascar", code: "MG" },
-        { name: "Malawi", code: "MW" },
-        { name: "Malaysia", code: "MY" },
-        { name: "Maldives", code: "MV" },
-        { name: "Mali", code: "ML" },
-        { name: "Malta", code: "MT" },
-        { name: "Marshall Islands", code: "MH" },
-        { name: "Martinique", code: "MQ" },
-        { name: "Mauritania", code: "MR" },
-        { name: "Mauritius", code: "MU" },
-        { name: "Mayotte", code: "YT" },
-        { name: "Mexico", code: "MX" },
-        { name: "Micronesia, Federated States of", code: "FM" },
-        { name: "Moldova, Republic of", code: "MD" },
-        { name: "Monaco", code: "MC" },
-        { name: "Mongolia", code: "MN" },
-        { name: "Montserrat", code: "MS" },
-        { name: "Morocco", code: "MA" },
-        { name: "Mozambique", code: "MZ" },
-        { name: "Myanmar", code: "MM" },
-        { name: "Namibia", code: "NA" },
-        { name: "Nauru", code: "NR" },
-        { name: "Nepal", code: "NP" },
-        { name: "Netherlands", code: "NL" },
-        { name: "Netherlands Antilles", code: "AN" },
-        { name: "New Caledonia", code: "NC" },
-        { name: "New Zealand", code: "NZ" },
-        { name: "Nicaragua", code: "NI" },
-        { name: "Niger", code: "NE" },
-        { name: "Nigeria", code: "NG" },
-        { name: "Niue", code: "NU" },
-        { name: "Norfolk Island", code: "NF" },
-        { name: "Northern Mariana Islands", code: "MP" },
-        { name: "Norway", code: "NO" },
-        { name: "Oman", code: "OM" },
-        { name: "Pakistan", code: "PK" },
-        { name: "Palau", code: "PW" },
-        { name: "Palestinian Territory, Occupied", code: "PS" },
-        { name: "Panama", code: "PA" },
-        { name: "Papua New Guinea", code: "PG" },
-        { name: "Paraguay", code: "PY" },
-        { name: "Peru", code: "PE" },
-        { name: "Philippines", code: "PH" },
-        { name: "Pitcairn", code: "PN" },
-        { name: "Poland", code: "PL" },
-        { name: "Portugal", code: "PT" },
-        { name: "Puerto Rico", code: "PR" },
-        { name: "Qatar", code: "QA" },
-        { name: "Reunion", code: "RE" },
-        { name: "Romania", code: "RO" },
-        { name: "Russian Federation", code: "RU" },
-        { name: "RWANDA", code: "RW" },
-        { name: "Saint Helena", code: "SH" },
-        { name: "Saint Kitts and Nevis", code: "KN" },
-        { name: "Saint Lucia", code: "LC" },
-        { name: "Saint Pierre and Miquelon", code: "PM" },
-        { name: "Saint Vincent and the Grenadines", code: "VC" },
-        { name: "Samoa", code: "WS" },
-        { name: "San Marino", code: "SM" },
-        { name: "Sao Tome and Principe", code: "ST" },
-        { name: "Saudi Arabia", code: "SA" },
-        { name: "Senegal", code: "SN" },
-        { name: "Serbia and Montenegro", code: "CS" },
-        { name: "Seychelles", code: "SC" },
-        { name: "Sierra Leone", code: "SL" },
-        { name: "Singapore", code: "SG" },
-        { name: "Slovakia", code: "SK" },
-        { name: "Slovenia", code: "SI" },
-        { name: "Solomon Islands", code: "SB" },
-        { name: "Somalia", code: "SO" },
-        { name: "South Africa", code: "ZA" },
-        { name: "South Georgia and the South Sandwich Islands", code: "GS" },
-        { name: "Spain", code: "ES" },
-        { name: "Sri Lanka", code: "LK" },
-        { name: "Sudan", code: "SD" },
-        { name: "Suriname", code: "SR" },
-        { name: "Svalbard and Jan Mayen", code: "SJ" },
-        { name: "Swaziland", code: "SZ" },
-        { name: "Sweden", code: "SE" },
-        { name: "Switzerland", code: "CH" },
-        { name: "Syrian Arab Republic", code: "SY" },
-        { name: "Taiwan, Province of China", code: "TW" },
-        { name: "Tajikistan", code: "TJ" },
-        { name: "Tanzania, United Republic of", code: "TZ" },
-        { name: "Thailand", code: "TH" },
-        { name: "Timor-Leste", code: "TL" },
-        { name: "Togo", code: "TG" },
-        { name: "Tokelau", code: "TK" },
-        { name: "Tonga", code: "TO" },
-        { name: "Trinidad and Tobago", code: "TT" },
-        { name: "Tunisia", code: "TN" },
-        { name: "Turkey", code: "TR" },
-        { name: "Turkmenistan", code: "TM" },
-        { name: "Turks and Caicos Islands", code: "TC" },
-        { name: "Tuvalu", code: "TV" },
-        { name: "Uganda", code: "UG" },
-        { name: "Ukraine", code: "UA" },
-        { name: "United Arab Emirates", code: "AE" },
-        { name: "United Kingdom", code: "GB" },
-        { name: "United States", code: "US" },
-        { name: "United States Minor Outlying Islands", code: "UM" },
-        { name: "Uruguay", code: "UY" },
-        { name: "Uzbekistan", code: "UZ" },
-        { name: "Vanuatu", code: "VU" },
-        { name: "Venezuela", code: "VE" },
-        { name: "Viet Nam", code: "VN" },
-        { name: "Virgin Islands, British", code: "VG" },
-        { name: "Virgin Islands, U.S.", code: "VI" },
-        { name: "Wallis and Futuna", code: "WF" },
-        { name: "Western Sahara", code: "EH" },
-        { name: "Yemen", code: "YE" },
-        { name: "Zambia", code: "ZM" },
-        { name: "Zimbabwe", code: "ZW" },
-      ];
-      let showing = [];
-
-      const ac = Autocomplete.init(
-        "autocomplete1",
-        function (value, instance) {
-          if (value) {
-            showing = countries.filter((c) =>
-              c.name.toLowerCase().startsWith(value.toLowerCase())
-            );
-            instance.setItems(showing.map((c) => c.name));
-          }
-        },
-        function (value, index, instance) {}
-      );
-
-      const ac2 = Autocomplete.init(
-        "autocomplete2",
-        function (value, instance) {
-          if (value) {
-            showing = countries.filter((c) =>
-              c.name.toLowerCase().startsWith(value.toLowerCase())
-            );
-            instance.setItems(
-              showing.map(
-                (c) => `
-
-                  ${c.name}
-                  <img class="postfix" style="width:36px" src="docs/templates/img/flags/${c.code.toLowerCase()}.png" />
-                  `
-              )
-            );
-          }
-        },
-        function (value, index, instance) {
-          instance.getTiggerElement().value = showing[index].name;
-        }
-      );
-    </script>
-
-    <script>
-      /*Demo purpose*/
-      document.addEventListener("DOMContentLoaded", function (event) {
-        const mode = localStorage.getItem("mode") || "light";
-        if (mode === "dark") {
-          setDarkMode();
-        } else {
-          setLightMode();
-        }
-      });
-
-      document
-        .getElementById("dark_mode_toggle")
-        .addEventListener("click", function (e) {
-          const mode = localStorage.getItem("mode") || "light";
-          if (mode === "light") {
-            setDarkMode();
-          } else {
-            setLightMode();
-          }
-        });
-
-      function setDarkMode() {
-        localStorage.setItem("mode", "dark");
-        document.documentElement.setAttribute("data-theme", "dark");
-        document.getElementById("dark_mode_toggle_badge").innerHTML = "ON";
-      }
-
-      function setLightMode() {
-        localStorage.setItem("mode", "light");
-        document.documentElement.setAttribute("data-theme", "light");
-        document.getElementById("dark_mode_toggle_badge").innerHTML = "OFF";
-      }
-    </script>
   </body>
 </html>

@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   build();
+  initDarkmode();
+  initAutocomplete();
 });
 
 function build() {
@@ -34,7 +36,7 @@ function build() {
 }
 
 function getDocs(callback) {
-  fetch("docs/docs.json")
+  fetch("docs/data/docs.json")
     .then((response) => response.json())
     .then((response) => {
       callback(
@@ -115,4 +117,86 @@ function highlight() {
       hljs.highlightElement(element);
     });
   }
+}
+
+function getCountries(callback) {
+  fetch("docs/data/countries.json")
+    .then((response) => response.json())
+    .then((data) => {
+      callback(data);
+    });
+}
+
+function initAutocomplete() {
+  getCountries((countries) => {
+    let showing = [];
+
+    const ac = Autocomplete.init(
+      "autocomplete1",
+      function (value, instance) {
+        if (value) {
+          showing = countries.filter((c) =>
+            c.name.toLowerCase().startsWith(value.toLowerCase())
+          );
+          instance.setItems(showing.map((c) => c.name));
+        }
+      },
+      function (value, index, instance) {}
+    );
+
+    const ac2 = Autocomplete.init(
+      "autocomplete2",
+      function (value, instance) {
+        if (value) {
+          showing = countries.filter((c) =>
+            c.name.toLowerCase().startsWith(value.toLowerCase())
+          );
+          instance.setItems(
+            showing.map(
+              (c) => `
+   
+          ${c.name}
+          <img class="postfix" style="width:36px" src="docs/templates/img/flags/${c.code.toLowerCase()}.png" />
+          `
+            )
+          );
+        }
+      },
+      function (value, index, instance) {
+        instance.getTiggerElement().value = showing[index].name;
+      }
+    );
+  });
+}
+
+function initDarkmode() {
+  const mode = localStorage.getItem("mode") || "light";
+  if (mode === "dark") {
+    setDarkMode();
+  } else {
+    setLightMode();
+  }
+
+  document
+    .getElementById("dark_mode_toggle")
+    .addEventListener("click", function (e) {
+      const mode = localStorage.getItem("mode") || "light";
+      if (mode === "light") {
+        setDarkMode();
+      } else {
+        setLightMode();
+      }
+    });
+}
+
+function setDarkMode() {
+  localStorage.setItem("mode", "dark");
+  document.documentElement.setAttribute("data-theme", "dark");
+  document.getElementById("dark_mode_toggle_badge").innerHTML = "ON";
+}
+
+function setLightMode() {
+  localStorage.setItem("mode", "light");
+  document.documentElement.setAttribute("data-theme", "light");
+  document.getElementById("dark_mode_toggle_badge").innerHTML = "OFF";
 }
