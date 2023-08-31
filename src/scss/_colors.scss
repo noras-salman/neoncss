@@ -15,6 +15,7 @@ $colorTextLink: #1d21ff;
 $colorTextPrimary: #000000d9;
 $colorTextPrimaryLight: #fefefe;
 $colorTextSecondary: #00000099;
+$colorTextGrey:#737278;
 
 $colorError: #da5e5a;
 :root {
@@ -24,6 +25,7 @@ $colorError: #da5e5a;
   --accent-color-dark: #{$defaultColorAccentDark};
   --accent-secondary-color: #{$defaultColorAccentSecondary};
   --text-primary-color: #{$colorTextPrimary};
+  --text-grey-color: #{$colorTextGrey};
   --color-error: #{$colorError};
 }
 
@@ -73,6 +75,10 @@ $colorAccentGradient: linear-gradient(
 
 .black-bg {
   background-color: $black !important;
+}
+
+.grey {
+  color: $colorTextGrey !important;
 }
 
 .sea {
