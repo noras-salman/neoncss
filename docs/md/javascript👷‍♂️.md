@@ -30,10 +30,10 @@
 </div>
 ```
 
-<button class="btn btn-accent btn-round" action="modal" data="demo">
+<button class="btn btn-accent btn-round" action="modal" data="demo-modal"/>
 Open Modal
 </button>
-<div id="demo" class="modal">
+<div id="demo-modal" class="modal">
    <div class="modal-box modal-box-fixed">
       <span class="modal-title">Modal title</span>
       <div class="modal-content">

@@ -2,10 +2,10 @@
 /* Navigation bar*/
 nav {
   width: 100%;
-  height: $dimentionsNavbarHeight;
-  line-height: $dimentionsNavbarHeight;
-  padding-left: $dimentionsBase;
-  padding-right: $dimentionsBase;
+  height: $dimensionsNavbarHeight;
+  line-height: $dimensionsNavbarHeight;
+  padding-left: $dimensionsBase;
+  padding-right: $dimensionsBase;
   box-shadow: 2px 4px 8px 2px $shadowColor;
 
   &.fixed {
@@ -13,7 +13,7 @@ nav {
     top: 0;
     z-index: 10;
     & + * {
-      margin-top: $dimentionsNavbarHeight;
+      margin-top: $dimensionsNavbarHeight;
     }
   }
 
@@ -67,7 +67,7 @@ nav {
     text-transform: none;
   }
   img {
-    height: $dimentionsNavbarHeight;
+    height: $dimensionsNavbarHeight;
     width: auto;
   }
 }

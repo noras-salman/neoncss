@@ -7,10 +7,10 @@ $cardCoverHeight: 300px;
   transition: 0.3s;
   background-color: var(--window-color-secondary);
   border-radius: $roundSmall;
-  padding: $dimentionsBase;
+  padding: $dimensionsBase;
   /*width:100% - margin*2 */
   width: 100%;
-  margin: $dimentionsBaseSmall/2;
+  margin: $dimensionsBaseSmall/2;
   border: 1px solid #ddd;
 
   .card-fill {
@@ -18,7 +18,7 @@ $cardCoverHeight: 300px;
   }
 
   .card-cover {
-    margin: -1 * $dimentionsBase;
+    margin: -1 * $dimensionsBase;
     position: relative;
 
     .card-cover-title {
@@ -32,7 +32,7 @@ $cardCoverHeight: 300px;
         rgba(0, 0, 0, 0.7),
         rgba(0, 0, 0, 0.95)
       );
-      padding: $dimentionsBase;
+      padding: $dimensionsBase;
       color: $lightColor;
     }
 
@@ -45,14 +45,14 @@ $cardCoverHeight: 300px;
   }
 
   .card-body {
-    padding-top: $dimentionsBase;
+    padding-top: $dimensionsBase;
   }
 }
 
 /*Full cover*/
 
 .card-cover-full {
-  margin: -1 * $dimentionsBase;
+  margin: -1 * $dimensionsBase;
   height: $cardCoverHeight;
   img,
   video {

@@ -4,7 +4,7 @@
   list-style: none;
 
   li {
-    padding: $dimentionsBase;
+    padding: $dimensionsBase;
     background-color: var(--window-color-secondary);
 
     &.border {
@@ -52,7 +52,7 @@
     .sublist:nth-child(#{$i}) {
       position: relative;
       > li {
-        padding-left: $i * $dimentionsBase/2 !important;
+        padding-left: $i * $dimensionsBase/2 !important;
       }
     }
   }
@@ -84,8 +84,8 @@
   font-size: $fontSizeSmall;
   background-color: $colorTextSecondary;
   color: $colorTextPrimaryLight;
-  padding: $dimentionsBaseSmall / 2 $dimentionsBaseSmall $dimentionsBaseSmall /
-    2 $dimentionsBaseSmall;
+  padding: $dimensionsBaseSmall / 2 $dimensionsBaseSmall $dimensionsBaseSmall /
+    2 $dimensionsBaseSmall;
   border-radius: $roundSmall / 2;
 }
 

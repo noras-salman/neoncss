@@ -48,12 +48,12 @@ $bannerHeight: 300px;
   .banner-content {
     width: 80%;
     margin: auto;
-    padding-top: 2 * $dimentionsBase;
+    padding-top: 2 * $dimensionsBase;
   }
 
   .banner-title {
     @extend .heading-2;
-    margin-top: $dimentionsBase;
-    margin-bottom: $dimentionsBaseSmall;
+    margin-top: $dimensionsBase;
+    margin-bottom: $dimensionsBaseSmall;
   }
 }

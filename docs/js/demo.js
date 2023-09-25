@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   build();
   initDarkmode();
-  initAutocomplete();
+  //initAutocomplete();
 });
 
 function build() {
@@ -17,7 +17,7 @@ function build() {
       })
       .join("");
 
-    /** Build documentaion */
+    /** Build documentation */
     let docIndex = 0;
     for (let doc of docs) {
       docIndex++;
@@ -25,7 +25,7 @@ function build() {
       element.setAttribute("id", doc.file);
       element.setAttribute("class", "section");
       document.getElementById("documentation").appendChild(element);
-      loadDocumenation("docs/md/" + doc.file, doc.file);
+      loadDocumentation("docs/md/" + doc.file, doc.file);
       if (docIndex != docs.length) {
         const divider = document.createElement("div");
         divider.setAttribute("class", "divider");
@@ -62,7 +62,7 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function loadDocumenation(path, holder) {
+function loadDocumentation(path, holder) {
   var converter = new showdown.Converter({
     extensions: (function () {
       function htmlunencode(text) {

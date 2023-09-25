@@ -18,18 +18,18 @@
 
 .modal-title {
   font-size: 2em;
-  padding: $dimentionsBase $dimentionsBaseSmall;
+  padding: $dimensionsBase $dimensionsBaseSmall;
 }
 
 .modal-box {
   background-color: var(--window-color-secondary);
-  padding: $dimentionsBase;
+  padding: $dimensionsBase;
   border-radius: $roundSmall;
   margin: auto;
 }
 
 .modal-content {
-  padding: $dimentionsBaseSmall;
+  padding: $dimensionsBaseSmall;
 }
 
 .modal-footer {

@@ -24,8 +24,8 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: $dimentionsBase;
-  margin-bottom: $dimentionsBaseSmall;
+  margin-top: $dimensionsBase;
+  margin-bottom: $dimensionsBaseSmall;
 }
 
 .heading-1 {
@@ -88,8 +88,8 @@ h6 {
 }
 
 p {
-  margin-top: $dimentionsBaseSmall;
-  margin-bottom: $dimentionsBaseSmall;
+  margin-top: $dimensionsBaseSmall;
+  margin-bottom: $dimensionsBaseSmall;
 }
 
 .body-2 {
@@ -162,7 +162,7 @@ p > a {
 }
 
 .section {
-  padding: $dimentionsBase;
+  padding: $dimensionsBase;
 }
 
 .center-text {
@@ -224,8 +224,8 @@ video {
   width: 100%;
   height: 1px;
   background-color: $colorSecondary;
-  margin-top: $dimentionsBaseSmall;
-  margin-bottom: $dimentionsBaseSmall;
+  margin-top: $dimensionsBaseSmall;
+  margin-bottom: $dimensionsBaseSmall;
 }
 
 .divider-inline {
@@ -263,24 +263,24 @@ video {
 .container {
   width: 100%;
   margin: auto;
-  padding: $dimentionsBase;
+  padding: $dimensionsBase;
 }
 
 .container-fixed {
   max-width:1200px;
   margin: auto !important;
-  padding: $dimentionsBase;
+  padding: $dimensionsBase;
 }
 
 .container-fixed-m {
   max-width:1024px;
   margin: auto !important;
-  padding: $dimentionsBase;
+  padding: $dimensionsBase;
 }
 .container-fixed-s {
   max-width:700px;
   margin: auto !important;
-  padding: $dimentionsBase;
+  padding: $dimensionsBase;
 }
 
 .material-icons {
