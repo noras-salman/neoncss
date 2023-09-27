@@ -5,44 +5,43 @@
 The wrapper class `.input-box` limits the width to 300px
 
 ```html
-<div class="input-box">
-    .... 
-    ....
-</div>
+<div class="input-box">.... ....</div>
 ```
 
 The wrapper class `.input` makes the input field expand to the whole width of the parent
 
 ```html
-<div class="input">
-    .... 
-    ....
-</div>
+<div class="input">.... ....</div>
 ```
 
 ##### Input type
 
 ```html
 <div class="input-box">
-    <div class="input">
-    <label>Label</label>
-    <input type="text" placeholder="Placeholder" />
-    <span class="help-text">Help text</span>
-    </div>
-
-    <div class="input">
+  <div class="input">
     <label>Label</label>
     <input type="password" placeholder="Password" />
     <span class="help-text">Help text</span>
-    </div>
+  </div>
 
-    <div class="input">
+  <div class="input">
     <label>Label</label>
     <input type="date" placeholder="Date" />
     <span class="help-text">Help text</span>
-    </div>
+  </div>
+
+  <div class="input">
+    <input
+      class="no-border"
+      type="text"
+      placeholder="Placeholder"
+      value="This is a no-border input"
+    />
+    <span class="help-text">This is still editable</span>
+  </div>
 </div>
 ```
+
 <div class="input-box">
     <div class="input">
     <label>Label</label>
@@ -61,6 +60,14 @@ The wrapper class `.input` makes the input field expand to the whole width of th
     <input type="date" placeholder="Date" />
     <span class="help-text">Help text</span>
     </div>
+
+      <div class="input">
+    <input class="no-border heading-6" type="text" placeholder="Placeholder" value="This is a no-border input" />
+
+<span class="help-text">But it's still editable</span>
+
+</div>
+
 </div>
 
 ##### With effect
@@ -90,7 +97,9 @@ When using `.input-effect` the place holder should be set to be empty
 </div>
 
 ##### Validation
+
 You can set a pattern or a type to activate validation
+
 ```html
 <div class="input-box">
   <div class="input">
@@ -113,6 +122,7 @@ You can set a pattern or a type to activate validation
   </div>
 </div>
 ```
+
 <div class="input-box">
   <div class="input">
     <label>Email</label>
@@ -134,13 +144,13 @@ You can set a pattern or a type to activate validation
   </div>
 </div>
 
-
 ##### Textareas
+
 ```html
 <div class="input-box">
-    <div class="input">
-        <textarea placeholder="Placeholder"></textarea>
-    </div>
+  <div class="input">
+    <textarea placeholder="Placeholder"></textarea>
+  </div>
 </div>
 ```
 
@@ -151,6 +161,7 @@ You can set a pattern or a type to activate validation
 </div>
 
 ##### Selects
+
 ```html
 <div class="input-box">
   <div class="input">
@@ -161,6 +172,7 @@ You can set a pattern or a type to activate validation
   </div>
 </div>
 ```
+
 <div class="input-box">
   <div class="input">
     <select name="" id="">
@@ -170,12 +182,13 @@ You can set a pattern or a type to activate validation
   </div>
 </div>
 
-
 ##### Checkboxes
+
 Checkboxes have three types depending on the class you add:
- You can dicide not to add a class then it will appear normally.
- You can add the class `.chip`.
- You can add the class `.chip-big` to have a look of a normal button but the behaviour of a checkbox.
+You can dicide not to add a class then it will appear normally.
+You can add the class `.chip`.
+You can add the class `.chip-big` to have a look of a normal button but the behaviour of a checkbox.
+
 ```html
 <div class="input-box">
   <!---------NORMAL------------->
@@ -230,6 +243,7 @@ Checkboxes have three types depending on the class you add:
       <input type="checkbox" name="checkgroup1" />
       <label>label</label>
     </div>
+
   </div>
   <div class="divider-inline">Chip</div>
   <div class="input">
@@ -244,6 +258,7 @@ Checkboxes have three types depending on the class you add:
         <label for="checkchoice2">label</label>
       </div>
     </div>
+
   </div>
   <div class="divider-inline">Chip-big</div>
   <div class="input">
@@ -284,11 +299,14 @@ Checkboxes have three types depending on the class you add:
         >
       </div>
     </div>
+
   </div>
 </div>
 
 ##### Radio buttons
+
 Have the same styles as chckboxes
+
 ```html
 <div class="input-box">
   <!---------NORMAL------------->
@@ -316,8 +334,8 @@ Have the same styles as chckboxes
       </div>
     </div>
   </div>
-    <!---------CHIP END------------->
-    <!---------CHIP BIG------------->
+  <!---------CHIP END------------->
+  <!---------CHIP BIG------------->
 
   <div class="input">
     <div class="input-group">
@@ -341,7 +359,8 @@ Have the same styles as chckboxes
         <label for="choice5">
           <img
             src="https://www.pngrepo.com/png/303658/512/nodejs-1-logo.png"
-            alt=""/>
+            alt=""
+          />
           v10
         </label>
       </div>
@@ -352,15 +371,17 @@ Have the same styles as chckboxes
         <label for="choice6">
           <img
             src="https://www.pngrepo.com/png/303658/512/nodejs-1-logo.png"
-            alt=""/>
+            alt=""
+          />
           v14
-          </label>
+        </label>
       </div>
     </div>
   </div>
   <!---------CHIP BIG + IMG END------------->
 </div>
 ```
+
 <div class="input-box">
   <div class="input">
     <div class="input-group">
@@ -370,6 +391,7 @@ Have the same styles as chckboxes
       <input type="radio" name="group1" />
       <label>label</label>
     </div>
+
   </div>
 
   <div class="divider-inline">Chip</div>
@@ -385,6 +407,7 @@ Have the same styles as chckboxes
         <label for="choice2">label</label>
       </div>
     </div>
+
   </div>
 
   <div class="divider-inline">Chip-Big</div>
@@ -401,6 +424,7 @@ Have the same styles as chckboxes
         <label for="choice4"> label</label>
       </div>
     </div>
+
   </div>
   <div class="divider-inline">Chip-Big+Img</div>
   <div class="input">
@@ -428,6 +452,6 @@ Have the same styles as chckboxes
         >
       </div>
     </div>
+
   </div>
 </div>
-

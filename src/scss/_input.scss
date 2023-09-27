@@ -42,6 +42,10 @@ textarea {
   display: inline-block;
   padding: $dimensionsBaseSmall;
   border: solid 1px $colorTextSecondary;
+
+  &.no-border{
+    border: 0px ;
+  }
 }
 
 textarea {
