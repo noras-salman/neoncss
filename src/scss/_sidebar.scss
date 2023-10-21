@@ -2,7 +2,7 @@
 
 // local vars
 
-$sidebarWidth: 300px;
+$sidebarWidth: 280px;
 
 /* Sidebar*/
 
@@ -21,6 +21,7 @@ $sidebarWidth: 300px;
 
   .list,
   .sublist {
+    padding-top: 8px;
     li {
       padding: 0;
       background-color: var(--accent-color);
@@ -29,6 +30,7 @@ $sidebarWidth: 300px;
         display: inline-block;
         width: 100%;
         color: $lightColor;
+        font-weight: 300;
       }
     }
   }

@@ -1,19 +1,20 @@
 [
-  "getting-started🏁.md",
-  "typography📝.md",
-  "grid🗄️.md",
-  "buttons🔲.md",
-  "cards🗂️ .md",
-  "colors🎨.md",
+  "getting-started.md",
+  "typography.md",
+  "grid.md",
+  "buttons.md",
+  "cards.md",
+  "colors.md",
   "navigation.md",
   "banners.md",
   "lists.md",
 
-  "helpersℹ️.md",
-  "images📷.md",
-  "inputs🖱️.md",
-  "javascript👷‍♂️.md",
+  "stepper.md",
+  "helpers.md",
+  "images.md",
+  "inputs.md",
+  "javascript.md",
   "pagination.md",
-  "progress🚧.md",
-  "tables📈.md"
+  "progress.md",
+  "tables.md"
 ]

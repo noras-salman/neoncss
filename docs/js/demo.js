@@ -16,7 +16,8 @@ function build() {
               `;
       })
       .join("");
-
+    document.getElementById("sidebarlistMobile").innerHTML =
+      document.getElementById("sidebarlist").innerHTML;
     /** Build documentation */
     let docIndex = 0;
     for (let doc of docs) {

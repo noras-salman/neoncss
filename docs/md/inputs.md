@@ -201,6 +201,9 @@ You can add the class `.chip-big` to have a look of a normal button but the beha
     </div>
   </div>
   <!---------NORMAL END------------->
+  <div class="input">
+    <input class="switch-toggle" type="checkbox" />
+  </div>
   <!---------chip------------->
   <div class="input">
     <div class="input-group">
@@ -239,12 +242,19 @@ You can add the class `.chip-big` to have a look of a normal button but the beha
     <div class="input-group">
       <input type="checkbox" name="checkgroup1" />
       <label>label</label>
-
       <input type="checkbox" name="checkgroup1" />
       <label>label</label>
     </div>
 
   </div>
+
+  <div class="divider-inline">Toggle switch</div>
+   <div class="input">
+   <div class="switch-toggle">
+    <input type="checkbox"/> <label  >label</label>
+  </div>
+  </div>
+  
   <div class="divider-inline">Chip</div>
   <div class="input">
     <div class="input-group">

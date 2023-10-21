@@ -32,6 +32,7 @@ nav {
 
   a {
     color: $colorTextPrimaryLight;
+    font-weight: 200;
   }
 }
 
@@ -96,7 +97,9 @@ nav {
     height: 100%;
     top: 0;
     z-index: 13;
+   
     .nav-mobile-menu-content {
+      overflow: auto;
       box-shadow: 2px 4px 8px 2px $shadowColor;
       width: 300px;
       background: #fff;

@@ -38,6 +38,8 @@
     &.active {
       border-left: 2px solid var(--accent-color);
       filter: brightness(95%);
+      font-weight: bold;
+      padding-left: 8px;
     }
 
     &:hover {
@@ -53,6 +55,14 @@
       position: relative;
       > li {
         padding-left: $i * $dimensionsBase/2 !important;
+      }
+    }
+  }
+
+  &.list-small{
+    li{
+      a{
+        padding: 4px 8px !important;
       }
     }
   }
@@ -144,4 +154,6 @@
   &:hover.dropdown > .list {
     display: block;
   }
+
+  
 }
