@@ -1,10 +1,13 @@
 ## Buttons
+
 ```html
 <button class="btn input">Button</button>
 <!--------------------->
 <button class="btn with-border input">Button</button>
 <!--------------------->
 <button class="btn btn-accent input">Accent Button</button>
+<!--------------------->
+<button class="btn btn-accent input" disabled>Disabled</button>
 <!--------------------->
 <button class="btn btn-accent input">
   <span>
@@ -34,10 +37,12 @@
 <!--------------------->
 <button class="btn btn-round-extra sea-bg white input">sea-bg white</button>
 ```
+
 <div class="input-box">
     <button class="btn input">Button</button>
     <button class="btn with-border input">Button</button>
     <button class="btn btn-accent input">Accent Button</button>
+    <button class="btn btn-accent input" disabled>Disabled</button>
     <button class="btn btn-accent input">
     <span>
         Accent Button Icon
@@ -63,10 +68,11 @@
     </button>
 
     <button class="btn btn-round-extra sea-bg white input">sea-bg white</button>
+
 </div>
 
-
 Custom buttons:
+
 ```html
 <button class="btn btn-round-extra input with-border white-bg black">
   <img class="prefix" src="docs/templates/img/google.png" alt="" />
@@ -80,7 +86,8 @@ Custom buttons:
 <!--------------------->
 <button
   class="btn btn-round-extra input white"
-  style="background-color: #4267b2">
+  style="background-color: #4267b2"
+>
   <img class="prefix" src="docs/templates/img/facebook.png" alt="" />
   Login with facebook
 </button>
@@ -100,12 +107,14 @@ Custom buttons:
 <button
   class="btn btn-round-extra input white"
   style="background-color: #4267b2">
-  <img class="prefix" src="docs/templates/img/facebook.png" alt="" />
-  Login with facebook
+<img class="prefix" src="docs/templates/img/facebook.png" alt="" />
+Login with facebook
 </button>
+
 </div>
 
 Other buttons:
+
 ```html
 <button class="btn btn-accent btn-small btn-round-extra">
   <span>
