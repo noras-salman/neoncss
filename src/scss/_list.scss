@@ -67,6 +67,18 @@
     }
   }
 }
+
+
+.list.horizontal.tab{
+  border-bottom:  1px solid lightgray;
+}
+
+.list.horizontal.tab li.active{
+  border-left: 0 !important;
+  border-bottom: 2px solid var(--accent-color);
+  filter: brightness(100%) !important;
+}
+
 .sublist.indicator::after {
   content: "";
   position: absolute;

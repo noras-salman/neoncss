@@ -15,8 +15,7 @@
 
 .input {
   width: 100%;
-  margin: $dimensionsBaseSmall;
-}
+ }
 
 .input-box {
   max-width: 340px;
@@ -27,6 +26,10 @@
 .input {
   display: flex;
   flex-direction: column;
+
+  .input-horizontal{
+    flex-direction: row;
+  }
 }
 
 .input-box > input .input > input {

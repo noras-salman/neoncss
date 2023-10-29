@@ -177,13 +177,42 @@ p > a {
   text-align: right;
 }
 
+.flex{
+  display: flex;
+}
+
+.flex-0{
+  flex:0
+}
+
+$edges: top, bottom, right,left;
 @for $i from 0 through 12 {
   .padding-#{4*$i } {
     padding: #{4 * $i}px;
   }
-
   .margin-#{4*$i } {
     margin: #{4 * $i}px;
+  }
+
+  .padding-sides-#{4*$i } {
+    padding-left: #{4 * $i}px;
+    padding-right: #{4 * $i}px;
+  }
+
+  .margin-sides-#{4*$i } {
+    margin-left: #{4 * $i}px;
+    margin-right: #{4 * $i}px;
+  }
+
+  @each $edge in  $edges {
+
+    .padding-#{edge}-#{4*$i } {
+      padding-#{edge}: #{4 * $i}px;
+    }
+
+    .margin-#{edge}-#{4*$i } {
+      margin-#{edge}: #{4 * $i}px;
+    }
   }
 }
 
