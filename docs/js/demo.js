@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   build();
   initDarkmode();
-  //initAutocomplete();
+  setTimeout(() => {
+    initAutocomplete();
+  }, 3000);
 });
 
 function build() {
