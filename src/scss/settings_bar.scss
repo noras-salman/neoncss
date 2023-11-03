@@ -15,32 +15,32 @@
 
 /* Add Animation */
 
-.settings-bar-title {
-  font-size: 2em;
-  padding: $dimensionsBase $dimensionsBaseSmall;
-}
-
 .settings-bar-box {
   background-color: var(--window-color-secondary);
-  padding: $dimensionsBase;
-  //   border-radius: $roundSmall;
-  // margin: auto;
   position: fixed;
-
   max-width: 400px;
   top: 0;
+  display: flex;
+  flex-direction: column;
   right: 0;
   bottom: 0;
   height: 100%;
 }
 
+.settings-bar-title {
+  font-size: 2em;
+  flex: 0;
+  padding: 16px;
+}
+
 .settings-bar-content {
-  padding: $dimensionsBaseSmall;
-  position: relative;
+  padding: 16px;
+  flex: 1;
+  overflow: auto;
 }
 
 .settings-bar-footer {
-  position: fixed;
-  bottom: 0;
-  padding: $dimensionsBase;
+  position: relative;
+  flex: 0;
+  padding: 16px;
 }

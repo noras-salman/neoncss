@@ -18,7 +18,7 @@ avatar.src = generateAvatar(
 );
 ```
 
-#### Modals
+#### Dismissible: 1- Modals
 
 <button class="btn btn-accent btn-round" action="modal" data="demo-modal"/>
 Open Modal
@@ -46,7 +46,12 @@ Open Modal
       </div>
    </div>
 </div>
-
+<br><br>
+Dont forget to init:
+```js
+Dismissible.init(["modal", "settings-bar"]);
+```
+<br><br>
 ```html
 <button class="btn btn-accent btn-round" action="modal" data="demo">
   Open Modal
@@ -75,7 +80,7 @@ Open Modal
 </div>
 ```
 
-#### Settings bar
+#### Dismissible: 2- Settings bar
 
 <button
 class="btn btn-accent btn-round"
@@ -83,7 +88,16 @@ action="settings-bar"
 data="settings-bar-demo"> Open Settings bar
 </button>
 
-<div id="settings-bar-demo" class="settings-bar">
+<br><br>
+Dont forget to init:
+
+```js
+Dismissible.init(["modal", "settings-bar"]);
+```
+
+<br><br>
+
+<div id="settings-bar-demo" class="settings-bar"  >
   <div class="settings-bar-box">
     <span class="settings-bar-title">Modal title</span>
     <div class="settings-bar-content">

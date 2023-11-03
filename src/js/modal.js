@@ -1,4 +1,6 @@
 class Dismissible {
+  static MODAL = "modal";
+  static SETTINGS_BAR = "settings-bar";
   constructor(names) {
     this.names = names;
 
@@ -7,7 +9,6 @@ class Dismissible {
     this.closeTriggers = [];
 
     for (let name of names) {
-      console.log(name);
       this.modals = [...this.modals, ...document.querySelectorAll(`.${name}`)];
       this.triggers = [
         ...this.triggers,
@@ -25,6 +26,18 @@ class Dismissible {
     for (i = 0; i < instance.triggers.length; i++) {
       instance.triggers[i].addEventListener("click", (e) => {
         const target = e.target.getAttribute("data");
+
+        if (
+          document
+            .getElementById(target)
+            .classList.contains(Dismissible.SETTINGS_BAR)
+        ) {
+          for (let node of document.getElementById(target).childNodes) {
+            if (node?.classList?.contains("settings-bar-box"))
+              node.classList.add("slide-in");
+          }
+        }
+
         document.getElementById(target).classList.add("visible");
       });
     }
@@ -37,11 +50,13 @@ class Dismissible {
 
     for (i = 0; i < instance.modals.length; i++) {
       instance.modals[i].addEventListener("click", (e) => {
-        const dismissable = e.target.getAttribute("dismissable");
+        const dismissible = e.target.getAttribute("dismissible");
 
-        if (e.target.classList.contains(instance.name) && dismissable) {
-          /** Clicked outside the box */
-          Dismissible.closeAll(names);
+        for (let name of instance.names) {
+          if (e.target.classList.contains(name) && dismissible) {
+            /** Clicked outside the box */
+            Dismissible.closeAll(names);
+          }
         }
       });
     }
@@ -50,7 +65,9 @@ class Dismissible {
   static closeAll(names) {
     const instance = new Dismissible(names);
     for (i = 0; i < instance.modals.length; i++) {
-      instance.modals[i].classList.remove("visible");
+      for (let name of instance.names) {
+        instance.modals[i].classList.remove("visible");
+      }
     }
   }
 }

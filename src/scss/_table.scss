@@ -6,27 +6,28 @@ table {
   white-space: nowrap;
 }
 
-thead td {
+thead td,
+th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
-  background-color: #2d353c;
+  text-align: center;
+  background-color: lightgrey;
   color: white;
   font-weight: 700;
 }
 
 td,
 th {
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   padding: 8px;
 }
 
-tr:nth-child(even) {
-  background-color: #cccccc;
+table.striped tr:nth-child(even) {
+  background-color: #f1f1f1;
 }
 
 tr:hover {
-  background-color: #ddd;
+  background-color: lightgrey;
 }
 
 td {
