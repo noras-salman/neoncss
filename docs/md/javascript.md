@@ -20,6 +20,33 @@ avatar.src = generateAvatar(
 
 #### Modals
 
+<button class="btn btn-accent btn-round" action="modal" data="demo-modal"/>
+Open Modal
+</button>
+<div id="demo-modal" class="modal">
+   <div class="modal-box modal-box-fixed">
+      <span class="modal-title">Modal title</span>
+      <div class="modal-content">
+         <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+            do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum
+            dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum
+         </p>
+      </div>
+      <div class="modal-footer">
+         <button class="btn btn-accent btn-small">ACTION</button>
+         <button class="btn btn-flat btn-small" action="dismiss-modal">
+         CLOSE
+         </button>
+      </div>
+   </div>
+</div>
+
 ```html
 <button class="btn btn-accent btn-round" action="modal" data="demo">
   Open Modal
@@ -48,32 +75,71 @@ avatar.src = generateAvatar(
 </div>
 ```
 
-<button class="btn btn-accent btn-round" action="modal" data="demo-modal"/>
-Open Modal
+#### Settings bar
+
+<button
+class="btn btn-accent btn-round"
+action="settings-bar"
+data="settings-bar-demo"> Open Settings bar
 </button>
-<div id="demo-modal" class="modal">
-   <div class="modal-box modal-box-fixed">
-      <span class="modal-title">Modal title</span>
-      <div class="modal-content">
-         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-            do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum
-            dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt
-            mollit anim id est laborum
-         </p>
-      </div>
-      <div class="modal-footer">
-         <button class="btn btn-accent btn-small">ACTION</button>
-         <button class="btn btn-flat btn-small" action="dismiss-modal">
-         CLOSE
-         </button>
-      </div>
-   </div>
+
+<div id="settings-bar-demo" class="settings-bar">
+  <div class="settings-bar-box">
+    <span class="settings-bar-title">Modal title</span>
+    <div class="settings-bar-content">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum
+      </p>
+    </div>
+
+    <div class="settings-bar-footer">
+      <button class="btn btn-accent btn-small">ACTION</button>
+      <button class="btn btn-flat btn-small" action="dismiss-settings-bar">
+        CLOSE
+      </button>
+    </div>
+
+  </div>
 </div>
+```html
+<button
+  class="btn btn-accent btn-round"
+  action="settings-bar"
+  data="settings-bar-demo"
+>
+  Open Settings bar
+</button>
+<div id="settings-bar-demo" class="settings-bar">
+  <div class="settings-bar-box">
+    <span class="settings-bar-title">Modal title</span>
+    <div class="settings-bar-content">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum
+      </p>
+    </div>
+
+    <div class="settings-bar-footer">
+      <button class="btn btn-accent btn-small">ACTION</button>
+      <button class="btn btn-flat btn-small" action="dismiss-settings-bar">
+        CLOSE
+      </button>
+    </div>
+
+  </div>
+</div>
+```
 
 #### Autocomplete
 

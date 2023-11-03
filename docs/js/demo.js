@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initDarkmode();
   setTimeout(() => {
     initAutocomplete();
+    Dismissible.init(["modal", "settings-bar"]);
   }, 3000);
 });
 

@@ -1,12 +1,27 @@
-class Modal {
-  constructor() {
-    this.modals = document.querySelectorAll(".modal");
-    this.triggers = document.querySelectorAll('*[action="modal"]');
-    this.closeTriggers = document.querySelectorAll('*[action="dismiss-modal"]');
+class Dismissible {
+  constructor(names) {
+    this.names = names;
+
+    this.modals = [];
+    this.triggers = [];
+    this.closeTriggers = [];
+
+    for (let name of names) {
+      console.log(name);
+      this.modals = [...this.modals, ...document.querySelectorAll(`.${name}`)];
+      this.triggers = [
+        ...this.triggers,
+        ...document.querySelectorAll(`*[action="${name}"]`),
+      ];
+      this.closeTriggers = [
+        ...this.closeTriggers,
+        ...document.querySelectorAll(`*[action="dismiss-${name}"]`),
+      ];
+    }
   }
 
-  static init() {
-    const instance = new Modal();
+  static init(names) {
+    const instance = new Dismissible(names);
     for (i = 0; i < instance.triggers.length; i++) {
       instance.triggers[i].addEventListener("click", (e) => {
         const target = e.target.getAttribute("data");
@@ -16,7 +31,7 @@ class Modal {
 
     for (i = 0; i < instance.closeTriggers.length; i++) {
       instance.closeTriggers[i].addEventListener("click", (e) => {
-        Modal.closeAll();
+        Dismissible.closeAll(names);
       });
     }
 
@@ -24,16 +39,16 @@ class Modal {
       instance.modals[i].addEventListener("click", (e) => {
         const dismissable = e.target.getAttribute("dismissable");
 
-        if (e.target.classList.contains("modal") && dismissable) {
+        if (e.target.classList.contains(instance.name) && dismissable) {
           /** Clicked outside the box */
-          Modal.closeAll();
+          Dismissible.closeAll(names);
         }
       });
     }
   }
 
-  static closeAll() {
-    const instance = new Modal();
+  static closeAll(names) {
+    const instance = new Dismissible(names);
     for (i = 0; i < instance.modals.length; i++) {
       instance.modals[i].classList.remove("visible");
     }
@@ -41,5 +56,5 @@ class Modal {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  Modal.init();
+  Dismissible.init(["modal", "settings-bar"]);
 });

@@ -177,15 +177,15 @@ p > a {
   text-align: right;
 }
 
-.flex{
+.flex {
   display: flex;
 }
 
-.flex-0{
-  flex:0
+.flex-0 {
+  flex: 0;
 }
 
-$edges: top, bottom, right,left;
+$edges: top, bottom, right, left;
 @for $i from 0 through 12 {
   .padding-#{4*$i } {
     padding: #{4 * $i}px;
@@ -204,14 +204,13 @@ $edges: top, bottom, right,left;
     margin-right: #{4 * $i}px;
   }
 
-  @each $edge in  $edges {
-
-    .padding-#{edge}-#{4*$i } {
-      padding-#{edge}: #{4 * $i}px;
+  @each $edge in $edges {
+    .padding-#{$edge}-#{4*$i } {
+      padding-#{$edge}: #{4 * $i}px;
     }
 
-    .margin-#{edge}-#{4*$i } {
-      margin-#{edge}: #{4 * $i}px;
+    .margin-#{$edge}-#{4*$i } {
+      margin-#{$edge}: #{4 * $i}px;
     }
   }
 }
@@ -296,18 +295,18 @@ video {
 }
 
 .container-fixed {
-  max-width:1200px;
+  max-width: 1200px;
   margin: auto !important;
   padding: $dimensionsBase;
 }
 
 .container-fixed-m {
-  max-width:1024px;
+  max-width: 1024px;
   margin: auto !important;
   padding: $dimensionsBase;
 }
 .container-fixed-s {
-  max-width:700px;
+  max-width: 700px;
   margin: auto !important;
   padding: $dimensionsBase;
 }
