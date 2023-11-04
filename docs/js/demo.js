@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     initAutocomplete();
     Dismissible.init(["modal", "settings-bar"]);
+    DropDown.init();
   }, 3000);
 });
 

@@ -1,0 +1,49 @@
+// Dropdown no JS
+.dropdown {
+  position: relative;
+  display: inline-block;
+  .list {
+    display: none;
+    position: absolute;
+    background-color: var(--window-color-secondary);
+    min-width: 160px;
+    box-shadow: 2px 4px 8px 8px $shadowColor;
+    z-index: 1;
+    color: #010101;
+
+    li {
+      a {
+        color: #010101;
+      }
+    }
+
+    &.left {
+      left: 0;
+    }
+
+    &.right {
+      right: 0;
+    }
+  }
+
+  &:hover.dropdown > .list {
+    display: block;
+  }
+}
+
+// drop down with js
+ul.dropdown-menu {
+  position: fixed;
+  display: none;
+  list-style: none;
+  flex-direction: column;
+  background-color: var(--window-color);
+  color: var(--text-primary-color);
+  border: 1px solid lightgrey;
+  border-radius: 12px;
+  z-index: 3;
+
+  li {
+    padding: 16px 24px;
+  }
+}

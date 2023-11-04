@@ -15,8 +15,8 @@ class MobileNav {
 
     for (let i = 0; i < instance.navMenu.length; i++) {
       instance.navMenu[i].addEventListener("click", (e) => {
-        const dismissable = e.target.getAttribute("dismissable");
-        if (e.target.classList.contains("nav-mobile-menu") && dismissable) {
+        const dismissible = e.target.getAttribute("dismissible");
+        if (e.target.classList.contains("nav-mobile-menu") && dismissible) {
           /** Clicked outside the box */
           MobileNav.close();
         }
