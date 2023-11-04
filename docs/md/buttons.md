@@ -101,26 +101,6 @@
 ```
 Custom buttons:
 
-```html
-<button class="btn btn-round-extra input with-border white-bg black">
-  <img class="prefix" src="docs/templates/img/google.png" alt="" />
-  Login with Google
-</button>
-<!--------------------->
-<button class="btn btn-round-extra input black-bg white">
-  <img class="prefix" src="docs/templates/img/github.png" alt="" />
-  Login with Github
-</button>
-<!--------------------->
-<button
-  class="btn btn-round-extra input white"
-  style="background-color: #4267b2"
->
-  <img class="prefix" src="docs/templates/img/facebook.png" alt="" />
-  Login with facebook
-</button>
-```
-
 <div class="input-box">
 <button class="btn btn-round-extra input with-border white-bg black">
   <img class="prefix" src="docs/templates/img/google.png" alt="" />
@@ -141,7 +121,54 @@ Login with facebook
 
 </div>
 
+```html
+<button class="btn btn-round-extra input with-border white-bg black">
+  <img class="prefix" src="docs/templates/img/google.png" alt="" />
+  Login with Google
+</button>
+<!--------------------->
+<button class="btn btn-round-extra input black-bg white">
+  <img class="prefix" src="docs/templates/img/github.png" alt="" />
+  Login with Github
+</button>
+<!--------------------->
+<button
+  class="btn btn-round-extra input white"
+  style="background-color: #4267b2"
+>
+  <img class="prefix" src="docs/templates/img/facebook.png" alt="" />
+  Login with facebook
+</button>
+```
+
 Other buttons:
+
+<div>
+<button class="btn btn-accent btn-small btn-round-extra">
+  <span>
+    <span class="material-icons prefix"> check </span>
+    Accent Button
+  </span>
+</button>
+
+<button class="btn btn-action btn-flat">
+  <span class="material-icons"> more_vert </span>
+</button>
+
+<button class="btn btn-action btn-flat">
+  <span class="material-icons"> check </span>
+</button>
+<button class="btn btn-action btn-flat">
+  <span class="material-icons"> delete </span>
+</button>
+<button class="btn btn-action btn-flat">
+  <span class="material-icons"> visibility </span>
+</button>
+
+<button class="btn btn-floating btn-flat">
+  <span class="material-icons"> notifications </span>
+</button>
+</div>
 
 ```html
 <button class="btn btn-accent btn-small btn-round-extra">
@@ -149,6 +176,10 @@ Other buttons:
     <span class="material-icons prefix"> check </span>
     Accent Button
   </span>
+</button>
+<!--------------------->
+<button class="btn btn-action btn-flat">
+  <span class="material-icons"> more_vert </span>
 </button>
 <!--------------------->
 <button class="btn btn-action btn-flat">
@@ -167,26 +198,3 @@ Other buttons:
   <span class="material-icons"> notifications </span>
 </button>
 ```
-
-<div>
-<button class="btn btn-accent btn-small btn-round-extra">
-  <span>
-    <span class="material-icons prefix"> check </span>
-    Accent Button
-  </span>
-</button>
-
-<button class="btn btn-action btn-flat">
-  <span class="material-icons"> check </span>
-</button>
-<button class="btn btn-action btn-flat">
-  <span class="material-icons"> delete </span>
-</button>
-<button class="btn btn-action btn-flat">
-  <span class="material-icons"> visibility </span>
-</button>
-
-<button class="btn btn-floating btn-flat">
-  <span class="material-icons"> notifications </span>
-</button>
-</div>
