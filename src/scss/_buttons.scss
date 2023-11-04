@@ -1,0 +1,142 @@
+/*Buttons*/
+.button-text {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: $fontWeightMedium;
+  letter-spacing: 1.25px;
+}
+
+.btn {
+  @extend .button-text;
+  text-align: center;
+  cursor: pointer;
+  min-width: 96px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: none;
+  display: inline-block;
+  line-height: $dimensionsButtonHeight;
+  color: var(--accent-color);
+  background-color: var(--window-color-secondary);
+  vertical-align: middle;
+  align-items: center;
+  text-decoration: none;
+
+  &.btn-small {
+    line-height: $dimensionsButtonHeightSmall;
+    min-width: 32px;
+    font-size: 10px;
+    img {
+      height: 16px;
+    }
+  }
+
+  &.btn-mid {
+    line-height: $dimensionsButtonHeightMid;
+    min-width: 64px;
+    font-size: 12px;
+    img {
+      height: 24px;
+    }
+  }
+
+  &:disabled,
+  [disabled] {
+    border: 1px solid #999999 !important;
+    background-color: #cccccc !important;
+    color: #666666 !important;
+  }
+  img {
+    height: $dimensionsButtonHeight;
+    width: auto;
+  }
+  &.with-border {
+    border: 1px solid var(--accent-color);
+  }
+
+  &.btn-action {
+    padding: 2px;
+    min-width: 32px;
+    width: 32px;
+    min-height: 32px;
+    height: 32px;
+    line-height: 24px;
+    border-radius: 4px;
+    font-size: 0.75rem !important;
+    color: var(--text-primary-color) !important;
+  }
+
+  &.btn-floating {
+    min-width: 56px;
+    width: 56px;
+    min-height: 56px;
+    height: 56px;
+    border-radius: 50%;
+    font-size: 0.75rem !important;
+    background-color: var(--accent-color);
+    color: $lightColor;
+    padding: 0;
+    > .material-icons {
+      width: 56px;
+      height: 56px;
+      line-height: 56px;
+    }
+  }
+
+  &.btn-flat {
+    border: 0px;
+  }
+
+  &.btn-round {
+    border-radius: $roundNormal;
+  }
+
+  &.btn-round-extra {
+    border-radius: 48px;
+  }
+
+  &.btn-accent {
+    background-color: var(--accent-color);
+    color: $lightColor;
+  }
+
+  &.btn-accent-gradient {
+    background: $colorAccentGradient;
+    color: $lightColor;
+    border-color: transparent;
+  }
+
+  &:hover {
+    filter: brightness(90%);
+    transition: background-color 0.8s linear;
+  }
+  &:focus {
+    outline: 0;
+  }
+  &:active {
+    filter: brightness(75%);
+  }
+
+  .prefix {
+    vertical-align: middle;
+    padding-right: 8px;
+  }
+
+  .postfix {
+    vertical-align: middle;
+    padding-left: 8px;
+  }
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background-color: #8842d5;
+  border: none;
+  color: white;
+  padding: 18px 36px;
+  text-decoration: none;
+  cursor: pointer;
+}

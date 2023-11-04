@@ -11,7 +11,7 @@
   padding: 5%;
   display: none;
   background-color: #0000005b;
-  z-index: 1;
+  z-index: 2;
 }
 
 /* Add Animation */
@@ -24,7 +24,7 @@
 .modal-box {
   background-color: var(--window-color-secondary);
   padding: $dimensionsBase;
-  border-radius: $roundSmall;
+  border-radius: 12px;
   margin: auto;
 }
 

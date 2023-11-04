@@ -1,6 +1,68 @@
 ## Buttons
 
+<br/>
+<div class="row">
+<div class="col">
+ <button class="btn btn-accent btn-small btn-round ">btn-small</button>
+</div>
+<div class="col">
+<button class="btn  btn-accent btn-mid btn-round ">btn-mid</button>
+</div>
+<div class="col">
+<button class="btn  btn-accent btn-round ">btn</button>
+</div>
+</div>
+<br/><br/>
+<div class="input-box">
+    <button class="btn input">Button</button>
+    <br/>
+    <button class="btn with-border input">Button with-border</button>
+    <br/>
+    <button class="btn btn-accent input">Accent Button</button>
+    <br/>
+    <button class="btn btn-accent input" disabled>Disabled</button>
+    <br/>
+    <button class="btn btn-accent input">
+    <span>
+        Accent Button Icon
+        <span class="material-icons postfix"> navigate_next </span>
+    </span>
+    </button>
+    <br/>
+    <button class="btn btn-accent-gradient input">Accent Gradient Button</button>
+    <br/>
+    <button class="btn btn-round-extra btn-accent input">
+    Accent Button Round
+    </button>
+    <br/>
+    <button class="btn btn-round btn-accent input">
+    Accent Button Round Extra
+    </button>
+<br/>
+    <button class="btn btn-round-extra btn-accent input">
+    <span>
+        <span class="material-icons prefix"> check </span>
+        Accent Button Round Extra
+    </span>
+    </button>
+<br/>
+    <button class="btn btn-round-extra black-bg white input">black-bg white</button>
+<br/>
+    <button class="btn btn-round-extra cryola-bg white input">
+    cryola-bg white
+    </button>
+<br/>
+    <button class="btn btn-round-extra sea-bg white input">sea-bg white</button>
+<br/>
+</div>
+<br/><br/>
 ```html
+ <button class="btn btn-accent btn-small btn-round ">btn-small</button>
+ <!--------------------->
+  <button class="btn btn-accent btn-mid btn-round ">btn-mid</button>
+ <!--------------------->
+  <button class="btn btn-accent btn btn-round ">btn</button>
+ <!--------------------->
 <button class="btn input">Button</button>
 <!--------------------->
 <button class="btn with-border input">Button</button>
@@ -37,40 +99,6 @@
 <!--------------------->
 <button class="btn btn-round-extra sea-bg white input">sea-bg white</button>
 ```
-
-<div class="input-box">
-    <button class="btn input">Button</button>
-    <button class="btn with-border input">Button</button>
-    <button class="btn btn-accent input">Accent Button</button>
-    <button class="btn btn-accent input" disabled>Disabled</button>
-    <button class="btn btn-accent input">
-    <span>
-        Accent Button Icon
-        <span class="material-icons postfix"> navigate_next </span>
-    </span>
-    </button>
-    <button class="btn btn-accent-gradient input">Accent Gradient Button</button>
-    <button class="btn btn-round-extra btn-accent input">
-    Accent Button Round
-    </button>
-
-    <button class="btn btn-round-extra btn-accent input">
-    <span>
-        <span class="material-icons prefix"> check </span>
-        Accent Button Round
-    </span>
-    </button>
-
-    <button class="btn btn-round-extra black-bg white input">black-bg white</button>
-
-    <button class="btn btn-round-extra cryola-bg white input">
-    cryola-bg white
-    </button>
-
-    <button class="btn btn-round-extra sea-bg white input">sea-bg white</button>
-
-</div>
-
 Custom buttons:
 
 ```html
@@ -98,12 +126,12 @@ Custom buttons:
   <img class="prefix" src="docs/templates/img/google.png" alt="" />
   Login with Google
 </button>
-
+<br/>
 <button class="btn btn-round-extra input black-bg white">
   <img class="prefix" src="docs/templates/img/github.png" alt="" />
   Login with Github
 </button>
-
+<br/>
 <button
   class="btn btn-round-extra input white"
   style="background-color: #4267b2">

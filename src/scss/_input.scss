@@ -15,7 +15,7 @@
 
 .input {
   width: 100%;
- }
+}
 
 .input-box {
   max-width: 340px;
@@ -27,7 +27,7 @@
   display: flex;
   flex-direction: column;
 
-  .input-horizontal{
+  .input-horizontal {
     flex-direction: row;
   }
 }
@@ -35,9 +35,6 @@
 .input-box > input .input > input {
   width: 100%;
 }
-
-
- 
 
 /*Generic*/
 
@@ -49,8 +46,8 @@ textarea {
   padding: $dimensionsBaseSmall;
   border: solid 1px $colorTextSecondary;
 
-  &.no-border{
-    border: 0px ;
+  &.no-border {
+    border: 0px;
   }
 }
 
@@ -88,18 +85,18 @@ select {
 }
 
 /*Switch*/
-.switch-toggle{
+.switch-toggle {
   display: flex;
   align-items: center;
-  input[type="checkbox"]{
-   &~label{
-    padding: 8px;
-   }
-    appearance: none   ;
-    -webkit-tap-highlight-color: transparent  ;
+  input[type="checkbox"] {
+    & ~ label {
+      padding: 8px;
+    }
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
     cursor: pointer;
 
-    height: 32px  ;
+    height: 32px;
     width: 52px;
     border-radius: 16px;
     display: inline-block;
@@ -107,224 +104,92 @@ select {
     margin: 0;
     border: 2px solid lightgray;
     background: lightgray;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
 
-    &:focus{ 
+    &:focus {
       outline: 0;
     }
 
-      
-    &:after{
-        content: '';
-        position: absolute;
-        top: 2px;
-        left: 2px;
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        background: white;
-        box-shadow: 0 1px 2px rgba(44,44,44,.2);
-        transition: all .2s cubic-bezier(.5,.1,.75,1.35);
-      }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: white;
+      box-shadow: 0 1px 2px rgba(44, 44, 44, 0.2);
+      transition: all 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35);
+    }
 
-    &:checked{
-        background-color: var(--accent-color);
-        &:after{
-          transform: translatex(20px);
-        }
+    &:checked {
+      background-color: var(--accent-color);
+      &:after {
+        transform: translatex(20px);
       }
-   
-    
+    }
   }
 }
-  
-  /*Chips*/
-  
-  .chip {
-    &:hover {
-      filter: brightness(110%);
-    }
-  
-    input[type="radio"],
-    input[type="checkbox"] {
-      display: none;
-  
-      & ~ label {
-        background-color: $colorTextSecondary;
-        color: $colorTextPrimaryLight;
-        padding: $dimensionsBaseSmall / 2 $dimensionsBaseSmall
-          $dimensionsBaseSmall / 2 $dimensionsBaseSmall;
-        border-radius: 24px;
-        margin-right: $dimensionsBaseSmall;
-        cursor: pointer;
-      }
-  
-      &:checked ~ label {
-        background-color: var(--accent-color);
-      }
-    }
-  }
-  
-  .chip-big {
-    @extend .chip;
-    input[type="radio"],
-    input[type="checkbox"] {
-      display: none;
-  
-      & ~ label {
-        text-align: center;
-        cursor: pointer;
-        min-width: 96px;
-        padding-left: 16px;
-        padding-right: 16px;
-        padding-top: 8px;
-        padding-bottom: 8px;
-        border: none;
-        display: inline-block;
-        line-height: 32px;
-        color: var(--text-primary-color);
-        background-color: var(--window-color-secondary);
-        vertical-align: middle;
-        align-items: center;
-        text-decoration: none;
-        border: 1px solid var(--accent-color);
-        border-radius: 4px;
-      }
-  
-      &:checked ~ label {
-        box-shadow: inset 0px 0px 0px 2px var(--accent-color);
-        background-color: var(--window-color-secondary);
-      }
-    }
-  }
 
+/*Chips*/
 
- 
-
-
-/*Buttons*/
-
-.btn {
-  @extend .button-text;
-  text-align: center;
-  cursor: pointer;
-  min-width: 96px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  border: none;
-  display: inline-block;
-  line-height: $dimensionsButtonHeight;
-  color: var(--accent-color);
-  background-color: var(--window-color-secondary);
-  vertical-align: middle;
-  align-items: center;
-  text-decoration: none;
-
-  &:disabled,[disabled]{
-    border: 1px solid #999999 !important;
-    background-color: #cccccc !important;
-    color: #666666 !important;
-  }
-  img {
-    height: $dimensionsButtonHeight;
-    width: auto;
-  }
-  &.with-border {
-    border: 1px solid var(--accent-color);
-  }
-
-  &.btn-action {
-    padding: 2px;
-    min-width: 32px;
-    width: 32px;
-    min-height: 32px;
-    height: 32px;
-    line-height: 24px;
-    border-radius: 4px;
-    font-size: 0.75rem !important;
-    color: var(--text-primary-color) !important;
-  }
-
-  &.btn-floating {
-    min-width: 56px;
-    width: 56px;
-    min-height: 56px;
-    height: 56px;
-    border-radius: 50%;
-    font-size: 0.75rem !important;
-    background-color: var(--accent-color);
-    color: $lightColor;
-    padding: 0;
-    > .material-icons {
-      width: 56px;
-      height: 56px;
-      line-height: 56px;
-    }
-  }
-
-  &.btn-small {
-    line-height: $dimensionsButtonHeightSmall;
-    img {
-      height: $dimensionsButtonHeightSmall;
-    }
-  }
-
-  &.btn-flat {
-    border: 0px;
-  }
-
-  &.btn-round {
-    border-radius: $roundNormal;
-  }
-
-  &.btn-round-extra {
-    border-radius: 48px;
-  }
-
-  &.btn-accent {
-    background-color: var(--accent-color);
-    color: $lightColor;
-  }
-
-  &.btn-accent-gradient {
-    background: $colorAccentGradient;
-    color: $lightColor;
-    border-color: transparent;
-  }
-
+.chip {
   &:hover {
-    filter: brightness(90%);
-    transition: background-color 0.8s linear;
-  }
-  &:focus {
-    outline: 0;
-  }
-  &:active {
-    filter: brightness(75%);
+    filter: brightness(110%);
   }
 
-  .prefix {
-    vertical-align: middle;
-    padding-right: 8px;
-  }
+  input[type="radio"],
+  input[type="checkbox"] {
+    display: none;
 
-  .postfix {
-    vertical-align: middle;
-    padding-left: 8px;
+    & ~ label {
+      background-color: $colorTextSecondary;
+      color: $colorTextPrimaryLight;
+      padding: $dimensionsBaseSmall / 2 $dimensionsBaseSmall
+        $dimensionsBaseSmall / 2 $dimensionsBaseSmall;
+      border-radius: 24px;
+      margin-right: $dimensionsBaseSmall;
+      cursor: pointer;
+    }
+
+    &:checked ~ label {
+      background-color: var(--accent-color);
+    }
   }
 }
 
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  background-color: #8842d5;
-  border: none;
-  color: white;
-  padding: 18px 36px;
-  text-decoration: none;
-  cursor: pointer;
+.chip-big {
+  @extend .chip;
+  input[type="radio"],
+  input[type="checkbox"] {
+    display: none;
+
+    & ~ label {
+      text-align: center;
+      cursor: pointer;
+      min-width: 96px;
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      border: none;
+      display: inline-block;
+      line-height: 32px;
+      color: var(--text-primary-color);
+      background-color: var(--window-color-secondary);
+      vertical-align: middle;
+      align-items: center;
+      text-decoration: none;
+      border: 1px solid var(--accent-color);
+      border-radius: 4px;
+    }
+
+    &:checked ~ label {
+      box-shadow: inset 0px 0px 0px 2px var(--accent-color);
+      background-color: var(--window-color-secondary);
+    }
+  }
 }
 
 input:focus,
@@ -353,7 +218,6 @@ label {
   color: #a1a1a1;
   font-size: 0.8em;
 }
- 
 
 .input-effect {
   position: relative;

@@ -1,11 +1,12 @@
 {
-  "name": "neoncss",
+  "name": "@nasable/neoncss",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "start": "node server.js",
     "watch": "gulp watch",
+    "build": "gulp",
     "export": "gulp",
     "export:css": "gulp exportCSS",
     "export:js": "gulp exportJS"

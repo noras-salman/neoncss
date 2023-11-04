@@ -1,0 +1,9 @@
+ul.bread-crumbs {
+  display: flex;
+  list-style: none;
+
+  li:not(:first-child):before {
+    content: "/";
+    padding: 16px;
+  }
+}
