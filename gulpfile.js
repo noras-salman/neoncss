@@ -27,7 +27,7 @@ function exportCSS() {
 }
 
 function exportJS() {
-  return src("src/js/*.js")
+  return src("src/js/managers/*.js")
     .pipe(plumber())
     .pipe(
       babel({
@@ -62,20 +62,29 @@ function createDocumentation() {
 }
 
 function exportModules() {
-  return src("src/js/*.js")
+  return src("src/js/managers/*.js")
     .pipe(replace(/class /g, "export class "))
-    .pipe(dest(`dist/${pjson.name}`));
+    .pipe(dest(`dist/${pjson.name}/managers`));
 }
+
+function exportComponents() {
+  return src("src/js/components/*.jsx").pipe(
+    dest(`dist/${pjson.name}/components`)
+  );
+}
+
 exports.exportCSS = exportCSS;
 exports.exportJS = exportJS;
 exports.createDocumentation = createDocumentation;
 exports.exportModules = exportModules;
+exports.exportComponents = exportComponents;
 
 exports.default = series(
   exportCSS,
   exportJS,
   createDocumentation,
-  exportModules
+  exportModules,
+  exportComponents
 );
 exports.watch = function () {
   liveReload.listen({
