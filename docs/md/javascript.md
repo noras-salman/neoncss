@@ -29,7 +29,7 @@
 <br>
 Please call to init:
 ```js
-DropDown.init();
+DropDownManager.init();
 ```
 
 #### Avatar
@@ -43,11 +43,16 @@ DropDown.init();
 and js
 
 ```js
-avatar.src = generateAvatar(
-  (text = "NS"),
-  (foregroundColor = "white"),
-  (backgroundColor = "black")
-);
+AvatarGenerator.get({
+  text: "NS",
+  config: {
+    foregroundColor: "white",
+    backgroundColor: "black",
+    size: 200,
+    font: "bold 80px Arial",
+    format: AvatarGenerator.ImageFormat.PNG,
+  },
+});
 ```
 
 #### Dismissible: 1- Modals
@@ -79,9 +84,13 @@ Open Modal
    </div>
 </div>
 <br><br>
-Dont forget to init:
+Usage: "Dont forget to init"
 ```js
-Dismissible.init(["modal", "settings-bar"]);
+Dismissible.init(Dismissible.MODAL);
+Dismissible.init([Dismissible.MODAL,Dismissible.SETTINGS_BAR]);
+Dismissible.closeAll(Dismissible.MODAL);
+Dismissible.closeAll([Dismissible.MODAL,Dismissible.SETTINGS_BAR]);
+Dismissible.show('modal1');
 ```
 <br><br>
 ```html
@@ -121,10 +130,14 @@ data="settings-bar-demo"> Open Settings bar
 </button>
 
 <br><br>
-Dont forget to init:
+Usage: "Dont forget to init"
 
 ```js
-Dismissible.init(["modal", "settings-bar"]);
+Dismissible.init(Dismissible.SETTINGS_BAR);
+Dismissible.init([Dismissible.MODAL, Dismissible.SETTINGS_BAR]);
+Dismissible.closeAll(Dismissible.SETTINGS_BAR);
+Dismissible.closeAll([Dismissible.MODAL, Dismissible.SETTINGS_BAR]);
+Dismissible.show("settings-bar1");
 ```
 
 <br><br>
@@ -247,7 +260,7 @@ Javascript
 getCountries((countries) => {
   let showing = [];
   /* Simple*/
-  Autocomplete.init(
+  AutocompleteManager.init(
     "autocomplete1",
     function (value, instance) {
       if (value) {
@@ -261,7 +274,7 @@ getCountries((countries) => {
   );
 
   /* CUSTOM*/
-  Autocomplete.init(
+  AutocompleteManager.init(
     "autocomplete2",
     function (value, instance) {
       if (value) {
@@ -284,4 +297,91 @@ getCountries((countries) => {
     }
   );
 });
+```
+
+#### Carosel
+
+<div class="container-fixed">
+<div class="carousel">
+  <div class="item">
+    <img
+      src="https://images.pexels.com/photos/1896755/pexels-photo-1896755.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+      alt=""
+    />
+  </div>
+  <div class="item">
+    <img
+      src=" https://images.pexels.com/photos/1903871/pexels-photo-1903871.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      alt=""
+    />
+  </div>
+  <div class="item">
+    <img
+      src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+      alt=""
+    />
+  </div>
+
+  <div class="carousel-indicator"></div>
+
+  <div class="carasoule-contorl next">
+    <div class="carasoule-contorl-btn">
+      &gt;
+    </div>
+  </div>
+  <div class="carasoule-contorl prev">
+    <div class="carasoule-contorl-btn">
+    &lt;
+    </div>
+  </div>
+</div>
+</div>
+
+<br><br>
+Javascript
+
+```js
+CarouselElement.init("carousel1");
+CarouselElement.init("carousel1", { delay: 3500, auto: true });
+// or
+CarouselManager.init(); // init all
+CarouselManager.init({ config: { delay: 3500, auto: true } });
+CarouselManager.init({ id: "carousel1" });
+CarouselManager.init({ id: "carousel1", config: { delay: 3500, auto: true } });
+```
+
+<br><br>
+
+note also there is `carousel carousel-vh` to expand on the whole page
+
+```html
+<div class="carousel">
+  <div class="item">
+    <img
+      src="https://images.pexels.com/photos/1896755/pexels-photo-1896755.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+      alt=""
+    />
+  </div>
+  <div class="item">
+    <img
+      src=" https://images.pexels.com/photos/1903871/pexels-photo-1903871.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+      alt=""
+    />
+  </div>
+  <div class="item">
+    <img
+      src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+      alt=""
+    />
+  </div>
+
+  <div class="carousel-indicator"></div>
+
+  <div class="carasoule-contorl next">
+    <div class="carasoule-contorl-btn">&gt;</div>
+  </div>
+  <div class="carasoule-contorl prev">
+    <div class="carasoule-contorl-btn">&lt;</div>
+  </div>
+</div>
 ```

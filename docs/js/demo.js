@@ -3,8 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initDarkmode();
   setTimeout(() => {
     initAutocomplete();
+    CarouselManager.init();
     Dismissible.init(["modal", "settings-bar"]);
-    DropDown.init();
+    DropDownManager.init();
   }, 3000);
 });
 
@@ -136,7 +137,7 @@ function initAutocomplete() {
   getCountries((countries) => {
     let showing = [];
 
-    const ac = Autocomplete.init(
+    const ac = AutocompleteManager.init(
       "autocomplete1",
       function (value, instance) {
         if (value) {
@@ -149,7 +150,7 @@ function initAutocomplete() {
       function (value, index, instance) {}
     );
 
-    const ac2 = Autocomplete.init(
+    const ac2 = AutocompleteManager.init(
       "autocomplete2",
       function (value, instance) {
         if (value) {

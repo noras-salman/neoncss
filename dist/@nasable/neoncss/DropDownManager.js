@@ -1,4 +1,4 @@
-class DropDown {
+export class DropDownManager {
   constructor() {
     this.dropDowns = document.querySelectorAll(".dropdown-menu");
     this.triggers = document.querySelectorAll(
@@ -7,7 +7,7 @@ class DropDown {
   }
 
   static init() {
-    const instance = new DropDown();
+    const instance = new DropDownManager();
     const bodyRect = document.body.getBoundingClientRect();
     for (let i = 0; i < instance.triggers.length; i++) {
       instance.triggers[i].addEventListener("click", (e) => {
@@ -34,13 +34,13 @@ class DropDown {
     document.addEventListener("click", (documentEvent) => {
       const action = documentEvent.target.getAttribute("action");
       if (!action || action != "dropdown-menu-toggle") {
-        DropDown.close();
+        DropDownManager.close();
       }
     });
   }
 
   static close() {
-    const instance = new DropDown();
+    const instance = new DropDownManager();
     for (let i = 0; i < instance.dropDowns.length; i++) {
       instance.dropDowns[i].classList.remove("visible");
     }

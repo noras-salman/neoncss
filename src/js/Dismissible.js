@@ -1,9 +1,19 @@
+/**
+ Usage :  
+ -  Dismissible.init(Dismissible.MODAL);
+ -  Dismissible.init(Dismissible.SETTINGS_BAR);
+ -  Dismissible.init([Dismissible.MODAL,Dismissible.SETTINGS_BAR]);
+ -  Dismissible.closeAll(Dismissible.MODAL);
+ -  Dismissible.closeAll(Dismissible.SETTINGS_BAR);
+ -  Dismissible.closeAll([Dismissible.MODAL,Dismissible.SETTINGS_BAR]);
+ -  Dismissible.show('settings-bar1');
+ */
 class Dismissible {
   static MODAL = "modal";
   static SETTINGS_BAR = "settings-bar";
   constructor(names) {
-    this.names = names;
-
+    if (Array.isArray(names)) this.names = names;
+    this.names = [names];
     this.modals = [];
     this.triggers = [];
     this.closeTriggers = [];
@@ -23,32 +33,20 @@ class Dismissible {
 
   static init(names) {
     const instance = new Dismissible(names);
-    for (i = 0; i < instance.triggers.length; i++) {
+    for (let i = 0; i < instance.triggers.length; i++) {
       instance.triggers[i].addEventListener("click", (e) => {
         const target = e.target.getAttribute("data");
-
-        if (
-          document
-            .getElementById(target)
-            .classList.contains(Dismissible.SETTINGS_BAR)
-        ) {
-          for (let node of document.getElementById(target).childNodes) {
-            if (node?.classList?.contains("settings-bar-box"))
-              node.classList.add("slide-in");
-          }
-        }
-
-        document.getElementById(target).classList.add("visible");
+        Dismissible.show(target);
       });
     }
 
-    for (i = 0; i < instance.closeTriggers.length; i++) {
+    for (let i = 0; i < instance.closeTriggers.length; i++) {
       instance.closeTriggers[i].addEventListener("click", (e) => {
         Dismissible.closeAll(names);
       });
     }
 
-    for (i = 0; i < instance.modals.length; i++) {
+    for (let i = 0; i < instance.modals.length; i++) {
       instance.modals[i].addEventListener("click", (e) => {
         const dismissible = e.target.getAttribute("dismissible");
 
@@ -62,16 +60,22 @@ class Dismissible {
     }
   }
 
+  static show(id) {
+    if (
+      document.getElementById(id).classList.contains(Dismissible.SETTINGS_BAR)
+    ) {
+      for (let node of document.getElementById(id).childNodes) {
+        if (node?.classList?.contains("settings-bar-box"))
+          node.classList.add("slide-in");
+      }
+    }
+    document.getElementById(target).classList.add("visible");
+  }
+
   static closeAll(names) {
     const instance = new Dismissible(names);
-    for (i = 0; i < instance.modals.length; i++) {
-      for (let name of instance.names) {
-        instance.modals[i].classList.remove("visible");
-      }
+    for (let i = 0; i < instance.modals.length; i++) {
+      instance.modals[i].classList.remove("visible");
     }
   }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  Dismissible.init(["modal", "settings-bar"]);
-});

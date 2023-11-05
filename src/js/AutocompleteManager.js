@@ -1,4 +1,4 @@
-class Autocomplete {
+class AutocompleteManager {
   constructor(triggerId) {
     this.globalResults = document.querySelectorAll(".autocomplete-results");
 
@@ -16,7 +16,7 @@ class Autocomplete {
     this.onSelect = callback;
   }
 
-  getTiggerElement() {
+  getTriggerElement() {
     return document.getElementById(this.triggerId);
   }
 
@@ -26,7 +26,7 @@ class Autocomplete {
     const a = document.createElement("a");
     a.innerHTML = `${item}`;
     element.addEventListener("click", function (e) {
-      instance.getTiggerElement().value = item;
+      instance.getTriggerElement().value = item;
       e.preventDefault();
       instance.onSelect(item, index, instance);
       instance.results.classList.remove("visible");
@@ -54,18 +54,18 @@ class Autocomplete {
       this.results.classList.add("visible");
     }
     this.results.appendChild(this.list);
-    this.getTiggerElement().parentNode.appendChild(this.results);
+    this.getTriggerElement().parentNode.appendChild(this.results);
   }
 
   setup() {
     const instance = this;
-    this.getTiggerElement().addEventListener("input", function (e) {
+    this.getTriggerElement().addEventListener("input", function (e) {
       instance.onChange(e.target.value || "", instance);
     });
   }
 
   static init(triggerId, onChange, onSelect) {
-    const instance = new Autocomplete(triggerId);
+    const instance = new AutocompleteManager(triggerId);
     instance.setOnChange(onChange);
     instance.setOnSelect(onSelect);
     instance.setup();
@@ -74,8 +74,8 @@ class Autocomplete {
   }
 
   static closeAll() {
-    const instance = new Autocomplete();
-    for (i = 0; i < instance.globalResults.length; i++) {
+    const instance = new AutocompleteManager();
+    for (let i = 0; i < instance.globalResults.length; i++) {
       instance.globalResults[i].classList.remove("visible");
     }
   }
