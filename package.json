@@ -19,6 +19,11 @@
     "sass": "^1.68.0",
     "static-server": "^2.2.1"
   },
+  "pnpm": {
+    "overrides": {
+      "graceful-fs": "^4.2.11"
+    }
+  },
   "devDependencies": {
     "@babel/core": "^7.23.0",
     "@babel/preset-env": "^7.22.20",

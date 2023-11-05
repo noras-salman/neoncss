@@ -69,7 +69,7 @@ class Dismissible {
           node.classList.add("slide-in");
       }
     }
-    document.getElementById(target).classList.add("visible");
+    document.getElementById(id).classList.add("visible");
   }
 
   static closeAll(names) {
