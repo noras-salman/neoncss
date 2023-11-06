@@ -24,7 +24,7 @@ class DropDownManager {
         let x = triggerRect.left;
         const xEdgeDistance = bodyRect.width - (x + targetRect.width);
         if (xEdgeDistance < 0) {
-          x = x - xEdgeDistance;
+          x = bodyRect.width - targetRect.width;
         }
         document.getElementById(target).style.top = y + "px";
 
