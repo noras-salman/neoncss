@@ -1,5 +1,6 @@
 const fs = require("fs");
 
+console.log(fs.readdirSync(`./`));
 fs.rmdirSync("./docs", { recursive: true });
 fs.rmdirSync("./release", { recursive: true });
 fs.rmdirSync("./src", { recursive: true });
