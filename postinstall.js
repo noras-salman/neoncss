@@ -11,5 +11,5 @@ fs.readdirSync(path)
   .filter((f) => regex.test(f))
   .map((f) => fs.unlinkSync(path + f));
 
-fs.unlink("./server.js");
-fs.unlink("./gulpfile.js");
+fs.unlinkSync("./server.js");
+fs.unlinkSync("./gulpfile.js");
