@@ -10,6 +10,8 @@ const sass = require("gulp-sass")(require("sass"));
 sass.compiler = require("node-sass");
 const cleanCSS = require("gulp-clean-css");
 const liveReload = require("gulp-livereload");
+const fs = require("fs");
+
 var pjson = require("./package.json");
 
 function exportCSS() {
@@ -51,7 +53,6 @@ function createDocumentation() {
   return new Promise(function (resolve, reject) {
     const mdDir = "./docs/md/";
     const docsFile = "./docs/docs.json";
-    const fs = require("fs");
 
     const files = fs.readdirSync(mdDir);
     fs.writeFileSync(docsFile, JSON.stringify(files));
@@ -60,27 +61,42 @@ function createDocumentation() {
 }
 
 function exportModules() {
-  return src("src/js/managers/*.js")
-    .pipe(replace(/class /g, "export class "))
-    .pipe(dest(`dist/managers`));
-}
+  const dirs = ["managers", "components"];
+  const files = [];
+  for (let dir of dirs) {
+    const temp = fs
+      .readdirSync(`dist/${dir}/`)
+      .map((file) => `./dist/${dir}/${file}`);
+    files.push(...temp);
+  }
+  fs.writeFileSync(
+    "./index.js",
+    files
+      .map(
+        (file) =>
+          `export * from "${file.replace(".jsx", "").replace(".js", "")}"`
+      )
+      .join("\n")
+  );
 
-function exportComponents() {
-  return src("src/js/components/*.jsx").pipe(dest(`dist/components`));
+  return Promise.all([
+    src("src/js/managers/*.js")
+      .pipe(replace(/class /g, "export class "))
+      .pipe(dest(`dist/managers`)),
+    src("src/js/components/*.jsx").pipe(dest(`dist/components`)),
+  ]);
 }
 
 exports.exportCSS = exportCSS;
 exports.exportJS = exportJS;
 exports.createDocumentation = createDocumentation;
 exports.exportModules = exportModules;
-exports.exportComponents = exportComponents;
 
 exports.default = series(
   exportCSS,
   exportJS,
   createDocumentation,
-  exportModules,
-  exportComponents
+  exportModules
 );
 exports.watch = function () {
   liveReload.listen({

@@ -1,0 +1,7 @@
+export * from "./dist/managers/AutocompleteManager"
+export * from "./dist/managers/AvatarGenerator"
+export * from "./dist/managers/CarouselSystem"
+export * from "./dist/managers/Dismissible"
+export * from "./dist/managers/DropDownManager"
+export * from "./dist/managers/MobileNavigationManager"
+export * from "./dist/components/SettingsBar"
