@@ -15,6 +15,7 @@
 
 .input {
   width: 100%;
+  margin-top: 8px;
 }
 
 .input-box {
@@ -26,10 +27,11 @@
 .input {
   display: flex;
   flex-direction: column;
+}
 
-  .input-horizontal {
-    flex-direction: row;
-  }
+.input-horizontal {
+  display: flex;
+  flex-direction: row;
 }
 
 .input-box > input .input > input {
@@ -88,10 +90,10 @@ select {
 .switch-toggle {
   display: flex;
   align-items: center;
+  label {
+    padding: 8px;
+  }
   input[type="checkbox"] {
-    & ~ label {
-      padding: 8px;
-    }
     appearance: none;
     -webkit-tap-highlight-color: transparent;
     cursor: pointer;
