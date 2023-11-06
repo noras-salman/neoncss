@@ -2,7 +2,7 @@
   "name": "@nasable/neoncss",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.js",
+  "main": "index.js",
   "scripts": {
     "start": "node server.js",
     "watch": "gulp watch",
