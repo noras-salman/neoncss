@@ -18,9 +18,8 @@ function exportCSS() {
     .pipe(sass().on("error", sass.logError))
     .pipe(cleanCSS())
     .pipe(rename("styles.css"))
-    .pipe(dest(`dist/${pjson.name}`))
+    .pipe(dest(`dist`))
     .pipe(rename("neoncss.min.css"))
-    .pipe(dest("dist/css"))
     .pipe(dest(`release/${pjson.version}/css`))
     .pipe(dest(`release/latest/css`))
     .pipe(liveReload());
@@ -43,7 +42,6 @@ function exportJS() {
     )
     .pipe(uglify())
     .pipe(concat("neoncss.min.js"))
-    .pipe(dest("dist/js"))
     .pipe(dest(`release/${pjson.version}/js`))
     .pipe(dest(`release/latest/js`))
     .pipe(liveReload());
@@ -64,13 +62,11 @@ function createDocumentation() {
 function exportModules() {
   return src("src/js/managers/*.js")
     .pipe(replace(/class /g, "export class "))
-    .pipe(dest(`dist/${pjson.name}/managers`));
+    .pipe(dest(`dist/managers`));
 }
 
 function exportComponents() {
-  return src("src/js/components/*.jsx").pipe(
-    dest(`dist/${pjson.name}/components`)
-  );
+  return src("src/js/components/*.jsx").pipe(dest(`dist/components`));
 }
 
 exports.exportCSS = exportCSS;
