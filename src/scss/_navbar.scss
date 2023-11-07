@@ -42,13 +42,13 @@ nav {
     list-style: none;
     li {
       display: inline;
+
       a {
         text-transform: uppercase;
-
         padding: 8px;
         &.active {
-          border-bottom: 2px solid var(--accent-color);
-          transition: border-bottom 0.1s ease-in;
+          font-weight: 600;
+          transition: font-weight 0.2s ease-in;
         }
       }
     }
@@ -97,7 +97,7 @@ nav {
     height: 100%;
     top: 0;
     z-index: 13;
-   
+
     .nav-mobile-menu-content {
       overflow: auto;
       box-shadow: 2px 4px 8px 2px $shadowColor;

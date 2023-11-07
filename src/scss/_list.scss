@@ -2,11 +2,10 @@
 
 .list {
   list-style: none;
-
+  background-color: inherit;
   li {
     padding: $dimensionsBase;
-    background-color: var(--window-color-secondary);
-
+    background-color: inherit;
     &.border {
       border: 1px solid #ddd;
     }
@@ -36,10 +35,9 @@
     }
 
     &.active {
-      border-left: 2px solid var(--accent-color);
-      filter: brightness(95%);
-      font-weight: bold;
-      padding-left: 8px;
+      font-weight: 600;
+
+      transition: font-weight 0.2s ease-in;
     }
 
     &:hover {

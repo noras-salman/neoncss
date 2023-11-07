@@ -24,13 +24,18 @@ $sidebarWidth: 280px;
     padding-top: 8px;
     li {
       padding: 0;
-      background-color: var(--accent-color);
+
       a {
         padding: 16px;
         display: inline-block;
         width: 100%;
         color: $lightColor;
         font-weight: 300;
+        &.active {
+          font-weight: 600;
+          padding: 24px !important;
+          transition: font-weight 0.2s ease-in, padding-left 0.2s ease-in;
+        }
       }
     }
   }

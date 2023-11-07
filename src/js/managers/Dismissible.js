@@ -13,7 +13,7 @@ class Dismissible {
   static SETTINGS_BAR = "settings-bar";
   constructor(names) {
     if (Array.isArray(names)) this.names = names;
-    this.names = [names];
+    else this.names = [names];
     this.modals = [];
     this.triggers = [];
     this.closeTriggers = [];
